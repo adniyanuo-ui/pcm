@@ -1,0 +1,64 @@
+[
+  {
+    "pdf_page": 174,
+    "raw_text": "【方源】《圣惠》卷十。",
+    "corrected_header": "10277 天竺黄散",
+    "keep_raw_after_header": true,
+    "note": "Header clipped at the top of the page; ID and name recovered from sequence and TOC."
+  },
+  {
+    "pdf_page": 230,
+    "raw_text": "【方源】《春脚集》卷一。",
+    "corrected_header": "10686 开障去翳散",
+    "keep_raw_after_header": true,
+    "note": "Header clipped at the top of the page; ID and name recovered from sequence and TOC."
+  },
+  {
+    "pdf_page": 605,
+    "raw_text": "13/0正瓶服",
+    "corrected_header": "13701 止痛散",
+    "note": "Severely damaged header recovered from sequence, fields and TOC."
+  },
+  {
+    "pdf_page": 668,
+    "raw_text": "【方源】《纲目拾遗》卷十引《秘方集腋》。",
+    "corrected_header": "14238 内造伏虎丹",
+    "keep_raw_after_header": true,
+    "note": "Header not detected; ID and name recovered from sequence and TOC."
+  },
+  {
+    "pdf_page": 669,
+    "raw_text": "1P活/",
+    "corrected_header": "14241 内消化积丸",
+    "note": "Severely damaged header recovered from sequence, fields and TOC."
+  },
+  {
+    "pdf_page": 669,
+    "raw_text": "【方源】《医方类聚》卷一七四引《简易》。",
+    "corrected_header": "14245 内消托里散",
+    "keep_raw_after_header": true,
+    "note": "Header not detected; ID and name recovered from sequence and TOC."
+  },
+  {
+    "pdf_page": 757,
+    "raw_text": "【方源】《魏氏家藏方》卷二。",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "14932 分气丸",
+    "keep_raw_after_header": true,
+    "note": "Header clipped at the top of the page; ID and name recovered from sequence and TOC."
+  },
+  {
+    "pdf_page": 889,
+    "raw_text": "15950升麻汤",
+    "corrected_header": "15956 升麻汤",
+    "note": "One otherwise valid OCR digit was wrong; repaired from sequence and TOC."
+  },
+  {
+    "pdf_page": 1228,
+    "raw_text": "【方源】《卫生总微》卷十二。",
+    "corrected_header": "18684 水蓼丹",
+    "keep_raw_after_header": true,
+    "note": "Header not detected; ID and name recovered from sequence and TOC."
+  }
+]

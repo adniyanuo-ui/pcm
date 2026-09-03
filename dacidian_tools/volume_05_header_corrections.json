@@ -1,0 +1,120 @@
+[
+  {
+    "pdf_page": 113,
+    "raw_text": "36588 麦门冬汤",
+    "corrected_header": "38588 麦门冬汤",
+    "note": "扫描原页和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 294,
+    "raw_text": "49102 芦荟丸",
+    "corrected_header": "40102 芦荟丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 295,
+    "raw_text": "49111 芦荟丸",
+    "corrected_header": "40111 芦荟丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 389,
+    "raw_text": "40891 杏子汤",
+    "region": "right",
+    "line_index": 26,
+    "corrected_header": "40892 杏子汤",
+    "note": "扫描原页第二个相邻标题为40892；末位2误识别为1。"
+  },
+  {
+    "pdf_page": 462,
+    "raw_text": "41468 辰砂破涎丸",
+    "corrected_header": "41488 辰砂破涎丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 478,
+    "raw_text": "甘草",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "41600 抑气丸",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第477页（书页389）；仅第478页开头的末味药、用法和主治可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 528,
+    "raw_text": "72071 吹鼻散",
+    "corrected_header": "42071 吹鼻散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 604,
+    "raw_text": "42699 针头丸",
+    "region": "right",
+    "line_index": 12,
+    "corrected_header": "42698 针头丸",
+    "note": "扫描原页首个相邻标题为42698；末位8误识别为9。"
+  },
+  {
+    "pdf_page": 781,
+    "raw_text": "441沉香化滞丸",
+    "corrected_header": "44108 沉香化滞丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 803,
+    "raw_text": "44764 沉嘉香茸丸",
+    "corrected_header": "44264 沉麝香茸丸",
+    "note": "扫描原页、目录和卷内顺序共同确认编号与方名。"
+  },
+  {
+    "pdf_page": 816,
+    "raw_text": "44361 羌活汤",
+    "region": "right",
+    "line_index": 24,
+    "corrected_header": "44362 羌活汤",
+    "note": "扫描原页第二个相邻标题为44362；末位2误识别为1。"
+  },
+  {
+    "pdf_page": 837,
+    "raw_text": "44537",
+    "region": "right",
+    "line_index": 41,
+    "corrected_header": "44537 羌活散",
+    "note": "扫描原页中编号与方名被OCR拆成两行。"
+  },
+  {
+    "pdf_page": 837,
+    "raw_text": "羌活散",
+    "region": "right",
+    "line_index": 42,
+    "drop_line": true,
+    "note": "已合并到同页上一行的完整标题；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 879,
+    "raw_text": "块）",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "44880 诃黎勒丸",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第878页（书页790）；仅第879页开头的组成末行、用法、功用和主治可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 1149,
+    "raw_text": "45947 附子木瓜丸",
+    "corrected_header": "46947 附子木瓜丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1232,
+    "raw_text": "476764750",
+    "region": "right",
+    "line_index": 35,
+    "corrected_header": "47654 驱毒冲和膏",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  }
+]

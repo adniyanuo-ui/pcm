@@ -39,12 +39,18 @@ def init_worker(threads: int, text_score: float) -> None:
     )
 
 
-def page_regions(pdf_page: int, width: int, height: int) -> list[tuple[str, int, int, int, int]]:
+def page_regions(
+    pdf_page: int,
+    width: int,
+    height: int,
+    content_start: int,
+    front_end: int,
+) -> list[tuple[str, int, int, int, int]]:
     """Return reading-order crop regions for this edition's fixed layouts."""
-    if pdf_page <= 10:
+    if pdf_page <= front_end:
         return [("page", int(width * 0.05), int(height * 0.04), int(width * 0.95), int(height * 0.95))]
 
-    if pdf_page <= 88:
+    if pdf_page < content_start:
         # Contents and stroke index are three-column pages.
         # The scan alternates inner/outer margins on odd/even pages, so the
         # column boundaries need a small parity adjustment.  Do not overlap
@@ -74,8 +80,8 @@ def find_page_number(path: Path) -> int:
     return int(match.group(1))
 
 
-def ocr_page(job: tuple[int, str, str]) -> dict[str, Any]:
-    pdf_page, image_name, output_name = job
+def ocr_page(job: tuple[int, str, str, int, int, int]) -> dict[str, Any]:
+    pdf_page, image_name, output_name, volume, content_start, front_end = job
     output_path = Path(output_name)
     if output_path.exists() and output_path.stat().st_size > 100:
         return {"pdf_page": pdf_page, "status": "skipped"}
@@ -88,7 +94,7 @@ def ocr_page(job: tuple[int, str, str]) -> dict[str, Any]:
     regions: list[dict[str, Any]] = []
 
     assert OCR_ENGINE is not None
-    for region_name, x0, y0, x1, y1 in page_regions(pdf_page, width, height):
+    for region_name, x0, y0, x1, y1 in page_regions(pdf_page, width, height, content_start, front_end):
         crop = img[y0:y1, x0:x1]
         result = OCR_ENGINE(crop)
         lines: list[dict[str, Any]] = []
@@ -114,9 +120,10 @@ def ocr_page(job: tuple[int, str, str]) -> dict[str, Any]:
 
     payload = {
         "pdf_page": pdf_page,
-        "book_page": pdf_page - 88 if pdf_page >= 89 else None,
+        "volume": volume,
+        "book_page": pdf_page - content_start + 1 if pdf_page >= content_start else None,
         "image": {"width": width, "height": height, "file": Path(image_name).name},
-        "layout": "two_column" if pdf_page >= 89 else ("three_column" if pdf_page >= 11 else "single_page"),
+        "layout": "two_column" if pdf_page >= content_start else ("three_column" if pdf_page > front_end else "single_page"),
         "ocr": {"engine": "RapidOCR", "model": "PP-OCRv6", "version": "3.9.2"},
         "regions": regions,
         "elapsed_seconds": round(time.time() - started, 3),
@@ -142,6 +149,9 @@ def main() -> int:
     parser.add_argument("--workers", type=int, default=6)
     parser.add_argument("--threads-per-worker", type=int, default=2)
     parser.add_argument("--text-score", type=float, default=0.30)
+    parser.add_argument("--volume", type=int, default=1)
+    parser.add_argument("--content-start", type=int, default=89)
+    parser.add_argument("--front-end", type=int, default=10)
     args = parser.parse_args()
 
     image_by_page: dict[int, Path] = {}
@@ -157,7 +167,14 @@ def main() -> int:
 
     args.output.mkdir(parents=True, exist_ok=True)
     jobs = [
-        (page, str(image_by_page[page]), str(args.output / f"page_{page:04d}.json"))
+        (
+            page,
+            str(image_by_page[page]),
+            str(args.output / f"page_{page:04d}.json"),
+            args.volume,
+            args.content_start,
+            args.front_end,
+        )
         for page in range(args.start, args.end + 1)
     ]
 

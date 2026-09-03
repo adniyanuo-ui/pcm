@@ -1,0 +1,252 @@
+[
+  {
+    "pdf_page": 184,
+    "raw_text": "10939 朴消汤",
+    "corrected_header": "30939 朴消汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 215,
+    "raw_text": "芍药附子甘草汤",
+    "region": "right",
+    "line_index": 2,
+    "corrected_header": "31188 芍药附子甘草汤",
+    "note": "扫描原页中编号与方名被OCR拆成两行。"
+  },
+  {
+    "pdf_page": 215,
+    "raw_text": "31188",
+    "region": "right",
+    "line_index": 3,
+    "drop_line": true,
+    "note": "已合并到同页上一行的完整标题；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 261,
+    "raw_text": "115",
+    "region": "right",
+    "line_index": 34,
+    "corrected_header": "31585 芎当泻心汤",
+    "note": "扫描原页清晰显示31585 芎当泻心汤。"
+  },
+  {
+    "pdf_page": 280,
+    "raw_text": "31726 再造丸",
+    "corrected_header": "31720 再造丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 328,
+    "raw_text": "22085 百花膏",
+    "corrected_header": "32085 百花膏",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 341,
+    "raw_text": "1",
+    "region": "left",
+    "line_index": 14,
+    "corrected_header": "32185 百部散",
+    "note": "扫描原页清晰显示32185 百部散。"
+  },
+  {
+    "pdf_page": 341,
+    "raw_text": "32191 百部散",
+    "region": "right",
+    "line_index": 35,
+    "corrected_header": "32192 百部散",
+    "note": "扫描原页第二个标题为32192；末位2误识别为1。"
+  },
+  {
+    "pdf_page": 407,
+    "raw_text": "303",
+    "region": "right",
+    "line_index": 5,
+    "corrected_header": "32703 当归汤",
+    "note": "扫描原页清晰显示32703 当归汤。"
+  },
+  {
+    "pdf_page": 423,
+    "raw_text": "3881",
+    "region": "left",
+    "line_index": 17,
+    "corrected_header": "32841 当归粉",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 444,
+    "raw_text": "330r1 当归散",
+    "corrected_header": "33011 当归散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 448,
+    "raw_text": "ME357",
+    "region": "right",
+    "line_index": 20,
+    "corrected_header": "33057 当归煎",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 451,
+    "raw_text": "最日£30",
+    "region": "left",
+    "line_index": 7,
+    "corrected_header": "33073 当归膏",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 645,
+    "raw_text": "34573",
+    "region": "right",
+    "line_index": 3,
+    "corrected_header": "34573 朱砂指甲散",
+    "note": "扫描原页中编号与方名被OCR拆成两行。"
+  },
+  {
+    "pdf_page": 645,
+    "raw_text": "朱砂指甲散",
+    "region": "right",
+    "line_index": 4,
+    "drop_line": true,
+    "note": "已合并到同页上一行的完整标题；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 738,
+    "raw_text": "39258 杀鬼丸",
+    "corrected_header": "35258 杀鬼丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 757,
+    "raw_text": "35 31546",
+    "corrected_header": "35409 问命丹",
+    "note": "扫描原页清晰显示35409 问命丹；目录OCR将问误识别为间。"
+  },
+  {
+    "pdf_page": 783,
+    "raw_text": "35436 冰硼散",
+    "corrected_header": "35636 冰硼散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 829,
+    "raw_text": "34017 安眠散",
+    "corrected_header": "36017 安眠散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 838,
+    "raw_text": "36893安儿至宝汤",
+    "corrected_header": "36093 安儿至宝汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 839,
+    "raw_text": "30099 安坤赞育丸",
+    "corrected_header": "36099 安坤赞育丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 889,
+    "raw_text": "06455",
+    "region": "right",
+    "line_index": 4,
+    "corrected_header": "36490 异功散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 889,
+    "raw_text": "3369吨",
+    "region": "right",
+    "line_index": 41,
+    "corrected_header": "36493 异功散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 907,
+    "raw_text": "账2995",
+    "region": "left",
+    "line_index": 30,
+    "corrected_header": "36629 导滞汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 907,
+    "raw_text": "3665",
+    "region": "left",
+    "line_index": 38,
+    "corrected_header": "36630 导滞汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 909,
+    "raw_text": "36641 导痰汤",
+    "region": "left",
+    "line_index": 5,
+    "corrected_header": "36642 导痰汤",
+    "note": "扫描原页第二个相邻标题为36642；末位2误识别为1。"
+  },
+  {
+    "pdf_page": 911,
+    "raw_text": "393",
+    "region": "right",
+    "line_index": 4,
+    "corrected_header": "36665 导气抑留汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 912,
+    "raw_text": "6",
+    "region": "right",
+    "line_index": 21,
+    "corrected_header": "36677 导气醒脾汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 915,
+    "raw_text": "36495 导赤解毒汤",
+    "corrected_header": "36695 导赤解毒汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 915,
+    "raw_text": "34698 导滞香连丸",
+    "corrected_header": "36698 导滞香连丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 918,
+    "raw_text": "34723 艮宫除害丹",
+    "corrected_header": "36723 艮宫除害丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 929,
+    "raw_text": "36860 阴阳丹",
+    "corrected_header": "36800 阴阳丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1076,
+    "raw_text": "5008",
+    "region": "right",
+    "line_index": 37,
+    "corrected_header": "38005 羽泽散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1078,
+    "raw_text": "38332",
+    "region": "right",
+    "line_index": 14,
+    "corrected_header": "38030 羽泽散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1113,
+    "raw_text": "36329 红花升麻散",
+    "corrected_header": "38329 红花升麻散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  }
+]

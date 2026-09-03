@@ -1,0 +1,327 @@
+{"id": "09669", "name": "云台膏", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [89, 90], "book_pages": [5, 6]}, "toc": null}
+{"id": "09690", "name": "元归散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [93], "book_pages": [9]}, "toc": null}
+{"id": "09695", "name": "元寿丹", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [93], "book_pages": [9]}, "toc": null}
+{"id": "09696", "name": "元灵散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [93], "book_pages": [9]}, "toc": null}
+{"id": "09740", "name": "无价宝", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [98], "book_pages": [14]}, "toc": {"name": "看价案", "book_page": 14}}
+{"id": "09764", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [101], "book_pages": [17]}, "toc": {"name": "无优散", "book_page": 17}}
+{"id": "09765", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [101], "book_pages": [17]}, "toc": {"name": "无优散", "book_page": 17}}
+{"id": "09766", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [101], "book_pages": [17]}, "toc": {"name": "无优散", "book_page": 17}}
+{"id": "09768", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [101], "book_pages": [17]}, "toc": {"name": "无优散", "book_page": 17}}
+{"id": "09769", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [101], "book_pages": [17]}, "toc": {"name": "无优散", "book_page": 17}}
+{"id": "09770", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [101], "book_pages": [17]}, "toc": {"name": "无优散", "book_page": 17}}
+{"id": "09771", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [101, 102], "book_pages": [17, 18]}, "toc": {"name": "无优散", "book_page": 17}}
+{"id": "09774", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [102], "book_pages": [18]}, "toc": {"name": "无优散", "book_page": 18}}
+{"id": "09775", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [102], "book_pages": [18]}, "toc": {"name": "无优散", "book_page": 18}}
+{"id": "09776", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [102], "book_pages": [18]}, "toc": {"name": "无优散", "book_page": 18}}
+{"id": "09777", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [102], "book_pages": [18]}, "toc": {"name": "无优散", "book_page": 18}}
+{"id": "09778", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [102, 103], "book_pages": [18, 19]}, "toc": {"name": "无优散", "book_page": 18}}
+{"id": "09779", "name": "无忧散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [103], "book_pages": [19]}, "toc": {"name": "无优散", "book_page": 19}}
+{"id": "09911", "name": "天真丹", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [121], "book_pages": [37]}, "toc": null}
+{"id": "09950", "name": "天麻丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [127], "book_pages": [43]}, "toc": {"name": "43", "book_page": null}}
+{"id": "09956", "name": "天麻丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [128], "book_pages": [44]}, "toc": null}
+{"id": "09969", "name": "天麻丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [130], "book_pages": [46]}, "toc": null}
+{"id": "09979", "name": "天麻丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [131, 132], "book_pages": [47, 48]}, "toc": null}
+{"id": "09989", "name": "天麻丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [133], "book_pages": [49]}, "toc": null}
+{"id": "09990", "name": "天麻丹", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [133], "book_pages": [49]}, "toc": null}
+{"id": "09991", "name": "天麻汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [133], "book_pages": [49]}, "toc": null}
+{"id": "09996", "name": "天麻汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [134], "book_pages": [50]}, "toc": null}
+{"id": "09999", "name": "天麻汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [134], "book_pages": [50]}, "toc": null}
+{"id": "10062", "name": "天麻膏", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [142], "book_pages": [58]}, "toc": {"name": "天麻膏", "book_page": 58}}
+{"id": "10069", "name": "天雄丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [143], "book_pages": [59]}, "toc": {"name": "天雄丸", "book_page": 59}}
+{"id": "10070", "name": "天雄丸", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [143], "book_pages": [59]}, "toc": {"name": "天雄丸", "book_page": 59}}
+{"id": "10075", "name": "天雄丸", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [144], "book_pages": [60]}, "toc": {"name": "天雄丸", "book_page": 60}}
+{"id": "10109", "name": "天雄散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [150], "book_pages": [66]}, "toc": {"name": "66", "book_page": null}}
+{"id": "10142", "name": "天蓼粥", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [154], "book_pages": [70]}, "toc": {"name": "天夢粥", "book_page": 70}}
+{"id": "10165", "name": "天门冬丸", "flags": ["missing_source_field"], "source": {"volume": 2, "pdf_pages": [157, 158], "book_pages": [73, 74]}, "toc": {"name": "天门冬丸", "book_page": 73}}
+{"id": "10264", "name": "天竺黄丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [172], "book_pages": [88]}, "toc": {"name": "天竺黄丸", "book_page": 88}}
+{"id": "10277", "name": "天竺黄散", "flags": ["header_repaired_from_pdf_or_toc"], "source": {"volume": 2, "pdf_pages": [174], "book_pages": [90]}, "toc": {"name": "天竺黄散", "book_page": 90}}
+{"id": "10278", "name": "天竺黄散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [174], "book_pages": [90]}, "toc": {"name": "天竺黄散", "book_page": 90}}
+{"id": "10279", "name": "天竺黄散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [174], "book_pages": [90]}, "toc": {"name": "天竺黄散", "book_page": 90}}
+{"id": "10280", "name": "天竺黄散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [174], "book_pages": [90]}, "toc": {"name": "天竺黄散", "book_page": null}}
+{"id": "10281", "name": "天竺黄散", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [174], "book_pages": [90]}, "toc": {"name": "天竺黄散", "book_page": null}}
+{"id": "10293", "name": "天竺黄散", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [176], "book_pages": [92]}, "toc": {"name": "天竺黄散", "book_page": 92}}
+{"id": "10431", "name": "天王补心丹", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [197], "book_pages": [113]}, "toc": {"name": "天王补心丹", "book_page": 113}}
+{"id": "10435", "name": "天水五苓散", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [197], "book_pages": [113]}, "toc": {"name": "天水五苓散", "book_page": 113}}
+{"id": "10510", "name": "天下第一金疮药", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [210], "book_pages": [126]}, "toc": {"name": "天下第一金疮药 …126", "book_page": null}}
+{"id": "10511", "name": "天生一粒元珠丹", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [210], "book_pages": [126]}, "toc": {"name": "天生一粒元珠丹", "book_page": 126}}
+{"id": "10579", "name": "开骨散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10580", "name": "开骨膏", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10581", "name": "开骨膏", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10582", "name": "开迷散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10583", "name": "开结丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10584", "name": "开结汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10585", "name": "开结散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10586", "name": "开结散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10587", "name": "开笑散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10588", "name": "开笑散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10589", "name": "开窍引", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218], "book_pages": [134]}, "toc": null}
+{"id": "10590", "name": "开脬煎", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [218, 219], "book_pages": [134, 135]}, "toc": null}
+{"id": "10591", "name": "开脾汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [219], "book_pages": [135]}, "toc": null}
+{"id": "10592", "name": "开滞汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [219], "book_pages": [135]}, "toc": null}
+{"id": "10650", "name": "天胃生姜丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [225], "book_pages": [141]}, "toc": {"name": "开胃生姜丸", "book_page": 141}}
+{"id": "10676", "name": "开胸顺气丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [228, 229], "book_pages": [144, 145]}, "toc": {"name": "开胸顺气丸", "book_page": 144}}
+{"id": "10686", "name": "开障去翳散", "flags": ["header_repaired_from_pdf_or_toc", "low_confidence_line"], "source": {"volume": 2, "pdf_pages": [230], "book_pages": [146]}, "toc": {"name": "开障去翳散", "book_page": 146}}
+{"id": "10688", "name": "开豁滕理汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [230], "book_pages": [146]}, "toc": {"name": "开豁腠理汤", "book_page": 146}}
+{"id": "10689", "name": "开疆扫雾丹", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [230], "book_pages": [146]}, "toc": {"name": "开疆扫雾丹", "book_page": 146}}
+{"id": "10690", "name": "开心薯蓣肾气丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [230], "book_pages": [146]}, "toc": {"name": "开心薯预肾气丸", "book_page": 146}}
+{"id": "10691", "name": "开关润喉蓬莱雪", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [230], "book_pages": [146]}, "toc": {"name": "开关润喉蓬莱雪 …146", "book_page": null}}
+{"id": "10692", "name": "开郁顺气解毒汤", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [230, 231], "book_pages": [146, 147]}, "toc": {"name": "开郁顺气解毒汤 ***", "book_page": 146}}
+{"id": "10756", "name": "不换金散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [238], "book_pages": [154]}, "toc": {"name": "不换金散", "book_page": 154}}
+{"id": "10757", "name": "不换金散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [238], "book_pages": [154]}, "toc": {"name": "不换金散", "book_page": 154}}
+{"id": "10758", "name": "不换金散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [238], "book_pages": [154]}, "toc": {"name": "不换金散", "book_page": 154}}
+{"id": "10759", "name": "不止麒麟散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [238], "book_pages": [154]}, "toc": {"name": "不止麒麟散", "book_page": 154}}
+{"id": "10760", "name": "不饥耐老方", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [238], "book_pages": [154]}, "toc": {"name": "不饥耐老方", "book_page": 154}}
+{"id": "10775", "name": "木一", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [240], "book_pages": [156]}, "toc": {"name": "木一", "book_page": 156}}
+{"id": "10789", "name": "木瓜丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [241, 242], "book_pages": [157, 158]}, "toc": {"name": "木瓜丸", "book_page": 15}}
+{"id": "10790", "name": "木瓜丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [242], "book_pages": [158]}, "toc": {"name": "木瓜丸", "book_page": 15}}
+{"id": "10791", "name": "木瓜丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [242], "book_pages": [158]}, "toc": {"name": "木瓜丸", "book_page": 15}}
+{"id": "10795", "name": "木瓜丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [242, 243], "book_pages": [158, 159]}, "toc": {"name": "木瓜丸", "book_page": 15}}
+{"id": "10834", "name": "木瓜汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [248], "book_pages": [164]}, "toc": null}
+{"id": "10836", "name": "木瓜汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [248], "book_pages": [164]}, "toc": null}
+{"id": "10910", "name": "木香丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [256], "book_pages": [172]}, "toc": {"name": "木香丸", "book_page": 172}}
+{"id": "10964", "name": "木香丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [264], "book_pages": [180]}, "toc": {"name": "木香丸", "book_page": 180}}
+{"id": "11004", "name": "木香丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [270], "book_pages": [186]}, "toc": {"name": "木香丸", "book_page": 186}}
+{"id": "11006", "name": "木香丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [270], "book_pages": [186]}, "toc": {"name": "木香丸", "book_page": 186}}
+{"id": "11048", "name": "木香丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [275, 276], "book_pages": [191, 192]}, "toc": {"name": "木香丸", "book_page": 191}}
+{"id": "11049", "name": "木香丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [276], "book_pages": [192]}, "toc": {"name": "木香丸", "book_page": 192}}
+{"id": "11050", "name": "木香丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [276], "book_pages": [192]}, "toc": {"name": "木香丸", "book_page": 192}}
+{"id": "11051", "name": "木香丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [276], "book_pages": [192]}, "toc": {"name": "木香丸", "book_page": 192}}
+{"id": "11052", "name": "木香丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [276], "book_pages": [192]}, "toc": {"name": "木香丸", "book_page": 192}}
+{"id": "11053", "name": "木香丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [276], "book_pages": [192]}, "toc": {"name": "木香丸", "book_page": 192}}
+{"id": "11054", "name": "木香丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [276], "book_pages": [192]}, "toc": {"name": "木香丸", "book_page": 192}}
+{"id": "11055", "name": "木香丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [276], "book_pages": [192]}, "toc": {"name": "木香丸", "book_page": 192}}
+{"id": "11056", "name": "木香丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [276, 277], "book_pages": [192, 193]}, "toc": {"name": "木香丸", "book_page": 192}}
+{"id": "11130", "name": "木香汤", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [285], "book_pages": [201]}, "toc": {"name": "木香汤 20i", "book_page": null}}
+{"id": "11287", "name": "木香散", "flags": ["missing_source_field"], "source": {"volume": 2, "pdf_pages": [306, 307], "book_pages": [222, 223]}, "toc": {"name": "木香散", "book_page": 222}}
+{"id": "11313", "name": "木香散", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [310], "book_pages": [226]}, "toc": {"name": "木香散", "book_page": 226}}
+{"id": "11367", "name": "木贼煎", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [315], "book_pages": [231]}, "toc": {"name": "木贼煎", "book_page": 231}}
+{"id": "11513", "name": "木鳖膏", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [331], "book_pages": [247]}, "toc": {"name": "木鉴膏", "book_page": 247}}
+{"id": "11514", "name": "木鳖膏", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [331], "book_pages": [247]}, "toc": {"name": "木鉴膏", "book_page": 247}}
+{"id": "11515", "name": "木監膏", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [331], "book_pages": [247]}, "toc": {"name": "木鳖膏", "book_page": 247}}
+{"id": "11517", "name": "木鳖膏", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [332], "book_pages": [248]}, "toc": {"name": "木鉴膏", "book_page": 248}}
+{"id": "11603", "name": "木香三棱丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [343], "book_pages": [259]}, "toc": {"name": "化铁散", "book_page": 632}}
+{"id": "11604", "name": "木香三棱丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [343], "book_pages": [259]}, "toc": null}
+{"id": "11605", "name": "木香三棱丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [344], "book_pages": [260]}, "toc": null}
+{"id": "11606", "name": "木香三棱丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [344], "book_pages": [260]}, "toc": null}
+{"id": "11726", "name": "木香枳壳丸", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [358], "book_pages": [274]}, "toc": {"name": "木香枳壳丸", "book_page": 274}}
+{"id": "11834", "name": "木香槟榔丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [371, 372], "book_pages": [287, 288]}, "toc": {"name": "木香槟榔丸", "book_page": 28}}
+{"id": "11835", "name": "木香槟榔丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [372], "book_pages": [288]}, "toc": {"name": "木香槟榔丸", "book_page": 28}}
+{"id": "11836", "name": "木香槟榔丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [372], "book_pages": [288]}, "toc": {"name": "木香槟榔丸", "book_page": 28}}
+{"id": "11837", "name": "木香槟榔丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [372], "book_pages": [288]}, "toc": {"name": "木香槟榔丸", "book_page": 28}}
+{"id": "11838", "name": "木香槟榔丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [372], "book_pages": [288]}, "toc": {"name": "木香槟榔丸", "book_page": 28}}
+{"id": "11839", "name": "木香槟榔丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [372], "book_pages": [288]}, "toc": {"name": "木香槟榔丸", "book_page": 28}}
+{"id": "11840", "name": "木香槟榔丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [372, 373], "book_pages": [288, 289]}, "toc": {"name": "木香槟榔丸", "book_page": 28}}
+{"id": "11862", "name": "木通子芩汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [375], "book_pages": [291]}, "toc": null}
+{"id": "11863", "name": "木通车前汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [375], "book_pages": [291]}, "toc": null}
+{"id": "11864", "name": "木通芍药汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [375, 376], "book_pages": [291, 292]}, "toc": null}
+{"id": "11865", "name": "木通枳壳汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [376], "book_pages": [292]}, "toc": null}
+{"id": "11866", "name": "木通茴香丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [376], "book_pages": [292]}, "toc": null}
+{"id": "11867", "name": "木通桂枝汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [376], "book_pages": [292]}, "toc": null}
+{"id": "11868", "name": "木通黄芩汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [376], "book_pages": [292]}, "toc": null}
+{"id": "11869", "name": "木通犀角散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [376], "book_pages": [292]}, "toc": null}
+{"id": "11870", "name": "木茯车前子汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [376], "book_pages": [292]}, "toc": null}
+{"id": "11871", "name": "木香诃黎勒丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [376], "book_pages": [292]}, "toc": null}
+{"id": "11872", "name": "木香诃黎勒汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [376], "book_pages": [292]}, "toc": null}
+{"id": "11873", "name": "木香郁李仁丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [376, 377], "book_pages": [292, 293]}, "toc": null}
+{"id": "11874", "name": "木香金铃子丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [377], "book_pages": [293]}, "toc": null}
+{"id": "11875", "name": "木香金铃子散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [377], "book_pages": [293]}, "toc": null}
+{"id": "11876", "name": "木香草澄茄丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [377], "book_pages": [293]}, "toc": null}
+{"id": "11877", "name": "木香通气饮子", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [377], "book_pages": [293]}, "toc": null}
+{"id": "11878", "name": "木香硇砂煎丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [377], "book_pages": [293]}, "toc": null}
+{"id": "11879", "name": "木香硇砂煎丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [377, 378], "book_pages": [293, 294]}, "toc": null}
+{"id": "11880", "name": "木鳖子贴燴膏", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [378], "book_pages": [294]}, "toc": null}
+{"id": "11881", "name": "木瓜桂心二物饮", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [378], "book_pages": [294]}, "toc": null}
+{"id": "11882", "name": "木香干姜枳术丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [378], "book_pages": [294]}, "toc": null}
+{"id": "11883", "name": "木香枳术干姜丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [378], "book_pages": [294]}, "toc": null}
+{"id": "11884", "name": "木香顺气枳壳丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [378], "book_pages": [294]}, "toc": null}
+{"id": "11885", "name": "木防己加茯苓芒消汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [378], "book_pages": [294]}, "toc": null}
+{"id": "11886", "name": "木香人参干姜枳术丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [378], "book_pages": [294]}, "toc": null}
+{"id": "11887", "name": "木香人参生姜枳术丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [378, 379], "book_pages": [294, 295]}, "toc": null}
+{"id": "11888", "name": "木防己汤去石膏加茯苓芒消汤", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [379], "book_pages": [295]}, "toc": null}
+{"id": "11889", "name": "瓦垄丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [379], "book_pages": [295]}, "toc": null}
+{"id": "11890", "name": "瓦垄子丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [379], "book_pages": [295]}, "toc": null}
+{"id": "11891", "name": "瓦垄子丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [379], "book_pages": [295]}, "toc": null}
+{"id": "11892", "name": "瓦粉瓜萎丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [379], "book_pages": [295]}, "toc": null}
+{"id": "11895", "name": "王瓜酒", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [379], "book_pages": [295]}, "toc": null}
+{"id": "11935", "name": "五子散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [384, 385], "book_pages": [300, 301]}, "toc": {"name": "五子散 3Q0", "book_page": null}}
+{"id": "12099", "name": "五豆汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [404], "book_pages": [320]}, "toc": {"name": "五豆汤", "book_page": 320}}
+{"id": "12116", "name": "五饮丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [405], "book_pages": [321]}, "toc": {"name": "五饮丸", "book_page": 321}}
+{"id": "12306", "name": "五香丸", "flags": ["missing_source_field"], "source": {"volume": 2, "pdf_pages": [429, 430], "book_pages": [345, 346]}, "toc": {"name": "五香丸", "book_page": 345}}
+{"id": "12346", "name": "五香散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [435], "book_pages": [351]}, "toc": {"name": "丑香散", "book_page": 351}}
+{"id": "12461", "name": "五疰汤", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [451], "book_pages": [367]}, "toc": {"name": "五疰汤", "book_page": 367}}
+{"id": "12479", "name": "五黄膏", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [453], "book_pages": [369]}, "toc": {"name": "五黄膏", "book_page": 369}}
+{"id": "12486", "name": "五得汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [454], "book_pages": [370]}, "toc": {"name": "五得汤", "book_page": 370}}
+{"id": "12535", "name": "五痹汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [460], "book_pages": [376]}, "toc": {"name": "五痹汤", "book_page": 376}}
+{"id": "12553", "name": "五膈丸", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [463], "book_pages": [379]}, "toc": {"name": "五膈丸", "book_page": 379}}
+{"id": "12561", "name": "五隔散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [464], "book_pages": [380]}, "toc": {"name": "五膈散", "book_page": 380}}
+{"id": "12579", "name": "五癌丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [466], "book_pages": [382]}, "toc": {"name": "五瘿丸", "book_page": 382}}
+{"id": "12580", "name": "五瘦丸", "flags": ["name_differs_from_toc", "low_confidence_line"], "source": {"volume": 2, "pdf_pages": [466], "book_pages": [382]}, "toc": {"name": "五瘿丸", "book_page": 382}}
+{"id": "12581", "name": "五麟串", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [466], "book_pages": [382]}, "toc": {"name": "五臟串", "book_page": 382}}
+{"id": "12773", "name": "五味子散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [490, 491], "book_pages": [406, 407]}, "toc": {"name": "五味子散", "book_page": 406}}
+{"id": "12797", "name": "五香串丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [493], "book_pages": [409]}, "toc": {"name": "五香串丸", "book_page": 409}}
+{"id": "12798", "name": "五香饭灰", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [493], "book_pages": [409]}, "toc": {"name": "五香饭灰", "book_page": 409}}
+{"id": "12801", "name": "五倍子汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [494], "book_pages": [410]}, "toc": {"name": "五倍子汤", "book_page": 410}}
+{"id": "12802", "name": "五倍子汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [494], "book_pages": [410]}, "toc": {"name": "五倍子汤", "book_page": 410}}
+{"id": "12807", "name": "五倍子散", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [494], "book_pages": [410]}, "toc": {"name": "五倍子散", "book_page": 410}}
+{"id": "12808", "name": "五倍子散", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [494], "book_pages": [410]}, "toc": {"name": "五倍子散", "book_page": 410}}
+{"id": "12809", "name": "五倍子散", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [494], "book_pages": [410]}, "toc": {"name": "五倍子散", "book_page": 410}}
+{"id": "12810", "name": "五倍子散", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [494], "book_pages": [410]}, "toc": {"name": "五倍子散", "book_page": 410}}
+{"id": "12811", "name": "五倍子散", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [494], "book_pages": [410]}, "toc": {"name": "五倍子散", "book_page": 410}}
+{"id": "12848", "name": "五子衍宗丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [499], "book_pages": [415]}, "toc": {"name": "五子衍宗丸", "book_page": 415}}
+{"id": "12891", "name": "五伤接骨丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [506], "book_pages": [422]}, "toc": {"name": "五伤接骨丸", "book_page": 422}}
+{"id": "12892", "name": "五伤接骨膏", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [506], "book_pages": [422]}, "toc": {"name": "五伤接骨膏", "book_page": 422}}
+{"id": "12893", "name": "五行神验丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [506], "book_pages": [422]}, "toc": {"name": "五行神验丸", "book_page": 422}}
+{"id": "12894", "name": "五色戒烟丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [506], "book_pages": [422]}, "toc": {"name": "五色戒烟丸", "book_page": 422}}
+{"id": "12895", "name": "五色兑金丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [506], "book_pages": [422]}, "toc": {"name": "五色兑金丸", "book_page": 422}}
+{"id": "12896", "name": "五色鸡肝散", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [506], "book_pages": [422]}, "toc": {"name": "五色鸡肝散", "book_page": 422}}
+{"id": "12897", "name": "五色蟾酥墨", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [506], "book_pages": [422]}, "toc": {"name": "五色蟾酥墨", "book_page": 422}}
+{"id": "12898", "name": "五灯头草膏", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [506, 507], "book_pages": [422, 423]}, "toc": {"name": "五灯头草膏", "book_page": 422}}
+{"id": "12907", "name": "五灵至圣散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [507, 508], "book_pages": [423, 424]}, "toc": {"name": "五灵至圣散", "book_page": 423}}
+{"id": "12909", "name": "五灵蝉退丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [508], "book_pages": [424]}, "toc": {"name": "五灵蝉退丸", "book_page": 424}}
+{"id": "12910", "name": "五枝萍水汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [508], "book_pages": [424]}, "toc": {"name": "五枝萍水汤", "book_page": 424}}
+{"id": "12912", "name": "五苓五皮散", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [508], "book_pages": [424]}, "toc": {"name": "五苓五皮散", "book_page": 424}}
+{"id": "13085", "name": "五福化毒丹", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [529, 530], "book_pages": [445, 446]}, "toc": {"name": "五福化毒丹", "book_page": 445}}
+{"id": "13119", "name": "五十九号萃象方", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [534], "book_pages": [450]}, "toc": {"name": "五十九号萃象方", "book_page": 450}}
+{"id": "13215", "name": "车螯散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [543], "book_pages": [459]}, "toc": {"name": "车鳌散", "book_page": 459}}
+{"id": "13217", "name": "车整散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [543], "book_pages": [459]}, "toc": {"name": "车螯散", "book_page": 459}}
+{"id": "13218", "name": "车整散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [543], "book_pages": [459]}, "toc": {"name": "车螯散", "book_page": 459}}
+{"id": "13379", "name": "六岁墨", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [561], "book_pages": [477]}, "toc": {"name": "太岁墨", "book_page": 477}}
+{"id": "13420", "name": "太碧丹", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [567], "book_pages": [483]}, "toc": {"name": "太碧丹", "book_page": 483}}
+{"id": "13476", "name": "太乙保生丹", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [577], "book_pages": [493]}, "toc": {"name": "太乙保生丹", "book_page": 493}}
+{"id": "13662", "name": "止衄散", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [601], "book_pages": [517]}, "toc": {"name": "止衄散", "book_page": 517}}
+{"id": "13664", "name": "止衄散", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [601], "book_pages": [517]}, "toc": {"name": "止衄散", "book_page": 517}}
+{"id": "13701", "name": "止痛散", "flags": ["header_repaired_from_pdf_or_toc", "low_confidence_line"], "source": {"volume": 2, "pdf_pages": [605], "book_pages": [521]}, "toc": {"name": "止痛散", "book_page": 521}}
+{"id": "13800", "name": "止痛太阳丹", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [616], "book_pages": [532]}, "toc": {"name": "止痛太阳丹", "book_page": 532}}
+{"id": "13872", "name": "中正丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [625, 626], "book_pages": [541, 542]}, "toc": {"name": "中正丸", "book_page": 541}}
+{"id": "13873", "name": "中正汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [626], "book_pages": [542]}, "toc": {"name": "中正汤", "book_page": 542}}
+{"id": "13875", "name": "中白散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [626], "book_pages": [542]}, "toc": {"name": "中白散", "book_page": 542}}
+{"id": "13949", "name": "内托散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [635, 636], "book_pages": [551, 552]}, "toc": {"name": "内托散", "book_page": 551}}
+{"id": "13951", "name": "内托散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [636], "book_pages": [552]}, "toc": {"name": "内托散", "book_page": 552}}
+{"id": "13952", "name": "内托散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [636], "book_pages": [552]}, "toc": {"name": "内托散", "book_page": 552}}
+{"id": "13953", "name": "内托散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [636], "book_pages": [552]}, "toc": {"name": "内托散", "book_page": 552}}
+{"id": "13957", "name": "内托散", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [636], "book_pages": [552]}, "toc": {"name": "内托散", "book_page": 552}}
+{"id": "13958", "name": "内托散", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [636], "book_pages": [552]}, "toc": {"name": "内托散", "book_page": 552}}
+{"id": "13959", "name": "内托散", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [636], "book_pages": [552]}, "toc": {"name": "内托散", "book_page": 552}}
+{"id": "13960", "name": "内伤丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [636, 637], "book_pages": [552, 553]}, "toc": {"name": "内伤丸", "book_page": 552}}
+{"id": "14007", "name": "内补散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [643], "book_pages": [559]}, "toc": null}
+{"id": "14110", "name": "内府药酒", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [654], "book_pages": [570]}, "toc": {"name": "内府药酒", "book_page": 570}}
+{"id": "14131", "name": "内托白蔹散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [656, 657], "book_pages": [572, 573]}, "toc": null}
+{"id": "14238", "name": "内造伏虎丹", "flags": ["header_repaired_from_pdf_or_toc"], "source": {"volume": 2, "pdf_pages": [668], "book_pages": [584]}, "toc": {"name": "内造伏虎丹", "book_page": 584}}
+{"id": "14241", "name": "内消化积丸", "flags": ["header_repaired_from_pdf_or_toc", "low_confidence_line"], "source": {"volume": 2, "pdf_pages": [669], "book_pages": [585]}, "toc": {"name": "内消化积丸", "book_page": 585}}
+{"id": "14245", "name": "内消托里散", "flags": ["header_repaired_from_pdf_or_toc"], "source": {"volume": 2, "pdf_pages": [669], "book_pages": [585]}, "toc": {"name": "内消托里散", "book_page": 585}}
+{"id": "14322", "name": "贝母散(2)", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [681, 682], "book_pages": [597, 598]}, "toc": {"name": "贝母散", "book_page": 597}}
+{"id": "14364", "name": "贝齿散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [686], "book_pages": [602]}, "toc": {"name": "贝齿散", "book_page": 602}}
+{"id": "14365", "name": "贝齿散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [686], "book_pages": [602]}, "toc": {"name": "贝齿散", "book_page": 602}}
+{"id": "14388", "name": "见现丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [688, 689], "book_pages": [604, 605]}, "toc": {"name": "见晚丸", "book_page": 604}}
+{"id": "14389", "name": "见现丸", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [689], "book_pages": [605]}, "toc": {"name": "见现丸", "book_page": 605}}
+{"id": "14390", "name": "见晚丹", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [689], "book_pages": [605]}, "toc": {"name": "见现丹", "book_page": 605}}
+{"id": "14587", "name": "化窍丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [714], "book_pages": [630]}, "toc": {"name": "化病丸", "book_page": 630}}
+{"id": "14603", "name": "化铁散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [716], "book_pages": [632]}, "toc": null}
+{"id": "14616", "name": "化积散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [718], "book_pages": [634]}, "toc": {"name": "化积散", "book_page": 634}}
+{"id": "14617", "name": "化息散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [718], "book_pages": [634]}, "toc": {"name": "化息散", "book_page": 634}}
+{"id": "14618", "name": "化疳丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [718], "book_pages": [634]}, "toc": {"name": "化疳丸", "book_page": 634}}
+{"id": "14636", "name": "化斑汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [720], "book_pages": [636]}, "toc": {"name": "化斑汤", "book_page": 636}}
+{"id": "14729", "name": "化蟹丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [731], "book_pages": [647]}, "toc": {"name": "化压丸", "book_page": 647}}
+{"id": "14730", "name": "化墨丸", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [731], "book_pages": [647]}, "toc": {"name": "化墨丸", "book_page": 647}}
+{"id": "14731", "name": "化墨丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [731], "book_pages": [647]}, "toc": {"name": "化蟹丸", "book_page": 647}}
+{"id": "14733", "name": "化墨丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [731], "book_pages": [647]}, "toc": {"name": "化蟹丸", "book_page": 647}}
+{"id": "14734", "name": "化瘦丹", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [731], "book_pages": [647]}, "toc": {"name": "化癭丹", "book_page": 647}}
+{"id": "14735", "name": "化瘦丹", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [731], "book_pages": [647]}, "toc": {"name": "化瘿丹", "book_page": 647}}
+{"id": "14814", "name": "化痞反正膏", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [741], "book_pages": [657]}, "toc": {"name": "化痞反正膏", "book_page": 657}}
+{"id": "14860", "name": "化毒消肿托里散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [748], "book_pages": [664]}, "toc": {"name": "化毒消肿托里散", "book_page": 664}}
+{"id": "14861", "name": "化毒排脓内托散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [748], "book_pages": [664]}, "toc": {"name": "化毒排脓内托散", "book_page": 664}}
+{"id": "14862", "name": "化毒排脓内补散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [748], "book_pages": [664]}, "toc": {"name": "化毒排脓内补散", "book_page": 664}}
+{"id": "14874", "name": "气针丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [750], "book_pages": [666]}, "toc": {"name": "气针丸", "book_page": 666}}
+{"id": "14888", "name": "气痞丸", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [752], "book_pages": [668]}, "toc": {"name": "气痞丸", "book_page": 668}}
+{"id": "14890", "name": "气瘕丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [752], "book_pages": [668]}, "toc": {"name": "气瘦丸", "book_page": 668}}
+{"id": "14912", "name": "仓康汤", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [754], "book_pages": [670]}, "toc": {"name": "仓廩汤", "book_page": 670}}
+{"id": "14913", "name": "仓康汤", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [754], "book_pages": [670]}, "toc": {"name": "仓廉汤", "book_page": 670}}
+{"id": "14914", "name": "仓廪散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [754], "book_pages": [670]}, "toc": {"name": "仓廩散", "book_page": 670}}
+{"id": "14915", "name": "仓康散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [755], "book_pages": [671]}, "toc": {"name": "仓廩散", "book_page": 671}}
+{"id": "14932", "name": "分气丸", "flags": ["header_repaired_from_pdf_or_toc"], "source": {"volume": 2, "pdf_pages": [757], "book_pages": [673]}, "toc": {"name": "分气丸", "book_page": 673}}
+{"id": "15038", "name": "手拈散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [769], "book_pages": [685]}, "toc": {"name": "手拈散", "book_page": 685}}
+{"id": "15053", "name": "牛美", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [771], "book_pages": [687]}, "toc": {"name": "牛羹", "book_page": 687}}
+{"id": "15061", "name": "牛肉羹", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [772], "book_pages": [688]}, "toc": {"name": "牛肉羹", "book_page": 688}}
+{"id": "15093", "name": "牛涎丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [775], "book_pages": [691]}, "toc": {"name": "牛涎方", "book_page": 691}}
+{"id": "15138", "name": "牛黄丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [781], "book_pages": [697]}, "toc": {"name": "牛黄丸", "book_page": 697}}
+{"id": "15140", "name": "牛黄丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [781, 782], "book_pages": [697, 698]}, "toc": {"name": "牛黄丸", "book_page": 697}}
+{"id": "15141", "name": "牛黄丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [782], "book_pages": [698]}, "toc": {"name": "牛黄丸", "book_page": 698}}
+{"id": "15142", "name": "牛黄丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [782], "book_pages": [698]}, "toc": {"name": "牛黄丸", "book_page": 698}}
+{"id": "15144", "name": "牛黄丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [782], "book_pages": [698]}, "toc": {"name": "牛黄丸", "book_page": 698}}
+{"id": "15145", "name": "牛黄丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [782], "book_pages": [698]}, "toc": {"name": "牛黄丸", "book_page": 698}}
+{"id": "15147", "name": "牛黄丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [782, 783], "book_pages": [698, 699]}, "toc": {"name": "牛黄丸", "book_page": 698}}
+{"id": "15272", "name": "牛黄散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [800], "book_pages": [716]}, "toc": {"name": "牛黄散", "book_page": 716}}
+{"id": "15400", "name": "牛粪膏", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [816], "book_pages": [732]}, "toc": {"name": "牛粪膏", "book_page": 732}}
+{"id": "15420", "name": "牛膝丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [817, 818], "book_pages": [733, 734]}, "toc": {"name": "牛膝丸", "book_page": 733}}
+{"id": "15421", "name": "牛膝丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [818], "book_pages": [734]}, "toc": {"name": "牛膝丸", "book_page": 734}}
+{"id": "15424", "name": "牛膝丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [818], "book_pages": [734]}, "toc": {"name": "牛膝丸", "book_page": 734}}
+{"id": "15425", "name": "牛膝丸", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [818, 819], "book_pages": [734, 735]}, "toc": {"name": "牛膝丸", "book_page": 734}}
+{"id": "15434", "name": "牛膝丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [820], "book_pages": [736]}, "toc": {"name": "牛藤丸", "book_page": 736}}
+{"id": "15436", "name": "牛膝丸", "flags": ["name_differs_from_toc", "low_confidence_line"], "source": {"volume": 2, "pdf_pages": [820], "book_pages": [736]}, "toc": {"name": "牛藤丸", "book_page": 736}}
+{"id": "15456", "name": "牛膝丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [823], "book_pages": [739]}, "toc": {"name": "牛滕丸", "book_page": 739}}
+{"id": "15459", "name": "牛膝丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [824], "book_pages": [740]}, "toc": {"name": "牛藤丸", "book_page": 740}}
+{"id": "15481", "name": "牛膝汤", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [826, 827], "book_pages": [742, 743]}, "toc": {"name": "牛藤汤", "book_page": 742}}
+{"id": "15496", "name": "牛膝汤", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [828], "book_pages": [744]}, "toc": {"name": "牛藤汤", "book_page": 744}}
+{"id": "15505", "name": "牛膝酒", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [829], "book_pages": [745]}, "toc": {"name": "牛藤酒", "book_page": 745}}
+{"id": "15551", "name": "牛膝散", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [836], "book_pages": [752]}, "toc": {"name": "牛膝散", "book_page": 752}}
+{"id": "15554", "name": "牛膝散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [836], "book_pages": [752]}, "toc": {"name": "牛藤散", "book_page": 752}}
+{"id": "15555", "name": "牛膝散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [836], "book_pages": [752]}, "toc": {"name": "牛藤散", "book_page": 752}}
+{"id": "15556", "name": "牛膝散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [836], "book_pages": [752]}, "toc": {"name": "牛藤散", "book_page": 752}}
+{"id": "15558", "name": "牛膝散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [836, 837], "book_pages": [752, 753]}, "toc": {"name": "牛藤散", "book_page": 752}}
+{"id": "15559", "name": "牛膝散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [837], "book_pages": [753]}, "toc": {"name": "牛藤散", "book_page": 753}}
+{"id": "15566", "name": "牛膝煎", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [837], "book_pages": [753]}, "toc": {"name": "牛滕煎", "book_page": 753}}
+{"id": "15576", "name": "牛鰓散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [838], "book_pages": [754]}, "toc": {"name": "牛鳃散", "book_page": 754}}
+{"id": "15625", "name": "牛莠叶葵", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [844], "book_pages": [760]}, "toc": {"name": "牛蒡叶羹", "book_page": 760}}
+{"id": "15852", "name": "升麻丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [877], "book_pages": [793]}, "toc": {"name": "升麻丸", "book_page": 793}}
+{"id": "15853", "name": "升麻丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [877], "book_pages": [793]}, "toc": {"name": "升麻丸", "book_page": 793}}
+{"id": "15857", "name": "升麻汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [877, 878], "book_pages": [793, 794]}, "toc": {"name": "升麻汤", "book_page": 793}}
+{"id": "15858", "name": "升麻汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [878], "book_pages": [794]}, "toc": {"name": "升麻汤", "book_page": 794}}
+{"id": "15862", "name": "升麻汤", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [878], "book_pages": [794]}, "toc": {"name": "升麻汤", "book_page": 794}}
+{"id": "15863", "name": "升麻汤", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [878], "book_pages": [794]}, "toc": {"name": "升麻汤", "book_page": 794}}
+{"id": "15864", "name": "升麻汤", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [878], "book_pages": [794]}, "toc": {"name": "升麻汤", "book_page": 794}}
+{"id": "15865", "name": "升麻汤", "flags": ["header_repaired_by_sequence_and_toc"], "source": {"volume": 2, "pdf_pages": [878, 879], "book_pages": [794, 795]}, "toc": {"name": "升麻汤", "book_page": 794}}
+{"id": "15956", "name": "升麻汤", "flags": ["header_repaired_from_pdf_or_toc"], "source": {"volume": 2, "pdf_pages": [889], "book_pages": [805]}, "toc": {"name": "升麻汤", "book_page": 805}}
+{"id": "16565", "name": "乌头丸", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [967], "book_pages": [883]}, "toc": {"name": "乌头丸", "book_page": 883}}
+{"id": "16711", "name": "乌鸡腥", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [986], "book_pages": [902]}, "toc": {"name": "乌鸡腊", "book_page": 902}}
+{"id": "16913", "name": "乌扇膏", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1011], "book_pages": [927]}, "toc": {"name": "乌扇章", "book_page": 927}}
+{"id": "17025", "name": "乌梅散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [1025, 1026], "book_pages": [941, 942]}, "toc": {"name": "乌梅散", "book_page": 941}}
+{"id": "17081", "name": "乌蛇散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [1034], "book_pages": [950]}, "toc": {"name": "乌蛇散", "book_page": 950}}
+{"id": "17171", "name": "乌婴膏", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1047], "book_pages": [963]}, "toc": {"name": "乌翠膏", "book_page": 963}}
+{"id": "17340", "name": "乌梅丹砂丸", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [1069], "book_pages": [985]}, "toc": {"name": "乌梅丹砂丸", "book_page": 985}}
+{"id": "17351", "name": "乌梅定痛汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [1070], "book_pages": [986]}, "toc": {"name": "乌梅定痛汤", "book_page": 986}}
+{"id": "17367", "name": "乌癞白癞丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1072], "book_pages": [988]}, "toc": {"name": "乌癫白癫丸", "book_page": 988}}
+{"id": "17447", "name": "丹参丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1081, 1082], "book_pages": [997, 998]}, "toc": {"name": "丹参丸 L66", "book_page": null}}
+{"id": "17582", "name": "丹砂散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1098], "book_pages": [1014]}, "toc": {"name": "1014", "book_page": null}}
+{"id": "17613", "name": "丹铅丹", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1103], "book_pages": [1019]}, "toc": {"name": "丹讼丹", "book_page": 1019}}
+{"id": "17746", "name": "凤凰露", "flags": ["name_repaired_by_independent_ocr_consensus"], "source": {"volume": 2, "pdf_pages": [1119], "book_pages": [1035]}, "toc": {"name": "凤凰露", "book_page": 1035}}
+{"id": "17797", "name": "六圣散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1125], "book_pages": [1041]}, "toc": {"name": "六圣散……………1", "book_page": 1041}}
+{"id": "17837", "name": "六味丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1129], "book_pages": [1045]}, "toc": {"name": "六昧丸", "book_page": 1045}}
+{"id": "17847", "name": "六味脸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1130], "book_pages": [1046]}, "toc": {"name": "六味脍", "book_page": 1046}}
+{"id": "17927", "name": "六神散", "flags": ["name_differs_from_toc", "missing_source_field"], "source": {"volume": 2, "pdf_pages": [1139, 1140], "book_pages": [1055, 1056]}, "toc": {"name": "1055", "book_page": null}}
+{"id": "18087", "name": "文圣散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1158], "book_pages": [1074]}, "toc": {"name": "1074", "book_page": null}}
+{"id": "18133", "name": "火软丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1162], "book_pages": [1078]}, "toc": {"name": "火核丸", "book_page": 1078}}
+{"id": "18162", "name": "火筒散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1165], "book_pages": [1081]}, "toc": {"name": "火简散", "book_page": 1081}}
+{"id": "18174", "name": "火毒加味四物汤", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [1167], "book_pages": [1083]}, "toc": {"name": "火毒加味四物", "book_page": null}}
+{"id": "18311", "name": "双鳌丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1182], "book_pages": [1098]}, "toc": {"name": "双鳖丸", "book_page": 1098}}
+{"id": "18408", "name": "巴豆丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1195], "book_pages": [1111]}, "toc": {"name": "1111", "book_page": null}}
+{"id": "18434", "name": "巴戟丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1197], "book_pages": [1113]}, "toc": {"name": "1113", "book_page": null}}
+{"id": "18446", "name": "巴戟丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1199, 1200], "book_pages": [1115, 1116]}, "toc": {"name": "1115", "book_page": null}}
+{"id": "18469", "name": "巴霜顶", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1202], "book_pages": [1118]}, "toc": {"name": "巴籍顶", "book_page": 1118}}
+{"id": "18488", "name": "巴戟天酒", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [1204, 1205], "book_pages": [1120, 1121]}, "toc": {"name": "巴戟天酒", "book_page": 1120}}
+{"id": "18492", "name": "巴戟天散", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [1205], "book_pages": [1121]}, "toc": {"name": "巴戟天散", "book_page": 1121}}
+{"id": "18510", "name": "水火散", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1207], "book_pages": [1123]}, "toc": {"name": "水火散 **·.**", "book_page": 1123}}
+{"id": "18551", "name": "水肿饮", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1212], "book_pages": [1128]}, "toc": {"name": "1128", "book_page": null}}
+{"id": "18553", "name": "水府丹", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1212], "book_pages": [1128]}, "toc": {"name": "1128", "book_page": null}}
+{"id": "18672", "name": "水照丸", "flags": ["missing_source_field"], "source": {"volume": 2, "pdf_pages": [1226, 1227], "book_pages": [1142, 1143]}, "toc": {"name": "水照丸", "book_page": 1142}}
+{"id": "18684", "name": "水蓼丹", "flags": ["header_repaired_from_pdf_or_toc"], "source": {"volume": 2, "pdf_pages": [1228], "book_pages": [1144]}, "toc": {"name": "水蓼丹", "book_page": 1144}}
+{"id": "18702", "name": "水瓢丸", "flags": ["missing_source_field"], "source": {"volume": 2, "pdf_pages": [1230], "book_pages": [1146]}, "toc": {"name": "水瓢丸", "book_page": 1146}}
+{"id": "18703", "name": "水瓢丸", "flags": ["name_differs_from_toc"], "source": {"volume": 2, "pdf_pages": [1230], "book_pages": [1146]}, "toc": {"name": "水赢丸", "book_page": 1146}}
+{"id": "18751", "name": "水银葶苈丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [1235, 1236], "book_pages": [1151, 1152]}, "toc": null}
+{"id": "18752", "name": "水煮木香丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [1236], "book_pages": [1152]}, "toc": null}
+{"id": "18753", "name": "水煮木香丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [1236], "book_pages": [1152]}, "toc": null}
+{"id": "18754", "name": "水煮木香丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [1236], "book_pages": [1152]}, "toc": null}
+{"id": "18755", "name": "水煮木香丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [1236], "book_pages": [1152]}, "toc": null}
+{"id": "18756", "name": "水煮木香丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [1236], "book_pages": [1152]}, "toc": null}
+{"id": "18757", "name": "水煮木香丸", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [1236, 1237], "book_pages": [1152, 1153]}, "toc": null}
+{"id": "18758", "name": "水煮平胃散", "flags": ["missing_from_parsed_toc"], "source": {"volume": 2, "pdf_pages": [1237], "book_pages": [1153]}, "toc": null}
+{"id": "18767", "name": "水溶金丝膏", "flags": ["low_confidence_line"], "source": {"volume": 2, "pdf_pages": [1238], "book_pages": [1154]}, "toc": {"name": "水溶金丝膏", "book_page": 1154}}
