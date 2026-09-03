@@ -26,6 +26,7 @@ venv/
 pcm_web-master_hyd/dist/
 pcm_cms-master_hyd/dist/
 pcm_doctor_web/dist/
+pcm-master_hyd/var/
 
 # Local runtime and generated logs
 *.log

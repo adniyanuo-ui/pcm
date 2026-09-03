@@ -2,7 +2,12 @@ import datetime
 import json
 import uuid
 
-from llm.cms.serializers import ReviseSerializer, ShowChatSerializer, ShowChatOneSerializer
+from llm.cms.serializers import (
+    FormulaSearchRequestSerializer,
+    ReviseSerializer,
+    ShowChatSerializer,
+    ShowChatOneSerializer,
+)
 from llm.models import Revise, Record
 from llm_utils.client import model_name2client
 from llm_utils.prompt import v1
@@ -10,7 +15,11 @@ from patient.models import Patient, Answer
 from tools.resp import get_response
 from tools.viewset import ModelViewSet
 from django.http import StreamingHttpResponse
+from django.conf import settings
 from rest_framework.exceptions import APIException
+from rest_framework import status
+
+from llm_utils.rag import FormulaRetriever, RetrievalQuery
 
 
 class ReviseView(ModelViewSet):
@@ -42,6 +51,65 @@ class ReviseView(ModelViewSet):
         revise_li = [revise] + [Revise(p=revise.p, created_time=datetime.datetime.now())]
         serializer = self.get_serializer(revise_li, many=True)
         return get_response(data=serializer.data, msg="保存成功")
+
+
+class FormulaSearchView(ModelViewSet):
+    """返回有辞典原文和页码依据的候选基础方，不生成最终诊断或处方。"""
+
+    http_method_names = ["get", "post"]
+
+    @staticmethod
+    def _retriever():
+        return FormulaRetriever(settings.RAG_INDEX_PATH)
+
+    def list(self, request, *args, **kwargs):
+        try:
+            metadata = self._retriever().metadata()
+            safe_metadata = {
+                key: metadata.get(key)
+                for key in (
+                    "schema_version",
+                    "built_at",
+                    "indexed_records",
+                    "excluded_records",
+                    "syndrome_terms",
+                    "syndrome_links",
+                    "corpus_sha256",
+                )
+            }
+            return get_response({"ready": True, "index": safe_metadata})
+        except FileNotFoundError:
+            return get_response(
+                {
+                    "ready": False,
+                    "message": "方剂索引尚未构建，请先执行 python manage.py build_fangji_index",
+                }
+            )
+
+    def create(self, request, *args, **kwargs):
+        serializer = FormulaSearchRequestSerializer(data=request.data)
+        if not serializer.is_valid():
+            return get_response(
+                code=400,
+                msg=str(serializer.errors),
+                status_code=status.HTTP_400_BAD_REQUEST,
+            )
+        try:
+            query = RetrievalQuery.from_mapping(serializer.validated_data)
+            result = self._retriever().search(query)
+        except ValueError as exc:
+            return get_response(
+                code=400,
+                msg=str(exc),
+                status_code=status.HTTP_400_BAD_REQUEST,
+            )
+        except FileNotFoundError as exc:
+            return get_response(
+                code=503,
+                msg=str(exc),
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            )
+        return get_response(result, msg="候选方检索完成")
 
 
 class ChatView(ModelViewSet):

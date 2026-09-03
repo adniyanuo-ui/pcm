@@ -51,3 +51,47 @@ export interface PrescriptionItem {
   dose: string
   note: string
 }
+
+export interface RagSearchPayload {
+  free_text?: string
+  symptoms?: string[]
+  tongue?: string[]
+  pulse?: string[]
+  complexion?: string[]
+  voice?: string[]
+  mechanisms?: string[]
+  syndromes?: string[]
+  treatments?: string[]
+  formula_names?: string[]
+  doctor_notes?: string[]
+  top_k?: number
+}
+
+export interface RagApiCandidate {
+  id: string
+  name: string
+  retrieval_score: number
+  evidence_coverage: number
+  match_reasons: string[]
+  matched_terms: Record<string, string[]>
+  syndrome_index_hits: Array<Record<string, unknown>>
+  fields: Record<string, string>
+  truncated_fields: string[]
+  source: {
+    volume: number
+    pdf_pages: number[]
+    book_pages: number[]
+    citation: string
+  }
+  quality_flags: string[]
+}
+
+export interface RagSearchResult {
+  query: RagSearchPayload
+  candidates: RagApiCandidate[]
+  retrieval: {
+    candidate_pool: number
+    returned: number
+    score_note: string
+  }
+}

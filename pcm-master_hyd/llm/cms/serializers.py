@@ -156,3 +156,38 @@ class ShowChatOneSerializer(serializers.ModelSerializer):
         fields = [
             "id", "model_name", "runtime", "output", "system", "reasoning", "user", "revise_output"
         ]
+
+
+def _query_list_field():
+    return serializers.ListField(
+        child=serializers.CharField(max_length=240, trim_whitespace=True),
+        required=False,
+        default=list,
+        max_length=20,
+    )
+
+
+class FormulaSearchRequestSerializer(serializers.Serializer):
+    free_text = serializers.CharField(
+        required=False, default="", allow_blank=True, max_length=1000, trim_whitespace=True
+    )
+    symptoms = _query_list_field()
+    tongue = _query_list_field()
+    pulse = _query_list_field()
+    complexion = _query_list_field()
+    voice = _query_list_field()
+    mechanisms = _query_list_field()
+    syndromes = _query_list_field()
+    treatments = _query_list_field()
+    formula_names = _query_list_field()
+    doctor_notes = _query_list_field()
+    top_k = serializers.IntegerField(required=False, default=5, min_value=1, max_value=20)
+
+    def validate(self, attrs):
+        query_fields = (
+            "free_text", "symptoms", "tongue", "pulse", "complexion", "voice",
+            "mechanisms", "syndromes", "treatments", "formula_names", "doctor_notes",
+        )
+        if not any(attrs.get(field) for field in query_fields):
+            raise serializers.ValidationError("至少提供一项检索信息")
+        return attrs

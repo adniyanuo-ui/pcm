@@ -9,6 +9,9 @@ const selectedId = defineModel<string>({ required: true })
 defineProps<{
   candidates: FormulaCandidate[]
   stale: boolean
+  loading: boolean
+  candidatePool: number
+  dataMode: 'demo' | 'live'
 }>()
 
 defineEmits<{
@@ -31,15 +34,24 @@ function showOriginal(candidate: FormulaCandidate) {
       <div>
         <span class="section-kicker">第 4 步 · 方从法出</span>
         <h2>候选基础方</h2>
-        <p>按“益气健脾”及已确认的四诊信息检索，共召回 126 条，重排后展示前 3 条。</p>
+        <p>
+          按已确认的四诊、病机与治法检索，
+          <template v-if="dataMode === 'live'">共召回 {{ candidatePool }} 条，重排后展示前 {{ candidates.length }} 条。</template>
+          <template v-else>当前展示内置演示结果，配置 API 后切换为真实辞典检索。</template>
+        </p>
       </div>
-      <button class="refresh-button" :class="{ urgent: stale }" type="button" @click="$emit('refresh')">
+      <span class="data-mode-badge" :class="dataMode">{{ dataMode === 'live' ? '真实检索' : '演示数据' }}</span>
+      <button class="refresh-button" :class="{ urgent: stale }" type="button" :disabled="loading" @click="$emit('refresh')">
         <el-icon><RefreshRight /></el-icon>
-        {{ stale ? '信息已变更，重新检索' : '重新检索' }}
+        {{ loading ? '检索中…' : stale ? '信息已变更，重新检索' : '重新检索' }}
       </button>
     </div>
 
-    <div class="formula-list">
+    <div v-if="loading" class="formula-loading">
+      <i v-for="item in 3" :key="item"></i>
+      <p>正在检索辞典原文并重排候选方…</p>
+    </div>
+    <div v-else class="formula-list">
       <article
         v-for="(candidate, index) in candidates"
         :key="candidate.id"
@@ -59,7 +71,7 @@ function showOriginal(candidate: FormulaCandidate) {
               <h3>{{ candidate.name }}</h3>
               <span>方号 {{ candidate.id }} · {{ candidate.source }}</span>
             </div>
-            <div class="match-score"><strong>{{ candidate.match }}</strong><small>匹配度</small></div>
+            <div class="match-score"><strong>{{ candidate.match }}</strong><small>% 证据覆盖</small></div>
           </div>
           <p class="formula-summary">{{ candidate.summary }}</p>
 

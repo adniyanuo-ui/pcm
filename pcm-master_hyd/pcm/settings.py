@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+from importlib.util import find_spec
 from pathlib import Path
 import redis
 
@@ -198,6 +199,23 @@ wx_env = ""
 
 pdf_dir = ""
 
+# ========================== 方剂 RAG
+RAG_CORPUS_PATH = Path(
+    os.getenv(
+        "PCM_RAG_CORPUS_PATH",
+        BASE_DIR.parent / "dacidian_text" / "corpus" / "fangji_entries.jsonl",
+    )
+)
+RAG_SYNDROME_INDEX_PATH = Path(
+    os.getenv(
+        "PCM_RAG_SYNDROME_INDEX_PATH",
+        BASE_DIR.parent / "dacidian_text" / "volume_11" / "volume_11_syndrome_index.jsonl",
+    )
+)
+RAG_INDEX_PATH = Path(
+    os.getenv("PCM_RAG_INDEX_PATH", BASE_DIR / "var" / "rag" / "fangji.sqlite3")
+)
+
 # ========================== redis
 REDIS_HOST = os.getenv("PCM_REDIS_HOST", "127.0.0.1")
 REDIS_PORT = os.getenv("PCM_REDIS_PORT", "6379")
@@ -208,7 +226,10 @@ HOST = os.getenv("PCM_PUBLIC_URL", "http://127.0.0.1")
 currant_env = os.getenv("PCM_ENV", os.getenv("CURRANT_ENV", "local"))
 print("currant_env...", currant_env)
 if currant_env == "local":
-    from .settings_local import *
+    if find_spec("pcm.settings_local"):
+        from .settings_local import *
+    else:
+        from .settings_dev import *
 elif currant_env == "test":
     from .settings_test import *
 elif currant_env == "prod":

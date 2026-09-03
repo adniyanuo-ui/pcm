@@ -61,6 +61,258 @@ textarea:focus-visible {
   min-height: 100vh;
 }
 
+.login-page {
+  display: grid;
+  grid-template-columns: minmax(460px, 1.08fr) minmax(420px, 0.92fr);
+  min-height: 100vh;
+  background: var(--paper);
+}
+
+.login-intro {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 42px 7vw 48px 46px;
+  color: white;
+  background:
+    radial-gradient(circle at 16% 82%, rgba(211, 180, 111, 0.2), transparent 27%),
+    radial-gradient(circle at 82% 15%, rgba(120, 180, 155, 0.17), transparent 26%),
+    linear-gradient(145deg, #123f32 0%, #0c2f27 100%);
+}
+
+.login-intro::before,
+.login-intro::after {
+  position: absolute;
+  border: 1px solid rgba(219, 234, 226, 0.12);
+  border-radius: 50%;
+  content: "";
+}
+
+.login-intro::before {
+  top: -220px;
+  right: -170px;
+  width: 520px;
+  height: 520px;
+  box-shadow:
+    0 0 0 70px rgba(255, 255, 255, 0.018),
+    0 0 0 140px rgba(255, 255, 255, 0.014);
+}
+
+.login-intro::after {
+  bottom: -280px;
+  left: -170px;
+  width: 520px;
+  height: 520px;
+  box-shadow: 0 0 0 90px rgba(255, 255, 255, 0.018);
+}
+
+.login-brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.login-brand > span {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 11px;
+  color: white;
+  background: var(--cinnabar);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.26);
+  font: 700 24px "STKaiti", "KaiTi", serif;
+}
+
+.login-brand p,
+.login-brand small {
+  display: block;
+  margin: 0;
+}
+
+.login-brand p {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.login-brand small {
+  margin-top: 3px;
+  color: #a9c4b8;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}
+
+.intro-copy {
+  position: relative;
+  z-index: 1;
+  width: min(550px, 90%);
+}
+
+.intro-copy em {
+  color: #c8d9d1;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.intro-copy h1 {
+  margin: 17px 0 22px;
+  font: 500 clamp(44px, 5.2vw, 72px)/1.2 "STKaiti", "KaiTi", serif;
+  letter-spacing: 0.03em;
+}
+
+.intro-copy p {
+  max-width: 480px;
+  margin: 0;
+  color: #abc0b7;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.intro-flow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #b9cec5;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+.intro-flow i {
+  width: 28px;
+  height: 1px;
+  background: rgba(197, 217, 208, 0.4);
+}
+
+.login-form-side {
+  display: grid;
+  place-items: center;
+  padding: 40px;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(185, 148, 80, 0.07), transparent 30%),
+    #fbfaf6;
+}
+
+.login-card {
+  width: min(390px, 100%);
+  padding: 38px;
+  border: 1px solid #e2dfd5;
+  border-radius: 18px;
+  background: rgba(255, 254, 250, 0.94);
+  box-shadow: 0 22px 60px rgba(42, 55, 49, 0.1);
+}
+
+.login-card h2 {
+  margin: 7px 0 5px;
+  color: var(--ink);
+  font: 700 30px "STKaiti", "KaiTi", serif;
+}
+
+.login-card > p {
+  margin: 0 0 28px;
+  color: #89938e;
+  font-size: 11px;
+}
+
+.login-card > label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.login-card > label > span {
+  display: block;
+  margin: 0 0 7px 2px;
+  color: #5f6e67;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.login-input {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 8px;
+  align-items: center;
+  height: 47px;
+  padding: 0 13px;
+  border: 1px solid #dddcd4;
+  border-radius: 9px;
+  color: #86928c;
+  background: white;
+  transition: 150ms ease;
+}
+
+.login-input:focus-within {
+  border-color: #7fa896;
+  box-shadow: 0 0 0 3px rgba(23, 107, 82, 0.08);
+}
+
+.login-input input {
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  color: #2e4138;
+  background: transparent;
+  font-size: 12px;
+}
+
+.login-input input:focus {
+  outline: 0;
+}
+
+.login-input input::placeholder {
+  color: #b1b7b4;
+}
+
+.login-error {
+  margin: -4px 0 13px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  color: #9c3f2d;
+  background: var(--cinnabar-soft);
+  font-size: 10px;
+}
+
+.login-submit {
+  width: 100%;
+  height: 47px;
+  margin-top: 4px;
+  border: 0;
+  border-radius: 9px;
+  color: white;
+  background: var(--green);
+  box-shadow: 0 7px 20px rgba(23, 107, 82, 0.2);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-submit:hover {
+  background: var(--green-dark);
+}
+
+.login-submit:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.login-card > small {
+  display: block;
+  margin-top: 16px;
+  color: #a0a7a3;
+  font-size: 9px;
+  text-align: center;
+}
+
 .visit-header {
   position: sticky;
   z-index: 20;
@@ -986,7 +1238,74 @@ textarea:focus-visible {
 }
 
 .formula-heading {
+  gap: 10px;
   margin-bottom: 16px;
+}
+
+.formula-heading > div:first-child {
+  margin-right: auto;
+}
+
+.data-mode-badge {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border: 1px solid;
+  border-radius: 99px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.data-mode-badge.demo {
+  border-color: #e1c98f;
+  color: #87621f;
+  background: var(--amber-soft);
+}
+
+.data-mode-badge.live {
+  border-color: #b9d4c8;
+  color: var(--green);
+  background: var(--green-soft);
+}
+
+.refresh-button:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
+.formula-loading {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  min-height: 360px;
+}
+
+.formula-loading i {
+  display: block;
+  height: 96px;
+  border: 1px solid #e6e4dc;
+  border-radius: 13px;
+  background: linear-gradient(90deg, #f6f5ef 20%, #fbfaf6 40%, #f6f5ef 60%);
+  background-size: 220% 100%;
+  animation: loading-sheen 1.4s ease-in-out infinite;
+}
+
+.formula-loading p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #66746e;
+  background: rgba(255, 254, 250, 0.92);
+  box-shadow: 0 5px 18px rgba(42, 58, 51, 0.08);
+  font-size: 10px;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes loading-sheen {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
 }
 
 .formula-list {
@@ -1473,6 +1792,26 @@ textarea:focus-visible {
 }
 
 @media (max-width: 900px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+  .login-intro {
+    min-height: 320px;
+    padding: 28px 30px;
+  }
+  .intro-copy {
+    margin: 50px 0 35px;
+  }
+  .intro-copy h1 {
+    margin: 10px 0;
+    font-size: 42px;
+  }
+  .intro-copy p {
+    max-width: 560px;
+  }
+  .login-form-side {
+    padding: 42px 20px 60px;
+  }
   .visit-header { position: static; grid-template-columns: 1fr auto; gap: 10px; }
   .patient-strip { grid-column: 1 / -1; grid-row: 2; justify-self: stretch; min-width: 0; }
   .quiet-button { font-size: 0; }
@@ -1489,6 +1828,33 @@ textarea:focus-visible {
 }
 
 @media (max-width: 600px) {
+  .login-intro {
+    min-height: 270px;
+    padding: 22px;
+  }
+  .intro-copy {
+    width: 100%;
+    margin: 34px 0 22px;
+  }
+  .intro-copy h1 {
+    font-size: 34px;
+  }
+  .intro-copy p {
+    font-size: 11px;
+  }
+  .intro-flow {
+    gap: 7px;
+    font-size: 8px;
+  }
+  .intro-flow i {
+    width: 13px;
+  }
+  .login-form-side {
+    padding: 25px 14px 50px;
+  }
+  .login-card {
+    padding: 27px 22px;
+  }
   .visit-header { padding: 10px 13px; }
   .brand-eyebrow { display: none; }
   .brand-block h1 { font-size: 19px; }
