@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Lock, User } from '@element-plus/icons-vue'
-import { loginCms } from '../api/rag'
+import { loginCms } from '../api/client'
 
 const emit = defineEmits<{
   authenticated: []

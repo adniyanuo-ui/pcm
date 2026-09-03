@@ -18,15 +18,10 @@ import {
   initialPrescription,
   stages,
 } from './data/demo'
-import {
-  AuthenticationRequiredError,
-  hasCmsToken,
-  isRagApiConfigured,
-  searchFormulas,
-  toFormulaCandidate,
-} from './api/rag'
+import { AuthenticationRequiredError, hasCmsToken, isApiConfigured } from './api/client'
+import { searchFormulas, toFormulaCandidate } from './api/rag'
 
-const apiConfigured = isRagApiConfigured()
+const apiConfigured = isApiConfigured()
 const authenticated = ref(!apiConfigured || hasCmsToken())
 const currentStep = ref(0)
 const confirmed = reactive(stages.map(() => false))
@@ -41,6 +36,7 @@ const prescriptionVisible = ref(false)
 const retrievalLoading = ref(false)
 const retrievalPool = ref(126)
 const dataMode = ref<'demo' | 'live'>('demo')
+const rawTranscript = ref('')
 
 const selectedFormula = computed(() => formulaCandidates.value.find((item) => item.id === selectedFormulaId.value))
 
@@ -52,6 +48,17 @@ function confirmStep(index: number, next = index + 1) {
   confirmed[index] = true
   currentStep.value = Math.min(next, stages.length - 1)
   window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+function confirmIntake() {
+  if (apiConfigured && rawTranscript.value.trim()) {
+    const inquiry = examinations.value.find((item) => item.key === '问')
+    if (inquiry) {
+      inquiry.value = rawTranscript.value.trim()
+      inquiry.source = '录音原文 · 待AI整理'
+    }
+  }
+  confirmStep(0)
 }
 
 function markClinicalDataChanged() {
@@ -71,7 +78,7 @@ function examinationValue(key: string): string[] {
 
 async function retrieveFormulas() {
   downstreamStale.value = false
-  if (!isRagApiConfigured()) {
+  if (!isApiConfigured()) {
     dataMode.value = 'demo'
     formulaCandidates.value = demoFormulaCandidates.map((item) => ({ ...item }))
     selectedFormulaId.value = formulaCandidates.value[0].id
@@ -145,7 +152,13 @@ function completeVisit() {
         </div>
 
         <Transition name="stage-fade" mode="out-in">
-          <VoiceIntake v-if="currentStep === 0" key="intake" @confirm="confirmStep(0)" />
+          <VoiceIntake
+            v-if="currentStep === 0"
+            key="intake"
+            :live-speech="apiConfigured"
+            @transcript-change="rawTranscript = $event"
+            @confirm="confirmIntake"
+          />
 
           <FourExaminations
             v-else-if="currentStep === 1"

@@ -234,6 +234,8 @@ elif currant_env == "test":
     from .settings_test import *
 elif currant_env == "prod":
     from .settings_prod import *
+elif currant_env == "pilot":
+    from .settings_pilot import *
 
 # ========================= celery
 CELERY_TIMEZONE = "Asia/Shanghai"
@@ -252,3 +254,9 @@ redis_cli = redis.Redis(
 # ======================== appkey
 ALI_AK = os.getenv("ALIYUN_ACCESS_KEY_ID", "")
 ALI_AK_SECRET = os.getenv("ALIYUN_ACCESS_KEY_SECRET", "")
+ALIYUN_NLS_APPKEY = os.getenv("ALIYUN_NLS_APPKEY", "")
+ALIYUN_NLS_REGION = os.getenv("ALIYUN_NLS_REGION", "cn-shanghai")
+ALIYUN_NLS_GATEWAY = os.getenv(
+    "ALIYUN_NLS_GATEWAY",
+    "wss://nls-gateway.cn-shanghai.aliyuncs.com/ws/v1",
+)

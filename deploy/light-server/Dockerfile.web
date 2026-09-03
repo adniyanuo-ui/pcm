@@ -1,0 +1,14 @@
+FROM node:24-alpine AS builder
+
+ARG VITE_API_BASE_URL
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+
+WORKDIR /web
+COPY pcm_doctor_web/package.json pcm_doctor_web/package-lock.json ./
+RUN npm ci
+COPY pcm_doctor_web/ ./
+RUN npm run build
+
+FROM caddy:2-alpine
+COPY deploy/light-server/Caddyfile /etc/caddy/Caddyfile
+COPY --from=builder /web/dist /srv

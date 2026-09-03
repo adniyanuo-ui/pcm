@@ -4,10 +4,12 @@ import json
 
 import requests
 import qrcode
+from django.conf import settings
+from django.core.exceptions import ImproperlyConfigured
 from django.db import models
 
 # Create your models here.
-from pcm.settings import wx_env, ALI_AK, ALI_AK_SECRET, HOST
+from pcm.settings import wx_env, HOST
 from tools.base_model import BaseModel
 from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
@@ -77,29 +79,37 @@ class Token(BaseModel):
         """
         key = "ali_speech"
         obj = cls.objects.filter(key=key).first()
-        if obj and obj.expire_time > datetime.datetime.now() - datetime.timedelta(hours=1):
+        refresh_before = datetime.datetime.now() + datetime.timedelta(minutes=5)
+        if obj and obj.expire_time > refresh_before:
             return obj.token
 
-        client = AcsClient(ALI_AK, ALI_AK_SECRET, "cn-shanghai")
+        access_key_id = settings.ALI_AK
+        access_key_secret = settings.ALI_AK_SECRET
+        if not access_key_id or not access_key_secret:
+            raise ImproperlyConfigured(
+                "缺少 ALIYUN_ACCESS_KEY_ID 或 ALIYUN_ACCESS_KEY_SECRET"
+            )
+
+        region = settings.ALIYUN_NLS_REGION
+        client = AcsClient(access_key_id, access_key_secret, region)
 
         request = CommonRequest()
         request.set_method('POST')
-        request.set_domain('nls-meta.cn-shanghai.aliyuncs.com')
+        request.set_domain(f'nls-meta.{region}.aliyuncs.com')
         request.set_version('2019-02-28')
         request.set_action_name('CreateToken')
 
-        token = ""
+        response = client.do_action_with_exception(request)
+        payload = json.loads(response)
         try:
-            response = client.do_action_with_exception(request)
+            token = payload['Token']['Id']
+            expire_timestamp = int(payload['Token']['ExpireTime'])
+        except (KeyError, TypeError, ValueError) as exc:
+            raise RuntimeError("阿里云语音Token响应格式异常") from exc
 
-            jss = json.loads(response)
-            token = jss['Token']['Id']
-            expire_time = jss['Token']['ExpireTime']
-            # 转换时间
-            expire_time = datetime.datetime(1970, 1, 1) + datetime.timedelta(seconds=int(expire_time))
-
-            cls.objects.update_or_create(key=key, defaults=dict(token=token, expire_time=expire_time))
-        except Exception as e:
-            print(e)
-
+        expire_time = datetime.datetime.fromtimestamp(expire_timestamp)
+        cls.objects.update_or_create(
+            key=key,
+            defaults={"token": token, "expire_time": expire_time},
+        )
         return token

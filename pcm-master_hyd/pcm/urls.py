@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
+from pcm.health import health
 
 urlpatterns = [
+    path(r'api/health/', health, name='health'),
     # path('admin/', admin.site.urls),
     # web
     path(r'api/question/', include(('question.web.urls', 'question'), namespace='question')),

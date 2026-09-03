@@ -1,0 +1,55 @@
+name: pcm-pilot
+
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: deploy/light-server/Dockerfile.api
+    env_file:
+      - ${PCM_ENV_FILE:-.env}
+    environment:
+      GUNICORN_WORKERS: "1"
+      GUNICORN_THREADS: "4"
+      GUNICORN_TIMEOUT: "180"
+    volumes:
+      - pcm_data:/app/var
+    expose:
+      - "8000"
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; r=urllib.request.Request('http://127.0.0.1:8000/api/health/', headers={'X-Forwarded-Proto':'https'}); urllib.request.urlopen(r, timeout=3)"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+
+  web:
+    build:
+      context: ../..
+      dockerfile: deploy/light-server/Dockerfile.web
+      args:
+        VITE_API_BASE_URL: "https://${PCM_DOMAIN}"
+    environment:
+      PCM_DOMAIN: "${PCM_DOMAIN}"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  pcm_data:
+  caddy_data:
+  caddy_config:

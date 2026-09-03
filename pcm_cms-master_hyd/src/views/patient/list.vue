@@ -308,6 +308,7 @@ export default {
 
             websocket: null,
             token: null,
+            speech_appkey: null,
             record_text_map: {},
             audioContext: null,
             scriptProcessor: null,
@@ -676,9 +677,11 @@ export default {
         async connectWebSocket() {
             await on_token().then(response => {
                 this.token = response.data.token
+                this.speech_appkey = response.data.appkey
                 // console.log(response.data)
                 // console.log("token = " + this.token)
-                const socketUrl = `wss://nls-gateway.cn-shanghai.aliyuncs.com/ws/v1?token=${this.token}`;
+                const socketUrl = `${response.data.gateway}?token=${this.token}`;
+                const speechAppkey = this.speech_appkey
 
                 let websocket = new WebSocket(socketUrl);
                 this.websocket = websocket
@@ -687,7 +690,7 @@ export default {
 
                     var startTranscriptionMessage = {
                         header: {
-                            appkey: "8FX6XaxMFH1abv6t",
+                            appkey: speechAppkey,
                             namespace: "SpeechTranscriber",
                             name: "StartTranscription",
                             task_id: ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>

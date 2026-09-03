@@ -18,7 +18,7 @@ defineEmits<{
       <div>
         <span class="section-kicker">第 2 步 · 信息必须由大夫确认</span>
         <h2>四诊合参</h2>
-        <p>AI 已从对话中整理“问诊”，望、闻、切诊由大夫补充。点击卡片即可修改。</p>
+        <p>系统已将录音内容带入“问诊”，望、闻、切诊由大夫补充；所有内容都可直接修改。</p>
       </div>
       <span class="source-legend"><i></i> 带来源记录</span>
     </div>

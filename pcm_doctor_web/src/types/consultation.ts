@@ -9,7 +9,7 @@ export interface StageDefinition {
 
 export interface TranscriptLine {
   id: number
-  role: '医生' | '患者'
+  role: '医生' | '患者' | '对话'
   time: string
   content: string
 }

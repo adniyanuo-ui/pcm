@@ -1,0 +1,26 @@
+FROM python:3.13-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+WORKDIR /app
+
+COPY pcm-master_hyd/requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+COPY pcm-master_hyd /app
+COPY dacidian_text/corpus/fangji_entries.jsonl /knowledge/fangji_entries.jsonl
+COPY dacidian_text/volume_11/volume_11_syndrome_index.jsonl /knowledge/syndrome_index.jsonl
+COPY deploy/light-server/api-entrypoint.sh /usr/local/bin/pcm-api-entrypoint
+
+RUN adduser --system --uid 10001 --group pcm \
+    && mkdir -p /app/var/rag \
+    && chown -R pcm:pcm /app/var \
+    && chmod 755 /usr/local/bin/pcm-api-entrypoint
+
+USER pcm
+
+EXPOSE 8000
+
+ENTRYPOINT ["pcm-api-entrypoint"]
