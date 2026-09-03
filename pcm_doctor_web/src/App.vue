@@ -18,7 +18,13 @@ import {
   initialPrescription,
   stages,
 } from './data/demo'
-import { hasCmsToken, isRagApiConfigured, searchFormulas, toFormulaCandidate } from './api/rag'
+import {
+  AuthenticationRequiredError,
+  hasCmsToken,
+  isRagApiConfigured,
+  searchFormulas,
+  toFormulaCandidate,
+} from './api/rag'
 
 const apiConfigured = isRagApiConfigured()
 const authenticated = ref(!apiConfigured || hasCmsToken())
@@ -93,6 +99,7 @@ async function retrieveFormulas() {
     ElMessage.success('已从辞典召回并重排 ' + result.retrieval.candidate_pool + ' 条候选')
   } catch (error) {
     const message = error instanceof Error ? error.message : '真实检索失败'
+    if (error instanceof AuthenticationRequiredError) authenticated.value = false
     ElMessage.error(message)
   } finally {
     retrievalLoading.value = false

@@ -47,6 +47,7 @@ python -m venv .venv
 .venv/bin/pip install -r requirements.txt
 .venv/bin/python manage.py migrate
 .venv/bin/python -m llm_utils.rag build
+.venv/bin/python manage.py createsuperuser
 .venv/bin/python manage.py runserver
 ~~~
 

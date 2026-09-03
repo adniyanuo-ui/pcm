@@ -53,7 +53,7 @@ class LoginView(ModelViewSet):
             raise APIException('认证失败')
 
         t = token.encode({"user_id": user.id, "username": user.username}, key="cms")
-        UserProfile.objects.filter(user_id=user.id).update(token=t)
+        UserProfile.objects.update_or_create(user_id=user.id, defaults={"token": t})
         result = {
             "account": username,
             "token": t,

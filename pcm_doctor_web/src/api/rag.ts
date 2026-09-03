@@ -7,6 +7,8 @@ import type {
 
 const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '')
 
+export class AuthenticationRequiredError extends Error {}
+
 export function isRagApiConfigured(): boolean {
   return Boolean(apiBaseUrl)
 }
@@ -48,6 +50,10 @@ export async function searchFormulas(payload: RagSearchPayload): Promise<RagSear
       signal: controller.signal,
     })
     const body = await response.json()
+    if (response.status === 401 || body.code === 401) {
+      localStorage.removeItem('token')
+      throw new AuthenticationRequiredError('登录状态已失效，请重新登录')
+    }
     if (!response.ok || body.code !== 200) {
       throw new Error(body.detail || body.msg || '检索失败（HTTP ' + response.status + '）')
     }
