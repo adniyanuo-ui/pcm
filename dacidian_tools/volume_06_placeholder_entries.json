@@ -1,0 +1,42 @@
+[
+  {
+    "id_range": [47729, 47734],
+    "default_name": "青龙丸",
+    "force_default_name": true,
+    "pdf_pages": [81],
+    "book_pages": [4],
+    "reason": "源PDF第81页（书页4）为全白页；方名由本册目录和同名连续条目确认，正文待可靠版本补全。"
+  },
+  {
+    "id_range": [49099, 49105],
+    "default_name": "矾石丸",
+    "force_default_name": true,
+    "pdf_pages": [238],
+    "book_pages": [161],
+    "reason": "源PDF第238页（书页161）为全白页；方名由本册目录确认，正文待可靠版本补全。"
+  },
+  {
+    "id": "49106",
+    "name": "矾石汤",
+    "name_source": "audited_table_of_contents",
+    "pdf_pages": [238],
+    "book_pages": [161],
+    "reason": "源PDF第238页（书页161）为全白页；方名由本册目录确认，正文待可靠版本补全。"
+  },
+  {
+    "id_range": [50241, 50250],
+    "default_name": "败毒散",
+    "force_default_name": true,
+    "pdf_pages": [387],
+    "book_pages": [310],
+    "reason": "源PDF第387页（书页310）为全白页；方名由本册目录和同名连续条目确认，正文待可靠版本补全。"
+  },
+  {
+    "id_range": [51183, 51188],
+    "default_name": "知母散",
+    "force_default_name": true,
+    "pdf_pages": [507],
+    "book_pages": [430],
+    "reason": "源PDF第507页（书页430）为全白页；方名由本册目录和同名连续条目确认，正文待可靠版本补全。"
+  }
+]

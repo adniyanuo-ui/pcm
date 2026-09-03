@@ -1,0 +1,67 @@
+[
+  {
+    "pdf_page": 107,
+    "raw_text": "肩背急强。",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "66609 秦艽散",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第106页（书页22）；仅第107页开头的主治末行可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 195,
+    "raw_text": "67322",
+    "region": "right",
+    "line_index": 19,
+    "corrected_header": "67322 桂枝五味甘草去桂加姜辛汤",
+    "note": "扫描原页中编号与方名被OCR拆成两行。"
+  },
+  {
+    "pdf_page": 195,
+    "raw_text": "桂枝五味甘草去桂加姜辛汤",
+    "region": "right",
+    "line_index": 20,
+    "drop_line": true,
+    "note": "已合并到同页上一行的完整标题；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 268,
+    "raw_text": "57914 桃花散",
+    "corrected_header": "67914 桃花散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 381,
+    "raw_text": "68344 热逆汤",
+    "corrected_header": "68844 热逆汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 610,
+    "raw_text": "70500 射干汤",
+    "corrected_header": "70600 射干汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 721,
+    "raw_text": "方",
+    "region": "right",
+    "line_index": 32,
+    "corrected_header": "71547 消毒散",
+    "note": "扫描原页清晰显示71547 消毒散；小模型仅识别出方名末字。"
+  },
+  {
+    "pdf_page": 844,
+    "raw_text": "72.0.7润肺通窍汤",
+    "corrected_header": "72622 润肺通窍汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 936,
+    "raw_text": "73433 调中汤",
+    "corrected_header": "73400 调中汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  }
+]

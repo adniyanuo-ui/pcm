@@ -1,0 +1,357 @@
+[
+  {
+    "pdf_page": 158,
+    "raw_text": "【主治】胸腹痞胀，暖气不食，面浮目黄，心",
+    "region": "left",
+    "line_index": 1,
+    "corrected_header": "56050 枳术蛎椒汤",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第157页（书页56）；仅第158页开头的主治可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 359,
+    "raw_text": "【方源】《回春》卷三。",
+    "region": "left",
+    "line_index": 3,
+    "corrected_header": "57843 茵陈大黄汤",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条标题及前段位于源PDF全白的第358页（书页257）；第359页仅保留可见后半段。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 457,
+    "raw_text": "燥湿汤”之异名。见该条。",
+    "region": "left",
+    "line_index": 2,
+    "corrected_header": "58696 茯苓泻湿汤",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第456页（书页355）；仅第457页开头的末行可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 723,
+    "raw_text": "【主治】牙齿疼痛，往来不歇。",
+    "region": "left",
+    "line_index": 3,
+    "corrected_header": "60952 香附子散",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第722页（书页621）；仅第723页开头的主治可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 915,
+    "raw_text": "大黄以除风燥；如阴寒证，为寒结秘而大便不",
+    "region": "left",
+    "line_index": 2,
+    "corrected_header": "62526 胜灵丹",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第914页（书页813）；仅第915页开头的后半段可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 946,
+    "raw_text": "【主治】疥癣。",
+    "region": "left",
+    "line_index": 1,
+    "corrected_header": "62751 疥癣散",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第945页（书页844）；仅第946页开头的主治可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 1117,
+    "raw_text": "【功效】宣瘰疬风热之毒。",
+    "region": "left",
+    "line_index": 2,
+    "corrected_header": "64095 宣热丹",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第1116页（书页1015）；仅第1117页开头的功用和主治可见。",
+    "note": "根据目录扫描页及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 1161,
+    "raw_text": "【组成】射干山栀子当归防己龙",
+    "region": "left",
+    "line_index": 2,
+    "corrected_header": "64490 祛毒散",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第1160页（书页1059）；仅第1161页开头的组成后段、用法和主治可见。",
+    "note": "根据目录扫描页及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 1305,
+    "raw_text": "梳往来搔之。",
+    "region": "left",
+    "line_index": 2,
+    "corrected_header": "65591 神应比天膏",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第1304页（书页1203）；仅第1305页开头的用法末段和主治可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 103,
+    "raw_text": "珀珠散",
+    "region": "right",
+    "line_index": 5,
+    "corrected_header": "55559 珀珠散",
+    "note": "扫描原页中方名与编号被OCR倒序拆成两行。"
+  },
+  {
+    "pdf_page": 103,
+    "raw_text": "55559",
+    "region": "right",
+    "line_index": 6,
+    "drop_line": true,
+    "note": "已合并到同页上一行的完整标题；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 174,
+    "raw_text": "52612 柏叶散",
+    "corrected_header": "56212 柏叶散",
+    "note": "扫描原页和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 178,
+    "raw_text": "56151 柏枝散",
+    "corrected_header": "56251 柏枝散",
+    "note": "扫描原页和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 421,
+    "raw_text": "5B401 茯苓散",
+    "corrected_header": "58401 茯苓散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 467,
+    "raw_text": "58785",
+    "region": "right",
+    "line_index": 5,
+    "corrected_header": "58785 荏子桔梗丸",
+    "note": "扫描原页中编号与方名被OCR拆成两行；方名按原页修复。"
+  },
+  {
+    "pdf_page": 467,
+    "raw_text": "荏子桔梗丸",
+    "region": "right",
+    "line_index": 6,
+    "drop_line": true,
+    "note": "已合并到同页上一行的完整标题；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 480,
+    "raw_text": "甲809",
+    "region": "right",
+    "line_index": 25,
+    "corrected_header": "58904 药油",
+    "note": "扫描原页清晰显示58904 药油。"
+  },
+  {
+    "pdf_page": 480,
+    "raw_text": "8 9",
+    "region": "right",
+    "line_index": 33,
+    "corrected_header": "58905 药油",
+    "note": "扫描原页清晰显示58905 药油。"
+  },
+  {
+    "pdf_page": 483,
+    "raw_text": "8825",
+    "region": "right",
+    "line_index": 30,
+    "corrected_header": "58928 药粉",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 552,
+    "raw_text": "592995",
+    "region": "left",
+    "line_index": 37,
+    "corrected_header": "59492 面药",
+    "note": "扫描原页清晰显示59492 面药。"
+  },
+  {
+    "pdf_page": 588,
+    "raw_text": "9697",
+    "region": "right",
+    "line_index": 24,
+    "corrected_header": "59799 咽津丹",
+    "note": "扫描原页清晰显示59799 咽津丹。"
+  },
+  {
+    "pdf_page": 595,
+    "raw_text": "851 貼痞膏",
+    "region": "right",
+    "line_index": 3,
+    "corrected_header": "59851 貼痞膏",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 595,
+    "raw_text": "9852 貼痞膏",
+    "region": "right",
+    "line_index": 21,
+    "corrected_header": "59852 貼痞膏",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 595,
+    "raw_text": "9853 貼痛汤",
+    "region": "right",
+    "line_index": 29,
+    "corrected_header": "59853 貼痛汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 607,
+    "raw_text": "·59957 星夏汤",
+    "corrected_header": "59957 星夏汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 809,
+    "raw_text": "61628",
+    "region": "right",
+    "line_index": 38,
+    "corrected_header": "61628 促经汤",
+    "note": "扫描原页中编号与方名被OCR拆成两行。"
+  },
+  {
+    "pdf_page": 809,
+    "raw_text": "促经汤",
+    "region": "right",
+    "line_index": 39,
+    "drop_line": true,
+    "note": "已合并到同页上一行的完整标题；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 890,
+    "raw_text": "61325 独活散",
+    "corrected_header": "62325 独活散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 916,
+    "raw_text": "61535 胜金丸",
+    "corrected_header": "62535 胜金丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 982,
+    "raw_text": "63075 洗痔漏神方",
+    "corrected_header": "63073 洗痔漏神方",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 998,
+    "raw_text": "1",
+    "region": "left",
+    "line_index": 2,
+    "corrected_header": "63187 活命神丹",
+    "note": "扫描原页清晰显示63187 活命神丹。"
+  },
+  {
+    "pdf_page": 1026,
+    "raw_text": "1",
+    "region": "right",
+    "line_index": 10,
+    "corrected_header": "63393 将军百战百胜膏",
+    "note": "扫描原页清晰显示63393 将军百战百胜膏；小模型将标题识别成两个数字碎片。"
+  },
+  {
+    "pdf_page": 1026,
+    "raw_text": "36",
+    "region": "right",
+    "line_index": 11,
+    "drop_line": true,
+    "note": "同页标题的OCR数字碎片；完整标题已在上一行恢复。"
+  },
+  {
+    "pdf_page": 1057,
+    "raw_text": "具61",
+    "region": "right",
+    "line_index": 6,
+    "corrected_header": "63642 首乌汤 1号",
+    "note": "扫描原页清晰显示63642 首乌汤1号。"
+  },
+  {
+    "pdf_page": 1110,
+    "raw_text": "66",
+    "region": "right",
+    "line_index": 32,
+    "corrected_header": "64047 举卿举败散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1114,
+    "raw_text": "54076宣明丸",
+    "corrected_header": "64076 宣明丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1215,
+    "raw_text": "66412",
+    "region": "right",
+    "line_index": 18,
+    "corrected_header": "64919 神应丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1224,
+    "raw_text": "6985",
+    "region": "left",
+    "line_index": 29,
+    "corrected_header": "64989 神妙汤",
+    "note": "扫描原页清晰显示64989 神妙汤。"
+  },
+  {
+    "pdf_page": 1305,
+    "raw_text": "6",
+    "region": "right",
+    "line_index": 19,
+    "corrected_header": "65596 神应夺命丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1306,
+    "raw_text": "9",
+    "region": "right",
+    "line_index": 26,
+    "corrected_header": "65609 神应普济丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1306,
+    "raw_text": "x",
+    "region": "right",
+    "line_index": 27,
+    "drop_line": true,
+    "note": "标题附近的印刷/OCR碎片；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 1308,
+    "raw_text": "46",
+    "region": "left",
+    "line_index": 33,
+    "corrected_header": "65618 神妙夺命丹",
+    "note": "扫描原页清晰显示65618 神妙夺命丹。"
+  },
+  {
+    "pdf_page": 1409,
+    "raw_text": "王6374",
+    "region": "right",
+    "line_index": 10,
+    "corrected_header": "66374 绛玉散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  }
+]

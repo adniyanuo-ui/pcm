@@ -1,0 +1,57 @@
+{
+  "volume": 8,
+  "pdf_pages": 1113,
+  "content_pdf_pages": [
+    85,
+    1113
+  ],
+  "content_book_pages": [
+    1,
+    1029
+  ],
+  "raw_line_count": 81960,
+  "front_matter_raw_line_count": 27113,
+  "raw_line_confidence": {
+    "mean": 0.979527,
+    "minimum": 0.30006,
+    "below_0_80": 809,
+    "below_0_70": 578
+  },
+  "parsed_toc_entries": 7542,
+  "parsed_entries": 8417,
+  "entry_id_range": [
+    66424,
+    74840
+  ],
+  "missing_entry_ids_count": 0,
+  "missing_entry_ids": [],
+  "duplicate_entry_ids": [],
+  "non_monotonic_pairs": [],
+  "entries_needing_review": 1539,
+  "field_counts": {
+    "方源": 7335,
+    "组成": 7334,
+    "主治": 7130,
+    "用法": 6754,
+    "功用": 1258,
+    "正文": 1170,
+    "异名": 656,
+    "加减": 543,
+    "备考": 502,
+    "方论选录": 498,
+    "宜忌": 492,
+    "临证举例": 117,
+    "现代研究": 8
+  },
+  "field_label_normalization": {
+    "exact": 32627,
+    "embedded_split": 136,
+    "name_correction": 69,
+    "header_correction": 8,
+    "partial_source_page_missing": 1,
+    "fuzzy": 6,
+    "dropped_header_fragment": 1,
+    "header_sequence_correction": 4,
+    "source_page_missing_placeholder": 6
+  }
+}

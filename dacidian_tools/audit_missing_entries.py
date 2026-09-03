@@ -25,6 +25,7 @@ def main() -> int:
         "--ids",
         help="Optional comma-separated subset of missing identifiers",
     )
+    parser.add_argument("--summary-only", action="store_true")
     args = parser.parse_args()
 
     volume_dir = args.volume_dir
@@ -75,6 +76,8 @@ def main() -> int:
                 ensure_ascii=False,
             )
         )
+        if args.summary_only:
+            continue
         for page in sorted(pages):
             path = raw_pages / f"page_{page:04d}.json"
             if not path.exists():

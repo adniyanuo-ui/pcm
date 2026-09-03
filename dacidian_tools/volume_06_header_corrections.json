@@ -1,0 +1,195 @@
+[
+  {
+    "pdf_page": 82,
+    "raw_text": "分，上五i岁以上者服四分，二十岁者照大人",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "47735 青龙丸",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第81页（书页4）；仅第82页开头的后半段可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 239,
+    "raw_text": "方》，名见《圣济总录》卷一一六。",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "49107 矾石汤",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第238页（书页161）；仅第239页开头的后半段可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 388,
+    "raw_text": "蟆瘟初起，两腮肿硬，恶寒，耳底抽痛。",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "50251 败毒散",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第387页（书页310）；仅第388页开头的主治末行和加减可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 508,
+    "raw_text": "煎至五分，去滓温服，不拘时候。",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "51189 知母散",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第507页（书页430）；仅第508页开头的用法末段、主治和备考可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 140,
+    "raw_text": "報",
+    "region": "right",
+    "line_index": 36,
+    "drop_line": true,
+    "note": "扫描页骑缝章覆盖标题产生的非正文碎片；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 140,
+    "raw_text": "装V",
+    "region": "right",
+    "line_index": 37,
+    "drop_line": true,
+    "note": "扫描页骑缝章覆盖标题产生的非正文碎片；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 140,
+    "raw_text": "济总录卷一〇二。",
+    "region": "right",
+    "line_index": 38,
+    "segments": [
+      "48234 青箱子丸",
+      "【方源】《圣济总录》卷一〇二。"
+    ],
+    "note": "扫描原页的标题受骑缝章遮挡；编号、方名及方源经原页、目录和相邻条目确认。"
+  },
+  {
+    "pdf_page": 149,
+    "raw_text": "48309 青金九龙膏",
+    "corrected_header": "48300 青金九龙膏",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 151,
+    "raw_text": "+8312 青娥不老丹",
+    "corrected_header": "48312 青娥不老丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 259,
+    "raw_text": "29308 郁李根皮丸",
+    "corrected_header": "49308 郁李根皮丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 291,
+    "raw_text": "19373 抵圣散",
+    "corrected_header": "49573 抵圣散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 291,
+    "raw_text": "4:74 抵圣散",
+    "corrected_header": "49574 抵圣散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 517,
+    "raw_text": "§1229 知柏地黄丸",
+    "corrected_header": "51279 知柏地黄丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 657,
+    "raw_text": "51404金主绿云油",
+    "corrected_header": "52404 金主绿云油",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 722,
+    "raw_text": "52B48 鱼脍方",
+    "corrected_header": "52848 鱼脍方",
+    "note": "扫描原页清晰显示52848 鱼脍方；目录小模型曾将鱼误识别为色。"
+  },
+  {
+    "pdf_page": 758,
+    "raw_text": "55109 育神镇心丸",
+    "corrected_header": "53109 育神镇心丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 809,
+    "raw_text": "S3519 泻肝散",
+    "corrected_header": "53519 泻肝散",
+    "note": "扫描原页和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 855,
+    "raw_text": "53994 治血汤",
+    "corrected_header": "53884 治血汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 869,
+    "raw_text": "53991治湿神效火龙膏",
+    "corrected_header": "53992 治湿神效火龙膏",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 883,
+    "raw_text": "1£11f",
+    "region": "right",
+    "line_index": 26,
+    "corrected_header": "54113 定命丹",
+    "note": "扫描原页清晰显示54113 定命丹。"
+  },
+  {
+    "pdf_page": 901,
+    "raw_text": "5+270 定吐紫金丹",
+    "corrected_header": "54270 定吐紫金丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 956,
+    "raw_text": "5472」 参苏饮",
+    "corrected_header": "54721 参苏饮",
+    "note": "扫描原页和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 958,
+    "raw_text": "54755 参杏膏",
+    "corrected_header": "54735 参杏膏",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 963,
+    "raw_text": "575655",
+    "region": "right",
+    "line_index": 0,
+    "corrected_header": "54767 参苓汤",
+    "note": "扫描原页清晰显示54767 参苓汤。"
+  },
+  {
+    "pdf_page": 965,
+    "raw_text": "基免華878",
+    "region": "right",
+    "line_index": 38,
+    "corrected_header": "54788 参苓膏",
+    "note": "扫描原页清晰显示54788 参苓膏；标题受印刷和页底影响。"
+  },
+  {
+    "pdf_page": 1017,
+    "raw_text": "5225驻世珍馐",
+    "region": "right",
+    "line_index": 3,
+    "corrected_header": "55225 驻世珍馐",
+    "note": "扫描原页和卷内顺序共同确认。"
+  }
+]

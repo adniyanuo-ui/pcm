@@ -1,0 +1,10 @@
+[
+  {
+    "id_range": [66603, 66608],
+    "default_name": "秦艽散",
+    "force_default_name": true,
+    "pdf_pages": [106],
+    "book_pages": [22],
+    "reason": "源PDF第106页（书页22）为全白页；方名由本册目录和同名连续条目确认，正文待可靠版本补全。"
+  }
+]

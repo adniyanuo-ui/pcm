@@ -57,6 +57,8 @@ python dacidian_tools/clean_volume.py \
 - `ignore_as_header`：将正文中的五位数字明确标成普通正文；
 - `record_status: partial_source_page_missing`：源扫描缺页、只能保留可见残段的条目。
 
+清洗程序会先验证每条修正规则确实能匹配对应页、栏和行号；存在失效规则时直接报错，避免规则文件看似存在却未真正应用。
+
 若源 PDF 本身是全白页，使用 `volume_XX_placeholder_entries.json` 保存目录中的编号和方名，不补造正文。此类记录以及部分缺失记录带有 `excluded_from_rag_until_recovered` 标记，构建 RAG 索引时必须排除。
 
 对正文方名与目录 OCR 不一致的条目，可用 `audit_headers.py` 的 PP-OCRv6 medium 模型重新读取正文标题。只有“正文中型模型”和“独立目录 OCR”一致时才生成名称纠错映射，再将该映射传给 `clean_volume.py --name-corrections`；三方不一致的条目继续保留在复核清单中。

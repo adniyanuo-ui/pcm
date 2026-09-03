@@ -239,6 +239,30 @@ def load_header_corrections(path: Path | None) -> dict[tuple[int, str, str | Non
     }
 
 
+def validate_header_corrections(
+    corrections: dict[tuple[int, str, str | None, int | None], dict[str, Any]],
+    lines: Iterable[dict[str, Any]],
+) -> None:
+    exact = {
+        (line["pdf_page"], line["text"], line["region"], line["line_index"])
+        for line in lines
+    }
+    page_text = {(page, text) for page, text, _region, _line_index in exact}
+    unmatched = []
+    for page, text, region, line_index in corrections:
+        found = (
+            (page, text) in page_text
+            if region is None and line_index is None
+            else (page, text, region, line_index) in exact
+        )
+        if not found:
+            unmatched.append(
+                {"pdf_page": page, "raw_text": text, "region": region, "line_index": line_index}
+            )
+    if unmatched:
+        raise ValueError(f"Header corrections do not match raw OCR lines: {unmatched}")
+
+
 def load_name_corrections(path: Path | None) -> dict[str, dict[str, Any]]:
     if path is None or not path.exists():
         return {}
@@ -266,6 +290,48 @@ def load_placeholder_entries(path: Path | None) -> list[dict[str, Any]]:
     if path is None or not path.exists():
         return []
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def expand_placeholder_entries(
+    rows: list[dict[str, Any]], toc: dict[str, dict[str, Any]]
+) -> list[dict[str, Any]]:
+    """Expand concise missing-page ranges to individual placeholder rows."""
+    expanded: list[dict[str, Any]] = []
+    for row in rows:
+        identifiers = (
+            range(int(row["id_range"][0]), int(row["id_range"][1]) + 1)
+            if row.get("id_range")
+            else [int(row["id"])]
+        )
+        overrides = {str(key): value for key, value in row.get("name_overrides", {}).items()}
+        for identifier in identifiers:
+            entry_id = f"{identifier:05d}"
+            toc_item = toc.get(entry_id)
+            if entry_id in overrides:
+                name = overrides[entry_id]
+                name_source = "audited_override"
+            elif row.get("name"):
+                name = row["name"]
+                name_source = row.get("name_source", "explicit_placeholder")
+            elif row.get("force_default_name") and row.get("default_name"):
+                name = row["default_name"]
+                name_source = "audited_group_name"
+            elif toc_item and toc_item.get("name"):
+                name = toc_item["name"]
+                name_source = "table_of_contents_ocr"
+            else:
+                name = row.get("default_name", "待核")
+                name_source = "group_context" if row.get("default_name") else "unresolved"
+            item = dict(row)
+            item.pop("id_range", None)
+            item.pop("name_overrides", None)
+            item.pop("default_name", None)
+            item.pop("force_default_name", None)
+            item.update({"id": entry_id, "name": name, "name_source": name_source})
+            if toc_item:
+                item["toc"] = {"name": toc_item["name"], "book_page": toc_item.get("book_page")}
+            expanded.append(item)
+    return expanded
 
 
 def split_embedded_fields(text: str) -> list[str]:
@@ -393,7 +459,7 @@ def parse_entries(
             continue
         ignore_as_header = bool(correction and correction.get("ignore_as_header"))
         if correction and not ignore_as_header:
-            segments = [correction["corrected_header"]]
+            segments = correction["segments"] if correction.get("segments") else [correction["corrected_header"]]
             if correction.get("keep_raw_after_header"):
                 segments.append(raw_text)
         else:
@@ -550,9 +616,12 @@ def main() -> int:
     toc = parse_toc(toc_lines)
     content_lines = list(iter_raw_lines(page_files, args.first_content_page, args.last_page))
     corrections = load_header_corrections(args.header_corrections)
+    validate_header_corrections(corrections, content_lines)
     name_corrections = load_name_corrections(args.name_corrections)
     text_corrections = load_text_corrections(args.text_corrections)
-    placeholder_entries = load_placeholder_entries(args.placeholder_entries)
+    placeholder_entries = expand_placeholder_entries(
+        load_placeholder_entries(args.placeholder_entries), toc
+    )
     entries, issues, label_stats = parse_entries(
         content_lines,
         toc,
