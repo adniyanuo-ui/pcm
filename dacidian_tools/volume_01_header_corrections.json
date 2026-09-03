@@ -1,0 +1,159 @@
+[
+  {
+    "pdf_page": 114,
+    "raw_text": "可姐一02220",
+    "corrected_header": "00229 一醉乌",
+    "note": "Header verified visually on book page 26 and against the formula content."
+  },
+  {
+    "pdf_page": 135,
+    "raw_text": "66300",
+    "corrected_header": "00399 二马散",
+    "note": "Header verified visually on book page 47 and in the volume table of contents."
+  },
+  {
+    "pdf_page": 168,
+    "raw_text": "09692 二妙酒",
+    "corrected_header": "00692 二妙酒",
+    "note": "One OCR digit repaired using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 180,
+    "raw_text": "0082:3二姜丸",
+    "corrected_header": "00828 二姜丸",
+    "note": "Punctuation-like OCR artifact repaired using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 191,
+    "raw_text": "《腊产秘书》卷中。为《丹溪心法附余》卷二",
+    "corrected_header": "00940 二脱散",
+    "keep_raw_after_header": true,
+    "note": "The body header is obscured by scan damage; name and ID were recovered from the volume table of contents."
+  },
+  {
+    "pdf_page": 212,
+    "raw_text": "126 二物大乌头煎",
+    "corrected_header": "01126 二物大乌头煎",
+    "note": "Missing leading digits repaired using the scan and table of contents."
+  },
+  {
+    "pdf_page": 238,
+    "raw_text": "010134年",
+    "corrected_header": "01303 十将丹",
+    "note": "Severely misread header recovered from its position and the volume table of contents."
+  },
+  {
+    "pdf_page": 246,
+    "raw_text": "0114",
+    "corrected_header": "01358 十圣夺命丹",
+    "note": "Severely misread header recovered from its position and the volume table of contents."
+  },
+  {
+    "pdf_page": 304,
+    "raw_text": "01319 丁香和胃丸",
+    "corrected_header": "01819 丁香和胃丸",
+    "note": "One OCR digit repaired using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 325,
+    "raw_text": "0989七枝煎",
+    "corrected_header": "01989 七枝煎",
+    "note": "Missing digit repaired using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 349,
+    "raw_text": "028",
+    "corrected_header": "02189 七液丹",
+    "note": "Header recovered from entry position, field content and the volume table of contents."
+  },
+  {
+    "pdf_page": 385,
+    "raw_text": "2467八宝丹",
+    "corrected_header": "02467 八宝丹",
+    "note": "Missing leading zero repaired using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 404,
+    "raw_text": "2619 八仙早朝糕",
+    "corrected_header": "02619 八仙早朝糕",
+    "note": "Missing leading zero repaired using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 511,
+    "raw_text": "-03472人马平安散",
+    "corrected_header": "03472 人马平安散",
+    "note": "Leading scan mark removed; ID and name verified in the table of contents."
+  },
+  {
+    "pdf_page": 632,
+    "raw_text": "94462 三圣散",
+    "corrected_header": "04462 三圣散",
+    "note": "One OCR digit repaired using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 634,
+    "raw_text": "4484三肉腫",
+    "corrected_header": "04484 三肉臛",
+    "note": "ID restored and rare character verified visually and against the source recipe text."
+  },
+  {
+    "pdf_page": 766,
+    "raw_text": "一干3959-",
+    "corrected_header": "05593 土一",
+    "note": "Header recovered from sequence and the volume table of contents."
+  },
+  {
+    "pdf_page": 766,
+    "raw_text": "二十059",
+    "corrected_header": "05594 土二",
+    "note": "Header recovered from sequence and the volume table of contents."
+  },
+  {
+    "pdf_page": 766,
+    "raw_text": "在干8955",
+    "corrected_header": "05598 土五",
+    "note": "Header recovered from sequence and the volume table of contents."
+  },
+  {
+    "pdf_page": 766,
+    "raw_text": "0天669550",
+    "corrected_header": "05599 土六",
+    "note": "Header recovered from sequence and the volume table of contents."
+  },
+  {
+    "pdf_page": 793,
+    "raw_text": "(5828 大豆散",
+    "corrected_header": "05828 大豆散",
+    "note": "Leading bracket replaced with zero using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 858,
+    "raw_text": "6336大黄散",
+    "corrected_header": "06336 大黄散",
+    "note": "Missing leading zero repaired using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 858,
+    "raw_text": "6337 大黄散",
+    "corrected_header": "06337 大黄散",
+    "note": "Missing leading zero repaired using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 1118,
+    "raw_text": "018108千金丸",
+    "corrected_header": "08108 千金丸",
+    "note": "Extra OCR digits removed using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 1188,
+    "raw_text": "Q8690女贞汤",
+    "corrected_header": "08690 女贞汤",
+    "note": "Leading letter repaired to zero using sequential IDs and the table of contents."
+  },
+  {
+    "pdf_page": 1273,
+    "raw_text": "093 小牡丹煎丸",
+    "corrected_header": "09301 小牡丹煎丸",
+    "note": "Missing digits restored using sequential IDs and the table of contents."
+  }
+]

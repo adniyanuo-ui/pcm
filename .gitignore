@@ -1,0 +1,46 @@
+# Workspace-provided read-only placeholder; the active local git dir is .git-local.
+.git-local/
+
+# Source archives and scanned books are local inputs, not repository content.
+*.zip
+*.pdf
+pcm_product/
+dacidian_pdf/
+
+# Expensive page OCR is packed into versioned *.jsonl.gz archives instead.
+dacidian_text/**/raw_pages/
+dacidian_text/**/samples/
+dacidian_text/**/quality_run.log
+dacidian_text/**/missing_headers_probe.txt
+
+# Python
+**/__pycache__/
+*.py[cod]
+.venv/
+.venv_*/
+venv/
+
+# JavaScript builds and dependencies
+**/node_modules/
+pcm_web-master_hyd/dist/
+pcm_cms-master_hyd/dist/
+
+# Local runtime and generated logs
+*.log
+*.pid
+:memory:.ses
+
+# Secrets and machine-specific environment files
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.bak
+**/*_bak.*
+
+# Editor and OS noise
+.DS_Store
+__MACOSX/
+.idea/
+.vscode/

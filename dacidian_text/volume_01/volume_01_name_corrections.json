@@ -1,0 +1,212 @@
+[
+  {
+    "id": "00682",
+    "from_name": "二炒丸",
+    "to_name": "二妙丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "00682 二妙丸",
+    "toc_ocr": "二妙丸",
+    "medium_confidence": 0.97674,
+    "pdf_page": 167
+  },
+  {
+    "id": "00693",
+    "from_name": "二炒散",
+    "to_name": "二妙散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "00693 二妙散",
+    "toc_ocr": "二妙散",
+    "medium_confidence": 0.96312,
+    "pdf_page": 168
+  },
+  {
+    "id": "00827",
+    "from_name": "二菱丸",
+    "to_name": "二姜丸",
+    "method": "The formula contains exactly 良姜 and 干姜; TOC and source meaning confirm 二姜丸.",
+    "medium_ocr": "00827 二蒙丸",
+    "toc_ocr": "二姜丸",
+    "medium_confidence": 0.89411,
+    "pdf_page": 180
+  },
+  {
+    "id": "00954",
+    "from_name": "三霜膏",
+    "to_name": "二霜膏",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "00954 二霜膏",
+    "toc_ocr": "二霜膏",
+    "medium_confidence": 0.9804,
+    "pdf_page": 193
+  },
+  {
+    "id": "01954",
+    "from_name": "一圣散",
+    "to_name": "七圣散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "01954 七圣散",
+    "toc_ocr": "七圣散",
+    "medium_confidence": 0.91754,
+    "pdf_page": 321
+  },
+  {
+    "id": "04153",
+    "from_name": "九雷丸",
+    "to_name": "九霄丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "04153 九霄丸",
+    "toc_ocr": "九霄丸",
+    "medium_confidence": 0.988,
+    "pdf_page": 594
+  },
+  {
+    "id": "04844",
+    "from_name": "三匱丹",
+    "to_name": "三匮丹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "04844 三匮丹",
+    "toc_ocr": "三匮丹",
+    "medium_confidence": 0.96512,
+    "pdf_page": 673
+  },
+  {
+    "id": "04879",
+    "from_name": "三梭丸",
+    "to_name": "三棱丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "04879 三棱丸",
+    "toc_ocr": "三棱丸",
+    "medium_confidence": 0.98523,
+    "pdf_page": 678
+  },
+  {
+    "id": "04885",
+    "from_name": "三梭汤",
+    "to_name": "三棱汤",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "04885 三棱汤",
+    "toc_ocr": "三棱汤",
+    "medium_confidence": 0.97405,
+    "pdf_page": 678
+  },
+  {
+    "id": "04910",
+    "from_name": "三梭煎",
+    "to_name": "三棱煎",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "04910 三棱煎",
+    "toc_ocr": "三棱煎",
+    "medium_confidence": 0.91002,
+    "pdf_page": 681
+  },
+  {
+    "id": "05356",
+    "from_name": "干萬散",
+    "to_name": "干葛散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "05356 干葛散",
+    "toc_ocr": "干葛散",
+    "medium_confidence": 0.97879,
+    "pdf_page": 737
+  },
+  {
+    "id": "05359",
+    "from_name": "干萬粥",
+    "to_name": "干葛粥",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "05359 干葛粥",
+    "toc_ocr": "干葛粥",
+    "medium_confidence": 0.93743,
+    "pdf_page": 737
+  },
+  {
+    "id": "05652",
+    "from_name": "土草薜汤",
+    "to_name": "土萆薢汤",
+    "method": "Verified from the 土茯苓 alias and formula source; OCR cannot reliably read 萆薢.",
+    "medium_ocr": "05652 土草薛汤",
+    "toc_ocr": "土革蘚汤",
+    "medium_confidence": 0.92665,
+    "pdf_page": 772
+  },
+  {
+    "id": "05697",
+    "from_name": "下瘙锭",
+    "to_name": "下瘩锭",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "05697 下瘩锭",
+    "toc_ocr": "下瘩锭",
+    "medium_confidence": 0.95345,
+    "pdf_page": 776
+  },
+  {
+    "id": "06919",
+    "from_name": "大蕈蘇丸",
+    "to_name": "大萆薢丸",
+    "method": "Verified from the composition and source; OCR cannot reliably read 萆薢.",
+    "medium_ocr": "06919 大草薢丸",
+    "toc_ocr": "大革薜丸",
+    "medium_confidence": 0.85033,
+    "pdf_page": 946
+  },
+  {
+    "id": "06920",
+    "from_name": "大草蘇散",
+    "to_name": "大萆薢散",
+    "method": "Cross-reference counterpart of 萆薢散.",
+    "medium_ocr": "06920 大草薢散",
+    "toc_ocr": "大革薜散",
+    "medium_confidence": 0.85594,
+    "pdf_page": 946
+  },
+  {
+    "id": "07915",
+    "from_name": "□糜散",
+    "to_name": "口糜散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "07915 口糜散",
+    "toc_ocr": "口糜散",
+    "medium_confidence": 0.94973,
+    "pdf_page": 1094
+  },
+  {
+    "id": "08703",
+    "from_name": "女蒌丸",
+    "to_name": "女萎丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "08703 女萎丸",
+    "toc_ocr": "女萎丸",
+    "medium_confidence": 0.95019,
+    "pdf_page": 1190
+  },
+  {
+    "id": "08704",
+    "from_name": "女藏膏",
+    "to_name": "女萎膏",
+    "method": "Verified against 古今录验/证类本草 references.",
+    "medium_ocr": "08704 女蔵膏",
+    "toc_ocr": "女葳膏",
+    "medium_confidence": 0.9364,
+    "pdf_page": 1190
+  },
+  {
+    "id": "08809",
+    "from_name": "小周丹",
+    "to_name": "小胃丹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "08809 小胃丹",
+    "toc_ocr": "小胃丹",
+    "medium_confidence": 0.92523,
+    "pdf_page": 1204
+  },
+  {
+    "id": "09308",
+    "from_name": "小華澄茄煎",
+    "to_name": "小荜澄茄煎",
+    "method": "Verified against the 鸡峰普济方 source text and matching ingredients.",
+    "medium_ocr": "09308 小草澄茄煎",
+    "toc_ocr": "小药澄",
+    "medium_confidence": 0.92275,
+    "pdf_page": 1274
+  }
+]

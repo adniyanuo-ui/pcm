@@ -1,0 +1,44 @@
+[
+  {
+    "id": "04484",
+    "field": "用法",
+    "from": "煮为臃食之",
+    "to": "煮为臛食之",
+    "note": "Verified against the 寿亲养老/永乐大典 source transcription."
+  },
+  {
+    "id": "05652",
+    "field": "组成",
+    "from": "土草薜（即土茯苓）",
+    "to": "土萆薢（即土茯苓）",
+    "note": "Rare herb-name characters verified from formula context and source."
+  },
+  {
+    "id": "06919",
+    "field": "组成",
+    "from": "草蘚二两",
+    "to": "萆薢二两",
+    "note": "Rare herb-name characters verified from formula context and source."
+  },
+  {
+    "id": "06920",
+    "field": "正文",
+    "from": "“草蘚散”",
+    "to": "“萆薢散”",
+    "note": "Cross-reference normalized to the verified formula name."
+  },
+  {
+    "id": "08704",
+    "field": "组成",
+    "from": "女葳一分",
+    "to": "女萎一分",
+    "note": "Verified against the 古今录验/证类本草 source references."
+  },
+  {
+    "id": "09308",
+    "field": "组成",
+    "from": "缩砂革澄茄各一两",
+    "to": "缩砂 荜澄茄各一两",
+    "note": "Verified against the 鸡峰普济方 source transcription."
+  }
+]

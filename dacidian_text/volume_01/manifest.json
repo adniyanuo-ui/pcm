@@ -1,0 +1,44 @@
+{
+  "source_pdf": "dacidian_pdf/中医方剂大辞典（第1册）.pdf",
+  "source_pdf_sha256": "d94d5d143f9e9a2beae5677a4bd80e8cfec5a0ff92d22739d9055c924b0e15d8",
+  "source_pdf_size": 153337339,
+  "ocr_engine": "RapidOCR 3.9.2 / PP-OCRv6 small / ONNX Runtime 1.29.0",
+  "rendering": "pdftoppm 250 DPI grayscale JPEG quality=95",
+  "layout": {
+    "pdf_pages_1_10": "single-page front matter",
+    "pdf_pages_11_88": "three-column contents/index",
+    "pdf_pages_89_1313": "two-column dictionary entries"
+  },
+  "correction_policy": [
+    "Preserve raw per-line OCR, coordinates and confidence.",
+    "Normalize field brackets and known field-label OCR variants.",
+    "Normalize only O/o->0 and I/l->1 inside five-character entry IDs.",
+    "Join visual line wraps inside fields.",
+    "Do not guess corrections to herb names, formula names, quantities, or classical quotations.",
+    "Use parsed table of contents as a comparison signal, not an automatic semantic overwrite.",
+    "Apply audited page-and-text keyed header repairs from volume_01_header_corrections.json."
+  ],
+  "header_corrections": "/home/heyude/project/pcm/dacidian_tools/volume_01_header_corrections.json",
+  "name_corrections": "dacidian_text/volume_01/volume_01_name_corrections.json",
+  "text_corrections": "/home/heyude/project/pcm/dacidian_tools/volume_01_text_corrections.json",
+  "outputs": {
+    "raw_pages": "dacidian_text/volume_01/raw_pages",
+    "raw_text": "dacidian_text/volume_01/volume_01_raw.txt",
+    "front_matter_text": "dacidian_text/volume_01/volume_01_front_matter.txt",
+    "clean_text": "dacidian_text/volume_01/volume_01_clean.txt",
+    "entries_jsonl": "dacidian_text/volume_01/volume_01_entries.jsonl",
+    "toc_jsonl": "dacidian_text/volume_01/volume_01_toc_index.jsonl",
+    "needs_review_jsonl": "dacidian_text/volume_01/volume_01_needs_review.jsonl",
+    "low_confidence_lines_jsonl": "dacidian_text/volume_01/volume_01_low_confidence_lines.jsonl",
+    "quality_json": "dacidian_text/volume_01/volume_01_quality.json"
+  },
+  "output_sha256": {
+    "raw_text": "6c9ca8c2adfb0371815192238df440f29d223322c594f29adf4d62d0bd18733c",
+    "front_matter_text": "9b655605c5b09b2bd2133e123e0baa307077a140b62b9e1d719939288f696251",
+    "clean_text": "cbb121f4c9b725b66e860bd459a8ec6a446576eedeb26e482b65059f9dc8b675",
+    "entries_jsonl": "1db263e1316a080d293a78b246a3a91911eae36f5a7aa9b9140fd34b12619dfe",
+    "toc_jsonl": "b4827f4be0d4e69efbd1590a5d1e1dfda99949018451ab015448b9a333813aa1",
+    "needs_review_jsonl": "338c64dd390530d0dcb39a2407bff2c79a81a07ae829c2d9ab1af13e67542eb8",
+    "low_confidence_lines_jsonl": "0408883487ce50ec64811bea06aaff9810c0d950327cad9e64f53e3c185596cd"
+  }
+}
