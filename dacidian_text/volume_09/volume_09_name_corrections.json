@@ -1,0 +1,622 @@
+[
+  {
+    "id": "75229",
+    "from_name": "芭蒲丸",
+    "to_name": "菖蒲丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "75229 菖蒲丸",
+    "toc_ocr": "菖蒲丸",
+    "medium_confidence": 0.98129,
+    "pdf_page": 131
+  },
+  {
+    "id": "75293",
+    "from_name": "菖蒲藝",
+    "to_name": "菖蒲羹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "75293 菖蒲羹",
+    "toc_ocr": "菖蒲羹",
+    "medium_confidence": 0.97449,
+    "pdf_page": 138
+  },
+  {
+    "id": "75320",
+    "from_name": "萝摩茶",
+    "to_name": "萝藦茶",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "75320 萝藦茶",
+    "toc_ocr": "萝藦茶",
+    "medium_confidence": 0.94024,
+    "pdf_page": 141
+  },
+  {
+    "id": "75336",
+    "from_name": "葵蕤丸",
+    "to_name": "萎蕤丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "75336 萎蕤丸",
+    "toc_ocr": "萎蕤丸",
+    "medium_confidence": 0.97379,
+    "pdf_page": 142
+  },
+  {
+    "id": "75343",
+    "from_name": "萎藕汤",
+    "to_name": "萎蕤汤",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "75343 萎蕤汤",
+    "toc_ocr": "萎蕤汤",
+    "medium_confidence": 0.97546,
+    "pdf_page": 144
+  },
+  {
+    "id": "75368",
+    "from_name": "英柞汤",
+    "to_name": "萸柞汤",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "75368 萸柞汤",
+    "toc_ocr": "萸柞汤",
+    "medium_confidence": 0.95181,
+    "pdf_page": 146
+  },
+  {
+    "id": "75371",
+    "from_name": "英芍熱地汤",
+    "to_name": "萸芍熟地汤",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "75371 萸芍熟地汤",
+    "toc_ocr": "萸芍熟地汤",
+    "medium_confidence": 0.93718,
+    "pdf_page": 146
+  },
+  {
+    "id": "75376",
+    "from_name": "萆麻汤",
+    "to_name": "草麻汤",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "75376 草麻汤",
+    "toc_ocr": "草麻汤",
+    "medium_confidence": 0.92082,
+    "pdf_page": 146
+  },
+  {
+    "id": "75389",
+    "from_name": "萆藓丸",
+    "to_name": "草薛丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "75389 草薛丸",
+    "toc_ocr": "草薛丸",
+    "medium_confidence": 0.83407,
+    "pdf_page": 148
+  },
+  {
+    "id": "75400",
+    "from_name": "萆薜丸",
+    "to_name": "草薛丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "75400 草薛丸",
+    "toc_ocr": "草薛丸",
+    "medium_confidence": 0.84054,
+    "pdf_page": 149
+  },
+  {
+    "id": "76441",
+    "from_name": "黄鸡藥",
+    "to_name": "黄鸡羹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "76441 黄鸡羹",
+    "toc_ocr": "黄鸡羹",
+    "medium_confidence": 0.92022,
+    "pdf_page": 265
+  },
+  {
+    "id": "76496",
+    "from_name": "黄栌汤",
+    "to_name": "黄泸汤",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "76496 黄泸汤",
+    "toc_ocr": "黄泸汤",
+    "medium_confidence": 0.86178,
+    "pdf_page": 272
+  },
+  {
+    "id": "76898",
+    "from_name": "黄者散",
+    "to_name": "黄耆散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "76898 黄耆散",
+    "toc_ocr": "黄耆散",
+    "medium_confidence": 0.97695,
+    "pdf_page": 322
+  },
+  {
+    "id": "76922",
+    "from_name": "黄警散",
+    "to_name": "黄耆散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "76922 黄耆散",
+    "toc_ocr": "黄耆散",
+    "medium_confidence": 0.92392,
+    "pdf_page": 326
+  },
+  {
+    "id": "76923",
+    "from_name": "黄警散",
+    "to_name": "黄耆散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "76923 黄耆散",
+    "toc_ocr": "黄耆散",
+    "medium_confidence": 0.97386,
+    "pdf_page": 326
+  },
+  {
+    "id": "76928",
+    "from_name": "黄書散",
+    "to_name": "黄耆散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "76928 黄耆散",
+    "toc_ocr": "黄耆散",
+    "medium_confidence": 0.97988,
+    "pdf_page": 327
+  },
+  {
+    "id": "76948",
+    "from_name": "黃耆散",
+    "to_name": "黄耆散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "76948 黄耆散",
+    "toc_ocr": "黄耆散",
+    "medium_confidence": 0.98213,
+    "pdf_page": 330
+  },
+  {
+    "id": "76960",
+    "from_name": "黃耆散",
+    "to_name": "黄耆散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "76960 黄耆散",
+    "toc_ocr": "黄耆散",
+    "medium_confidence": 0.98534,
+    "pdf_page": 331
+  },
+  {
+    "id": "76983",
+    "from_name": "黄書散",
+    "to_name": "黄耆散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "76983 黄耆散",
+    "toc_ocr": "黄耆散",
+    "medium_confidence": 0.98703,
+    "pdf_page": 335
+  },
+  {
+    "id": "77003",
+    "from_name": "黃耆散",
+    "to_name": "黄耆散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77003 黄耆散",
+    "toc_ocr": "黄耆散",
+    "medium_confidence": 0.93715,
+    "pdf_page": 337
+  },
+  {
+    "id": "77051",
+    "from_name": "黃耆膏",
+    "to_name": "黄耆膏",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77051 黄耆膏",
+    "toc_ocr": "黄耆膏",
+    "medium_confidence": 0.97051,
+    "pdf_page": 342
+  },
+  {
+    "id": "77063",
+    "from_name": "黃耆膏",
+    "to_name": "黄耆膏",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77063 黄耆膏",
+    "toc_ocr": "黄耆膏",
+    "medium_confidence": 0.98571,
+    "pdf_page": 344
+  },
+  {
+    "id": "77097",
+    "from_name": "黃鼠膏",
+    "to_name": "黄鼠膏",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77097 黄鼠膏",
+    "toc_ocr": "黄鼠膏",
+    "medium_confidence": 0.95584,
+    "pdf_page": 347
+  },
+  {
+    "id": "77760",
+    "from_name": "砲砂丸",
+    "to_name": "硇砂丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77760 硇砂丸",
+    "toc_ocr": "硇砂丸",
+    "medium_confidence": 0.92155,
+    "pdf_page": 427
+  },
+  {
+    "id": "77768",
+    "from_name": "砲砂丸",
+    "to_name": "硇砂丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77768 硇砂丸",
+    "toc_ocr": "硇砂丸",
+    "medium_confidence": 0.94173,
+    "pdf_page": 428
+  },
+  {
+    "id": "77774",
+    "from_name": "砲砂丸",
+    "to_name": "硇砂丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77774 硇砂丸",
+    "toc_ocr": "硇砂丸",
+    "medium_confidence": 0.9454,
+    "pdf_page": 429
+  },
+  {
+    "id": "77778",
+    "from_name": "砲砂丸",
+    "to_name": "硇砂丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77778硇砂丸",
+    "toc_ocr": "硇砂丸",
+    "medium_confidence": 0.93715,
+    "pdf_page": 429
+  },
+  {
+    "id": "77779",
+    "from_name": "砲砂丸",
+    "to_name": "硇砂丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77779 硇砂丸",
+    "toc_ocr": "硇砂丸",
+    "medium_confidence": 0.91408,
+    "pdf_page": 429
+  },
+  {
+    "id": "77784",
+    "from_name": "砲砂丸",
+    "to_name": "硇砂丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77784 硇砂丸",
+    "toc_ocr": "硇砂丸",
+    "medium_confidence": 0.91494,
+    "pdf_page": 430
+  },
+  {
+    "id": "77798",
+    "from_name": "砲砂丸",
+    "to_name": "硇砂丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77798 硇砂丸",
+    "toc_ocr": "硇砂丸",
+    "medium_confidence": 0.92063,
+    "pdf_page": 432
+  },
+  {
+    "id": "77827",
+    "from_name": "砲砂丸",
+    "to_name": "硇砂丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77827 硇砂丸",
+    "toc_ocr": "硇砂丸",
+    "medium_confidence": 0.9476,
+    "pdf_page": 436
+  },
+  {
+    "id": "77830",
+    "from_name": "砲砂丸",
+    "to_name": "硇砂丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77830 硇砂丸",
+    "toc_ocr": "硇砂丸",
+    "medium_confidence": 0.96393,
+    "pdf_page": 436
+  },
+  {
+    "id": "77831",
+    "from_name": "砲砂丸",
+    "to_name": "硇砂丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77831 硇砂丸",
+    "toc_ocr": "硇砂丸",
+    "medium_confidence": 0.93592,
+    "pdf_page": 436
+  },
+  {
+    "id": "77832",
+    "from_name": "砲砂线",
+    "to_name": "硇砂线",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77832 硇砂线",
+    "toc_ocr": "硇砂线",
+    "medium_confidence": 0.94451,
+    "pdf_page": 436
+  },
+  {
+    "id": "77834",
+    "from_name": "砲砂散",
+    "to_name": "硇砂散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77834 硇砂散",
+    "toc_ocr": "硇砂散",
+    "medium_confidence": 0.95462,
+    "pdf_page": 437
+  },
+  {
+    "id": "77836",
+    "from_name": "砲砂散",
+    "to_name": "硇砂散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77836 硇砂散",
+    "toc_ocr": "硇砂散",
+    "medium_confidence": 0.91703,
+    "pdf_page": 437
+  },
+  {
+    "id": "77838",
+    "from_name": "砲砂散",
+    "to_name": "硇砂散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77838 硇砂散",
+    "toc_ocr": "硇砂散",
+    "medium_confidence": 0.93761,
+    "pdf_page": 437
+  },
+  {
+    "id": "77852",
+    "from_name": "砲砂膏",
+    "to_name": "硇砂膏",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77852 硇砂膏",
+    "toc_ocr": "硇砂膏",
+    "medium_confidence": 0.96794,
+    "pdf_page": 438
+  },
+  {
+    "id": "77853",
+    "from_name": "砲砂膏",
+    "to_name": "硇砂膏",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77853 硇砂膏",
+    "toc_ocr": "硇砂膏",
+    "medium_confidence": 0.95883,
+    "pdf_page": 439
+  },
+  {
+    "id": "77855",
+    "from_name": "砲魏丸",
+    "to_name": "硇魏丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "77855 硇魏丸",
+    "toc_ocr": "硇魏丸",
+    "medium_confidence": 0.94679,
+    "pdf_page": 439
+  },
+  {
+    "id": "78168",
+    "from_name": "控诞丹",
+    "to_name": "控涎丹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "78168 控涎丹",
+    "toc_ocr": "控涎丹",
+    "medium_confidence": 0.93972,
+    "pdf_page": 479
+  },
+  {
+    "id": "78169",
+    "from_name": "控诞丹",
+    "to_name": "控涎丹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "78169 控涎丹",
+    "toc_ocr": "控涎丹",
+    "medium_confidence": 0.9472,
+    "pdf_page": 479
+  },
+  {
+    "id": "78221",
+    "from_name": "教右汤",
+    "to_name": "救右汤",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "78221 救右汤",
+    "toc_ocr": "救右汤",
+    "medium_confidence": 0.98261,
+    "pdf_page": 484
+  },
+  {
+    "id": "78389",
+    "from_name": "救療汤",
+    "to_name": "救察汤",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "78389 救察汤",
+    "toc_ocr": "救察汤",
+    "medium_confidence": 0.92414,
+    "pdf_page": 504
+  },
+  {
+    "id": "78513",
+    "from_name": "雀共丸",
+    "to_name": "雀粪丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "78513 雀粪丸",
+    "toc_ocr": "雀粪丸",
+    "medium_confidence": 0.95171,
+    "pdf_page": 521
+  },
+  {
+    "id": "78842",
+    "from_name": "悬要散",
+    "to_name": "悬萎散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "78842 悬萎散",
+    "toc_ocr": "悬萎散",
+    "medium_confidence": 0.88911,
+    "pdf_page": 559
+  },
+  {
+    "id": "79058",
+    "from_name": "苟须散",
+    "to_name": "笱须散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "79058 笱须散",
+    "toc_ocr": "笱须散",
+    "medium_confidence": 0.96803,
+    "pdf_page": 585
+  },
+  {
+    "id": "79211",
+    "from_name": "猪肝粪",
+    "to_name": "猪肝羹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "79211 猪肝羹",
+    "toc_ocr": "猪肝羹",
+    "medium_confidence": 0.93949,
+    "pdf_page": 603
+  },
+  {
+    "id": "79212",
+    "from_name": "猪肝藝",
+    "to_name": "猪肝羹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "79212 猪肝羹",
+    "toc_ocr": "猪肝羹",
+    "medium_confidence": 0.98432,
+    "pdf_page": 603
+  },
+  {
+    "id": "79213",
+    "from_name": "猪肝粪",
+    "to_name": "猪肝羹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "79213 猪肝羹",
+    "toc_ocr": "猪肝羹",
+    "medium_confidence": 0.98595,
+    "pdf_page": 603
+  },
+  {
+    "id": "79323",
+    "from_name": "猪肾粪",
+    "to_name": "猪肾羹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "79323 猪肾羹",
+    "toc_ocr": "猪肾羹",
+    "medium_confidence": 0.91148,
+    "pdf_page": 619
+  },
+  {
+    "id": "79325",
+    "from_name": "猪肾義",
+    "to_name": "猪肾羹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "79325 猪肾羹",
+    "toc_ocr": "猪肾羹",
+    "medium_confidence": 0.95998,
+    "pdf_page": 619
+  },
+  {
+    "id": "79326",
+    "from_name": "猪肾藝",
+    "to_name": "猪肾羹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "79326 猪肾羹",
+    "toc_ocr": "猪肾羹",
+    "medium_confidence": 0.94405,
+    "pdf_page": 619
+  },
+  {
+    "id": "79436",
+    "from_name": "猪蹄龔",
+    "to_name": "猪蹄羹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "79436 猪蹄羹",
+    "toc_ocr": "猪蹄羹",
+    "medium_confidence": 0.8793,
+    "pdf_page": 631
+  },
+  {
+    "id": "79438",
+    "from_name": "猪體膏",
+    "to_name": "猪髓膏",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "79438 猪髓膏",
+    "toc_ocr": "猪髓膏",
+    "medium_confidence": 0.96531,
+    "pdf_page": 631
+  },
+  {
+    "id": "79653",
+    "from_name": "商亮丸",
+    "to_name": "商壳丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "79653 商壳丸",
+    "toc_ocr": "商壳丸",
+    "medium_confidence": 0.95397,
+    "pdf_page": 660
+  },
+  {
+    "id": "80710",
+    "from_name": "濟肠散",
+    "to_name": "清肠散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "80710 清肠散",
+    "toc_ocr": "清肠散",
+    "medium_confidence": 0.96364,
+    "pdf_page": 798
+  },
+  {
+    "id": "80994",
+    "from_name": "清官丹",
+    "to_name": "清宫丹",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "80994 清宫丹",
+    "toc_ocr": "清宫丹",
+    "medium_confidence": 0.96605,
+    "pdf_page": 830
+  },
+  {
+    "id": "81152",
+    "from_name": "清署散",
+    "to_name": "清暑散",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "81152 清暑散",
+    "toc_ocr": "清暑散",
+    "medium_confidence": 0.99465,
+    "pdf_page": 847
+  },
+  {
+    "id": "81226",
+    "from_name": "清隔饮",
+    "to_name": "清膈饮",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "81226 清膈饮",
+    "toc_ocr": "清膈饮",
+    "medium_confidence": 0.95757,
+    "pdf_page": 856
+  },
+  {
+    "id": "81237",
+    "from_name": "清麗汤",
+    "to_name": "清震汤",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "81237 清震汤",
+    "toc_ocr": "清震汤",
+    "medium_confidence": 0.90498,
+    "pdf_page": 857
+  },
+  {
+    "id": "82767",
+    "from_name": "绵兖丸",
+    "to_name": "绵充丸",
+    "method": "PP-OCRv6-medium body header agrees with independent TOC OCR",
+    "medium_ocr": "82767 绵充丸",
+    "toc_ocr": "绵充丸",
+    "medium_confidence": 0.95666,
+    "pdf_page": 1052
+  }
+]

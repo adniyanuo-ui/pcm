@@ -1,0 +1,325 @@
+{
+  "corpus": "中医方剂大辞典正编第1-10册",
+  "entry_id_range": [
+    1,
+    96592
+  ],
+  "total_entries": 96592,
+  "rag_ready_entries": 96381,
+  "rag_excluded_entries": 211,
+  "rag_excluded_status_counts": {
+    "source_page_missing": 187,
+    "partial_source_page_missing": 24
+  },
+  "source_pdf_blank_pages": [
+    {
+      "volume": 5,
+      "pdf_page": 477
+    },
+    {
+      "volume": 5,
+      "pdf_page": 877
+    },
+    {
+      "volume": 5,
+      "pdf_page": 878
+    },
+    {
+      "volume": 6,
+      "pdf_page": 81
+    },
+    {
+      "volume": 6,
+      "pdf_page": 238
+    },
+    {
+      "volume": 6,
+      "pdf_page": 387
+    },
+    {
+      "volume": 6,
+      "pdf_page": 507
+    },
+    {
+      "volume": 7,
+      "pdf_page": 157
+    },
+    {
+      "volume": 7,
+      "pdf_page": 358
+    },
+    {
+      "volume": 7,
+      "pdf_page": 456
+    },
+    {
+      "volume": 7,
+      "pdf_page": 722
+    },
+    {
+      "volume": 7,
+      "pdf_page": 914
+    },
+    {
+      "volume": 7,
+      "pdf_page": 945
+    },
+    {
+      "volume": 7,
+      "pdf_page": 1116
+    },
+    {
+      "volume": 7,
+      "pdf_page": 1160
+    },
+    {
+      "volume": 7,
+      "pdf_page": 1304
+    },
+    {
+      "volume": 8,
+      "pdf_page": 106
+    },
+    {
+      "volume": 9,
+      "pdf_page": 99
+    },
+    {
+      "volume": 9,
+      "pdf_page": 208
+    },
+    {
+      "volume": 9,
+      "pdf_page": 482
+    },
+    {
+      "volume": 9,
+      "pdf_page": 527
+    },
+    {
+      "volume": 10,
+      "pdf_page": 288
+    },
+    {
+      "volume": 10,
+      "pdf_page": 1158
+    },
+    {
+      "volume": 10,
+      "pdf_page": 1201
+    },
+    {
+      "volume": 10,
+      "pdf_page": 1731
+    }
+  ],
+  "raw_line_count": 949057,
+  "raw_line_confidence_weighted_mean": 0.980519,
+  "raw_lines_below_0_70": 3508,
+  "review_index_records": 16682,
+  "unresolved_header_audit_records": 772,
+  "field_counts": {
+    "方源": 84221,
+    "组成": 84193,
+    "主治": 80958,
+    "用法": 79755,
+    "功用": 15269,
+    "正文": 12899,
+    "异名": 7370,
+    "宜忌": 5831,
+    "备考": 5771,
+    "加减": 5118,
+    "方论选录": 4365,
+    "临证举例": 955,
+    "现代研究": 76,
+    "制法": 8,
+    "附方": 5,
+    "备注": 1
+  },
+  "quality_flag_counts": {
+    "missing_from_parsed_toc": 10595,
+    "name_differs_from_toc": 2748,
+    "low_confidence_line": 2652,
+    "name_repaired_by_independent_ocr_consensus": 711,
+    "header_repaired_from_pdf_or_toc": 239,
+    "source_page_missing": 211,
+    "excluded_from_rag_until_recovered": 211,
+    "header_repaired_by_sequence_and_toc": 99,
+    "missing_source_field": 15,
+    "text_repaired_from_verified_source": 6
+  },
+  "volumes": [
+    {
+      "volume": 1,
+      "entry_range": [
+        1,
+        9634
+      ],
+      "entries": 9634,
+      "raw_lines": 98196,
+      "raw_confidence_mean": 0.983853,
+      "raw_lines_below_0_70": 148,
+      "header_corrections": 26,
+      "sequence_corrections": 0,
+      "name_corrections": 21,
+      "source_page_missing_placeholders": 0,
+      "partial_source_page_missing": 0
+    },
+    {
+      "volume": 2,
+      "entry_range": [
+        9635,
+        18768
+      ],
+      "entries": 9134,
+      "raw_lines": 91694,
+      "raw_confidence_mean": 0.983015,
+      "raw_lines_below_0_70": 151,
+      "header_corrections": 9,
+      "sequence_corrections": 37,
+      "name_corrections": 22,
+      "source_page_missing_placeholders": 0,
+      "partial_source_page_missing": 0
+    },
+    {
+      "volume": 3,
+      "entry_range": [
+        18769,
+        30066
+      ],
+      "entries": 11298,
+      "raw_lines": 111224,
+      "raw_confidence_mean": 0.984214,
+      "raw_lines_below_0_70": 123,
+      "header_corrections": 9,
+      "sequence_corrections": 2,
+      "name_corrections": 25,
+      "source_page_missing_placeholders": 0,
+      "partial_source_page_missing": 0
+    },
+    {
+      "volume": 4,
+      "entry_range": [
+        30067,
+        38375
+      ],
+      "entries": 8309,
+      "raw_lines": 84556,
+      "raw_confidence_mean": 0.978925,
+      "raw_lines_below_0_70": 509,
+      "header_corrections": 33,
+      "sequence_corrections": 4,
+      "name_corrections": 33,
+      "source_page_missing_placeholders": 0,
+      "partial_source_page_missing": 0
+    },
+    {
+      "volume": 5,
+      "entry_range": [
+        38376,
+        47701
+      ],
+      "entries": 9326,
+      "raw_lines": 91884,
+      "raw_confidence_mean": 0.978661,
+      "raw_lines_below_0_70": 597,
+      "header_corrections": 15,
+      "sequence_corrections": 4,
+      "name_corrections": 83,
+      "source_page_missing_placeholders": 23,
+      "partial_source_page_missing": 2
+    },
+    {
+      "volume": 6,
+      "entry_range": [
+        47702,
+        55547
+      ],
+      "entries": 7846,
+      "raw_lines": 76958,
+      "raw_confidence_mean": 0.981231,
+      "raw_lines_below_0_70": 156,
+      "header_corrections": 24,
+      "sequence_corrections": 14,
+      "name_corrections": 50,
+      "source_page_missing_placeholders": 30,
+      "partial_source_page_missing": 4
+    },
+    {
+      "volume": 7,
+      "entry_range": [
+        55548,
+        66423
+      ],
+      "entries": 10876,
+      "raw_lines": 103856,
+      "raw_confidence_mean": 0.976725,
+      "raw_lines_below_0_70": 679,
+      "header_corrections": 38,
+      "sequence_corrections": 4,
+      "name_corrections": 116,
+      "source_page_missing_placeholders": 62,
+      "partial_source_page_missing": 9
+    },
+    {
+      "volume": 8,
+      "entry_range": [
+        66424,
+        74840
+      ],
+      "entries": 8417,
+      "raw_lines": 81960,
+      "raw_confidence_mean": 0.979527,
+      "raw_lines_below_0_70": 578,
+      "header_corrections": 8,
+      "sequence_corrections": 4,
+      "name_corrections": 69,
+      "source_page_missing_placeholders": 6,
+      "partial_source_page_missing": 1
+    },
+    {
+      "volume": 9,
+      "entry_range": [
+        74841,
+        82875
+      ],
+      "entries": 8035,
+      "raw_lines": 77125,
+      "raw_confidence_mean": 0.977316,
+      "raw_lines_below_0_70": 141,
+      "header_corrections": 25,
+      "sequence_corrections": 6,
+      "name_corrections": 62,
+      "source_page_missing_placeholders": 31,
+      "partial_source_page_missing": 4
+    },
+    {
+      "volume": 10,
+      "entry_range": [
+        82876,
+        96592
+      ],
+      "entries": 13717,
+      "raw_lines": 131604,
+      "raw_confidence_mean": 0.980564,
+      "raw_lines_below_0_70": 426,
+      "header_corrections": 52,
+      "sequence_corrections": 24,
+      "name_corrections": 230,
+      "source_page_missing_placeholders": 35,
+      "partial_source_page_missing": 4
+    }
+  ],
+  "outputs": {
+    "entries": "fangji_entries.jsonl",
+    "rag_exclusions": "rag_exclusions.jsonl",
+    "review_index": "review_index.jsonl",
+    "unresolved_header_audit": "unresolved_header_audit.jsonl"
+  },
+  "output_sha256": {
+    "entries": "79fba24ec81e7fe81ca587adf10aee8bb4cb14c968cb6e6327b463c75c048484",
+    "rag_exclusions": "1f14b4f02845c7f7651180b4e3cb4849b6ee06cd59d894f701bbd3fa30ea4579",
+    "review_index": "e47bea74fbc0ae138a7f1c3ab6ae3d6cfffa10e2ca9825e3de17fcc2243d521e",
+    "unresolved_header_audit": "4044a4fb782903c8d65bf6453a1b0e875718ff352f943ae64930067a877a1ca8"
+  }
+}

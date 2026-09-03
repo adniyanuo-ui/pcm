@@ -1,0 +1,24 @@
+{
+  "volume": 11,
+  "source_pdf": "dacidian_pdf/中医方剂大辞典（第11册）.pdf",
+  "source_pdf_sha256": "26a757cbdc82879fadb072344d05522828ddf51b89463011ce22de32beadcf62",
+  "source_pdf_size": 81253820,
+  "ocr_engine": "RapidOCR 3.9.2 / PP-OCRv6 small / ONNX Runtime 1.29.0",
+  "rendering": "pdftoppm 250 DPI grayscale JPEG quality=95",
+  "layout": "pages 12-757 three-column; 758-929 two-column; 930-950 full-page",
+  "canonical_formula_corpus": "dacidian_text/corpus/fangji_entries.jsonl",
+  "outputs": {
+    "volume_11_raw.txt": "8ed6466a181a5dfb32cc767c3c11b40ee0199f036ef10b58dd49589484f5fced",
+    "volume_11_front_matter.txt": "5d2bcbd37f19c50f390de0c1eb7ebb3f65b22f18ce8f8003d90a26ad9df4bc48",
+    "volume_11_measures.txt": "ec9f8db00b924ce3ee075ef3ecc825d9a4af7c780013e219ddc29ef099bff37e",
+    "volume_11_bibliography.txt": "bd6d14287a7602537889af0c02c818f80143a5eb02077f6b59fc4124715e3804",
+    "volume_11_formula_index.jsonl": "75b4e67b1f2c9f67d25c9059acd050fc74cdd768c25414a2d383831cc078fadc",
+    "volume_11_formula_index_complete.jsonl": "d4c8f0df89e9010fe1359580c11bcb59f3a41b254c25b3196d96bd7e48abd298",
+    "volume_11_formula_index_needs_review.jsonl": "0482656373c3005c153809f5b43aaf7922619ab4adc45e71017812d55e56f0e7",
+    "volume_11_syndrome_index.jsonl": "a262c0b8f0fabc27dffd5de1bab078f850a9a3846c423fec25c8372957eb6fb9",
+    "volume_11_syndrome_index_needs_review.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "volume_11_measure_rows.jsonl": "957a939a90ed0e22982f871e43ab591b3a20fe4308d061146e67c54d0c6400ed",
+    "volume_11_bibliography_rows.jsonl": "32c07a10dbca37805122df5044142b5e3b59d11686c665c6ae081b3298188d78",
+    "volume_11_quality.json": "bab1819242eb36bb203da0c656e03aa8a56acef054abf543f6250d6a60cc9f66"
+  }
+}

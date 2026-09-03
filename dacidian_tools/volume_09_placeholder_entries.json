@@ -1,0 +1,30 @@
+[
+  {
+    "id_range": [74972, 74977],
+    "pdf_pages": [99],
+    "book_pages": [21],
+    "reason": "源PDF第99页（书页21）为全白页；方名来自本册目录OCR，正文待可靠版本补全。"
+  },
+  {
+    "id_range": [75905, 75914],
+    "default_name": "黄芩汤",
+    "force_default_name": true,
+    "pdf_pages": [208],
+    "book_pages": [130],
+    "reason": "源PDF第208页（书页130）为全白页；方名由本册目录和同名连续条目确认，正文待可靠版本补全。"
+  },
+  {
+    "id_range": [78204, 78211],
+    "pdf_pages": [482],
+    "book_pages": [404],
+    "reason": "源PDF第482页（书页404）为全白页；方名来自本册目录OCR，正文待可靠版本补全。"
+  },
+  {
+    "id_range": [78558, 78564],
+    "default_name": "常山饮",
+    "force_default_name": true,
+    "pdf_pages": [527],
+    "book_pages": [449],
+    "reason": "源PDF第527页（书页449）为全白页；方名由本册目录和同名连续条目确认，正文待可靠版本补全。"
+  }
+]

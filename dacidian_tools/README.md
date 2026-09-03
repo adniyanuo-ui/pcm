@@ -64,3 +64,19 @@ python dacidian_tools/clean_volume.py \
 对正文方名与目录 OCR 不一致的条目，可用 `audit_headers.py` 的 PP-OCRv6 medium 模型重新读取正文标题。只有“正文中型模型”和“独立目录 OCR”一致时才生成名称纠错映射，再将该映射传给 `clean_volume.py --name-corrections`；三方不一致的条目继续保留在复核清单中。
 
 逐页 `raw_pages/` 不直接放入 Git。完成后用 `pack_raw_pages.py pack` 生成确定性的 `volume_XX_raw_pages.jsonl.gz`，归档会验证页码连续性并可用 `unpack` 恢复原始逐页 JSON，因此不会丢失昂贵的 OCR 中间结果。
+
+第 11 册使用独立的一键流程：
+
+```bash
+python dacidian_tools/process_appendix.py --workers 10 --threads-per-worker 2
+```
+
+其分段版式为：PDF 12—653 页正词目三栏、654—757 页副词目三栏、758—929 页病证索引双栏、930—933 页度量衡表整页、934—950 页书目整页。`clean_appendix.py` 会用第 1—10 册的已确认方号和方名交叉恢复密集索引中的数字误识；无法从第 11 册可靠定位的行只从正编补入“逻辑完整索引”，并标明并非附编 OCR 直接证据。
+
+全书正编合并命令：
+
+```bash
+python dacidian_tools/merge_corpus.py
+```
+
+结果位于 `dacidian_text/corpus/`。构建 RAG 时读取 `fangji_entries.jsonl`，并排除 `record_status` 不为 `complete` 的记录。

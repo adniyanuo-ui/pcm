@@ -45,8 +45,26 @@ def page_regions(
     height: int,
     content_start: int,
     front_end: int,
+    layout_profile: str,
 ) -> list[tuple[str, int, int, int, int]]:
     """Return reading-order crop regions for this edition's fixed layouts."""
+    if layout_profile == "appendix":
+        if pdf_page <= 11 or pdf_page >= 930:
+            return [("page", int(width * 0.05), int(height * 0.04), int(width * 0.95), int(height * 0.95))]
+        if pdf_page <= 757:
+            if pdf_page % 2:
+                x_ranges = ((0.075, 0.36), (0.36, 0.62), (0.62, 0.94))
+            else:
+                x_ranges = ((0.065, 0.34), (0.34, 0.60), (0.60, 0.94))
+            return [
+                (f"column_{index}", int(width * x0), int(height * 0.055), int(width * x1), int(height * 0.93))
+                for index, (x0, x1) in enumerate(x_ranges, 1)
+            ]
+        return [
+            ("left", int(width * 0.06), int(height * 0.07), int(width * 0.49), int(height * 0.93)),
+            ("right", int(width * 0.485), int(height * 0.07), int(width * 0.93), int(height * 0.93)),
+        ]
+
     if pdf_page <= front_end:
         return [("page", int(width * 0.05), int(height * 0.04), int(width * 0.95), int(height * 0.95))]
 
@@ -80,8 +98,8 @@ def find_page_number(path: Path) -> int:
     return int(match.group(1))
 
 
-def ocr_page(job: tuple[int, str, str, int, int, int]) -> dict[str, Any]:
-    pdf_page, image_name, output_name, volume, content_start, front_end = job
+def ocr_page(job: tuple[int, str, str, int, int, int, int, str]) -> dict[str, Any]:
+    pdf_page, image_name, output_name, volume, content_start, front_end, book_page_start, layout_profile = job
     output_path = Path(output_name)
     if output_path.exists() and output_path.stat().st_size > 100:
         return {"pdf_page": pdf_page, "status": "skipped"}
@@ -94,7 +112,9 @@ def ocr_page(job: tuple[int, str, str, int, int, int]) -> dict[str, Any]:
     regions: list[dict[str, Any]] = []
 
     assert OCR_ENGINE is not None
-    for region_name, x0, y0, x1, y1 in page_regions(pdf_page, width, height, content_start, front_end):
+    for region_name, x0, y0, x1, y1 in page_regions(
+        pdf_page, width, height, content_start, front_end, layout_profile
+    ):
         crop = img[y0:y1, x0:x1]
         result = OCR_ENGINE(crop)
         lines: list[dict[str, Any]] = []
@@ -121,9 +141,15 @@ def ocr_page(job: tuple[int, str, str, int, int, int]) -> dict[str, Any]:
     payload = {
         "pdf_page": pdf_page,
         "volume": volume,
-        "book_page": pdf_page - content_start + 1 if pdf_page >= content_start else None,
+        "book_page": pdf_page - book_page_start + 1 if pdf_page >= book_page_start else None,
         "image": {"width": width, "height": height, "file": Path(image_name).name},
-        "layout": "two_column" if pdf_page >= content_start else ("three_column" if pdf_page > front_end else "single_page"),
+        "layout": (
+            "single_page"
+            if len(regions) == 1
+            else "three_column"
+            if len(regions) == 3
+            else "two_column"
+        ),
         "ocr": {"engine": "RapidOCR", "model": "PP-OCRv6", "version": "3.9.2"},
         "regions": regions,
         "elapsed_seconds": round(time.time() - started, 3),
@@ -152,7 +178,11 @@ def main() -> int:
     parser.add_argument("--volume", type=int, default=1)
     parser.add_argument("--content-start", type=int, default=89)
     parser.add_argument("--front-end", type=int, default=10)
+    parser.add_argument("--book-page-start", type=int, default=None)
+    parser.add_argument("--layout-profile", choices=("dictionary", "appendix"), default="dictionary")
     args = parser.parse_args()
+    if args.book_page_start is None:
+        args.book_page_start = args.content_start
 
     image_by_page: dict[int, Path] = {}
     for path in sorted(args.images.glob("page-*.jpg")):
@@ -174,6 +204,8 @@ def main() -> int:
             args.volume,
             args.content_start,
             args.front_end,
+            args.book_page_start,
+            args.layout_profile,
         )
         for page in range(args.start, args.end + 1)
     ]

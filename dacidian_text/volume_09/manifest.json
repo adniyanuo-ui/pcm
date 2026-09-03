@@ -1,0 +1,55 @@
+{
+  "volume": 9,
+  "source_pdf": "dacidian_pdf/中医方剂大辞典（第9册）.pdf",
+  "source_pdf_sha256": "4ba52821ce8e62b303b81afa3e0e3386250685e8b22f95d01cc36e8a344144b9",
+  "source_pdf_size": 33979178,
+  "ocr_engine": "RapidOCR 3.9.2 / PP-OCRv6 small / ONNX Runtime 1.29.0",
+  "rendering": "pdftoppm 250 DPI grayscale JPEG quality=95",
+  "layout": {
+    "front_matter": [
+      1,
+      10
+    ],
+    "contents_and_index": [
+      11,
+      78
+    ],
+    "dictionary_entries": [
+      79,
+      1063
+    ]
+  },
+  "correction_policy": [
+    "Preserve raw per-line OCR, coordinates and confidence.",
+    "Normalize field brackets and known field-label OCR variants.",
+    "Normalize only O/o->0 and I/l->1 inside five-character entry IDs.",
+    "Join visual line wraps inside fields.",
+    "Do not guess corrections to herb names, formula names, quantities, or classical quotations.",
+    "Use parsed table of contents as a comparison signal, not an automatic semantic overwrite.",
+    "Apply audited page-and-text keyed header repairs from volume_09_header_corrections.json when present."
+  ],
+  "header_corrections": "/home/heyude/project/pcm/dacidian_tools/volume_09_header_corrections.json",
+  "name_corrections": "dacidian_text/volume_09/volume_09_name_corrections.json",
+  "text_corrections": "/home/heyude/project/pcm/dacidian_tools/volume_09_text_corrections.json",
+  "placeholder_entries": "/home/heyude/project/pcm/dacidian_tools/volume_09_placeholder_entries.json",
+  "outputs": {
+    "raw_pages": "dacidian_text/volume_09/raw_pages",
+    "raw_text": "dacidian_text/volume_09/volume_09_raw.txt",
+    "front_matter_text": "dacidian_text/volume_09/volume_09_front_matter.txt",
+    "clean_text": "dacidian_text/volume_09/volume_09_clean.txt",
+    "entries_jsonl": "dacidian_text/volume_09/volume_09_entries.jsonl",
+    "toc_jsonl": "dacidian_text/volume_09/volume_09_toc_index.jsonl",
+    "needs_review_jsonl": "dacidian_text/volume_09/volume_09_needs_review.jsonl",
+    "low_confidence_lines_jsonl": "dacidian_text/volume_09/volume_09_low_confidence_lines.jsonl",
+    "quality_json": "dacidian_text/volume_09/volume_09_quality.json"
+  },
+  "output_sha256": {
+    "raw_text": "2dfca503bcc1c8c0d15f242ce718bcb8d5ac2e29c2a0eb48fbabc95b26043c68",
+    "front_matter_text": "f69cefb39c7fe3ead423686d605db88b55a4f88dd5a42a91cbc6cff25e43d18d",
+    "clean_text": "d33941e4d44a35c133b324ef56844e95824abf35e234356f3ce5e8c18792f0f8",
+    "entries_jsonl": "fdf9dff76200880a71ce642ecde9529aa6426c05d3bcc83fb37560fb30e6d024",
+    "toc_jsonl": "8389462ddd7470a8ac68248e7d36d1075668518c1e89741cbf57a8b8fb98920f",
+    "needs_review_jsonl": "dbe14fff7015d59134f71f27af962ca1f4a95fa89a36b64777a1cd585be60c23",
+    "low_confidence_lines_jsonl": "e5dff48601e216789840b7690c0a8fa97b70cd8393fe14a0d8dd91af8e125aa7"
+  }
+}

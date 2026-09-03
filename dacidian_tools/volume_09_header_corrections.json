@@ -1,0 +1,192 @@
+[
+  {
+    "pdf_page": 100,
+    "raw_text": "“理气丸”之异名。见该杀。",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "74978 理气舒肝丸",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第99页（书页21）；仅第100页开头的末行可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 209,
+    "raw_text": "下“黄芩半夏生姜汤”之异名。见该条。",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "75915 黄芩汤",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第208页（书页130）；仅第209页开头的末行可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 483,
+    "raw_text": "当贝 仙茅各四两 白术六两 人胞一个",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "78212 辅相振阳丸",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第482页（书页404）；仅第483页开头的组成后段、用法和主治可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 528,
+    "raw_text": "叶",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "78565 常山饮",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第527页（书页449）；仅第528页开头的组成末字和主治可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 109,
+    "raw_text": "5036 梧桐叶散",
+    "corrected_header": "75036 梧桐叶散",
+    "note": "扫描原页和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 133,
+    "raw_text": "752+3 菖蒲汤",
+    "corrected_header": "75243 菖蒲汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 133,
+    "raw_text": "75245",
+    "region": "right",
+    "line_index": 9,
+    "corrected_header": "75245 菖蒲汤",
+    "note": "扫描原页中编号与方名被OCR拆成两行。"
+  },
+  {
+    "pdf_page": 133,
+    "raw_text": "菖蒲汤",
+    "region": "right",
+    "line_index": 10,
+    "drop_line": true,
+    "note": "已合并到同页上一行的完整标题；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 191,
+    "raw_text": "【方源】《原全书》卷六十主引钱氏方。",
+    "region": "right",
+    "line_index": 31,
+    "corrected_header": "75758 黄龙散",
+    "keep_raw_after_header": true,
+    "note": "标题在扫描/OCR中遗漏；编号和方名由原页位置、目录及相邻条目确认。"
+  },
+  {
+    "pdf_page": 255,
+    "raw_text": "70.342 黄连散",
+    "corrected_header": "76342 黄连散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 346,
+    "raw_text": "77098 黄散子",
+    "corrected_header": "77088 黄散子",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 412,
+    "raw_text": "77652 黄耆解肌散",
+    "corrected_header": "77662 黄耆解肌散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 465,
+    "raw_text": "-905接骨丹",
+    "region": "left",
+    "line_index": 39,
+    "corrected_header": "78054 接骨丹",
+    "note": "扫描原页和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 483,
+    "raw_text": "73218 救中汤",
+    "corrected_header": "78218 救中汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 518,
+    "raw_text": "784B6 虚热煎",
+    "corrected_header": "78486 虚热煎",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 537,
+    "raw_text": "78电",
+    "region": "left",
+    "line_index": 16,
+    "corrected_header": "78645 蚺蛇油",
+    "note": "扫描原页清晰显示78645 蚺蛇油。"
+  },
+  {
+    "pdf_page": 664,
+    "raw_text": "79c82 商陆根贴方",
+    "corrected_header": "79682 商陆根贴方",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 711,
+    "raw_text": "《济阴纲目》卷十四。为《本事》卷十“麻",
+    "region": "left",
+    "line_index": 1,
+    "corrected_header": "80041 麻苏粥",
+    "keep_raw_after_header": true,
+    "note": "标题在OCR中遗漏；编号和方名由扫描原页、目录及相邻条目确认。"
+  },
+  {
+    "pdf_page": 716,
+    "raw_text": "83083 麻黄汤",
+    "corrected_header": "80083 麻黄汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 738,
+    "raw_text": "802+5 麻黄散",
+    "corrected_header": "80245 麻黄散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 778,
+    "raw_text": "805+7 清中汤",
+    "corrected_header": "80547 清中汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 875,
+    "raw_text": "B1387 清心凉膈丸",
+    "corrected_header": "81387 清心凉膈丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 883,
+    "raw_text": "81+57清肝消翳丸",
+    "corrected_header": "81457 清肝消翳丸",
+    "note": "扫描原页和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 901,
+    "raw_text": "31609 清胃保安丸",
+    "corrected_header": "81609 清胃保安丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 986,
+    "raw_text": "B2252 羚羊角散",
+    "corrected_header": "82252 羚羊角散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1017,
+    "raw_text": "B2480 断痫丹",
+    "corrected_header": "82480 断痫丹",
+    "note": "扫描原页和卷内顺序共同确认；目录小模型将痫误识别为病。"
+  }
+]

@@ -1,0 +1,373 @@
+[
+  {
+    "pdf_page": 289,
+    "raw_text": "（炙，锉）各七寸 青蒿心七枚（切） 杏仁",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "84062 葱白饮",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第288页（书页152）；仅第289页开头的组成后段、用法和主治可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 1159,
+    "raw_text": "一池，放信于池内，以原豆腐盖好，煮一炷香，",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "91160 痰毒顶",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第1158页（书页1022）；仅第1159页开头的组成后段、用法、功用和主治可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 1200,
+    "raw_text": "91498 碧雪散",
+    "region": "right",
+    "line_index": 39,
+    "corrected_header": "91498 碧雪散",
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条仅标题位于第1200页末；正文所在源PDF第1201页（书页1065）为全白页。",
+    "note": "标题可见但正文因后一源扫描页缺失而不完整。"
+  },
+  {
+    "pdf_page": 1732,
+    "raw_text": "《幼科折衷》卷上。为《医方类聚》卷一二",
+    "region": "left",
+    "line_index": 0,
+    "corrected_header": "95881 鳖甲饮",
+    "keep_raw_after_header": true,
+    "record_status": "partial_source_page_missing",
+    "source_note": "该条前半段位于源PDF全白的第1731页（书页1595）；仅第1732页开头的末段可见。",
+    "note": "根据目录及相邻编号恢复标题；正文因源扫描缺页而不完整。"
+  },
+  {
+    "pdf_page": 142,
+    "raw_text": "62905 琥珀丸",
+    "corrected_header": "82905 琥珀丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 153,
+    "raw_text": "62992 琥珀散",
+    "corrected_header": "82992 琥珀散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 198,
+    "raw_text": "63315 椒红丸",
+    "corrected_header": "83315 椒红丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 208,
+    "raw_text": "B3391 椒雄贴脐丸",
+    "corrected_header": "83391 椒雄贴脐丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 229,
+    "raw_text": "93559 散血瓜葵散",
+    "region": "right",
+    "line_index": 20,
+    "corrected_header": "83559 散血瓜蒌散",
+    "note": "扫描原页清晰显示83559 散血瓜蒌散；编号首位及方名末字均有OCR误识。"
+  },
+  {
+    "pdf_page": 271,
+    "raw_text": "0",
+    "region": "right",
+    "line_index": 28,
+    "corrected_header": "83908 葛豉粥",
+    "note": "扫描原页清晰显示83908 葛豉粥。"
+  },
+  {
+    "pdf_page": 285,
+    "raw_text": "82",
+    "region": "right",
+    "line_index": 21,
+    "corrected_header": "84029 葱粥",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 302,
+    "raw_text": "$4191 革劳丸",
+    "region": "left",
+    "line_index": 24,
+    "corrected_header": "84191 葶苈丸",
+    "note": "扫描原页清晰显示84191 葶苈丸；目录和小模型均误识方名。"
+  },
+  {
+    "pdf_page": 343,
+    "raw_text": "B4555 越鞠丸",
+    "corrected_header": "84555 越鞠丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 434,
+    "raw_text": "B5323 紫地汤",
+    "corrected_header": "85323 紫地汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 438,
+    "raw_text": "85356",
+    "region": "right",
+    "line_index": 0,
+    "corrected_header": "85356 紫苏汤",
+    "note": "扫描原页中编号与方名被OCR拆成两行。"
+  },
+  {
+    "pdf_page": 438,
+    "raw_text": "紫苏汤",
+    "region": "right",
+    "line_index": 1,
+    "drop_line": true,
+    "note": "已合并到同页上一行的完整标题；原始行保留于raw_pages。"
+  },
+  {
+    "pdf_page": 447,
+    "raw_text": "B5425 紫灵丹",
+    "corrected_header": "85425 紫灵丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 460,
+    "raw_text": "B5519 紫金散",
+    "corrected_header": "85519 紫金散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 484,
+    "raw_text": "B5705 紫菀汤",
+    "corrected_header": "85705 紫菀汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 502,
+    "raw_text": "85935 紫云风丸",
+    "corrected_header": "85835 紫云风丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 532,
+    "raw_text": "66078 掌胃膏",
+    "corrected_header": "86078 掌胃膏",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 547,
+    "raw_text": "B6194 蛤粉丸",
+    "corrected_header": "86194 蛤粉丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 568,
+    "raw_text": "B6344 黑白方",
+    "corrected_header": "86344 黑白方",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 773,
+    "raw_text": "87794 滋阴降火汤",
+    "corrected_header": "87994 滋阴降火汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 800,
+    "raw_text": "98186 普济消毒饮",
+    "corrected_header": "88186 普济消毒饮",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 840,
+    "raw_text": "B8490 犀角散",
+    "corrected_header": "88490 犀角散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 876,
+    "raw_text": "B8786 犀角竹沥膏",
+    "corrected_header": "88786 犀角竹沥膏",
+    "note": "扫描原页和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 894,
+    "raw_text": "3939 疏风定痛丸",
+    "corrected_header": "88939 疏风定痛丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 964,
+    "raw_text": "B9562 蓬莪茂散",
+    "corrected_header": "89562 蓬莪茂散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1008,
+    "raw_text": "89 25",
+    "region": "right",
+    "line_index": 20,
+    "corrected_header": "89925 搐药",
+    "note": "扫描原页清晰显示89925 搐药；目录小模型误识方名。"
+  },
+  {
+    "pdf_page": 1015,
+    "raw_text": "报66",
+    "region": "right",
+    "line_index": 33,
+    "corrected_header": "89995 暖金丹",
+    "note": "扫描原页清晰显示89995 暖金丹。"
+  },
+  {
+    "pdf_page": 1016,
+    "raw_text": "86668",
+    "region": "left",
+    "line_index": 25,
+    "corrected_header": "89998 暖炉丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1116,
+    "raw_text": "3346",
+    "region": "left",
+    "line_index": 16,
+    "corrected_header": "90839 解晕神丹",
+    "note": "扫描原页清晰显示90839 解晕神丹。"
+  },
+  {
+    "pdf_page": 1144,
+    "raw_text": "91951 新光一号",
+    "corrected_header": "91051 新光一号",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1187,
+    "raw_text": "11",
+    "region": "right",
+    "line_index": 6,
+    "corrected_header": "91386 霹雳夺命丹",
+    "note": "扫描原页清晰显示91386 霹雳夺命丹；目录小模型误识首二字。"
+  },
+  {
+    "pdf_page": 1192,
+    "raw_text": "9i422 碧丹",
+    "corrected_header": "91422 碧丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1222,
+    "raw_text": "71677 槟榔汤",
+    "corrected_header": "91677 槟榔汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1259,
+    "raw_text": "194 酸枣仁散",
+    "region": "right",
+    "line_index": 28,
+    "corrected_header": "91994 酸枣仁散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1266,
+    "raw_text": "#2441 著薇饮子",
+    "corrected_header": "92041 蔷薇饮子",
+    "note": "扫描原页清晰显示92041 蔷薇饮子；编号与方名均有OCR误识。"
+  },
+  {
+    "pdf_page": 1271,
+    "raw_text": "92587 蔓菁子散",
+    "corrected_header": "92087 蔓菁子散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1271,
+    "raw_text": "92000 蔓菁子粥",
+    "corrected_header": "92090 蔓菁子粥",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1271,
+    "raw_text": "92042 蔗浆粥",
+    "corrected_header": "92092 蔗浆粥",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1274,
+    "raw_text": "$2111 聚宝丹",
+    "corrected_header": "92111 聚宝丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1451,
+    "raw_text": "93503 镇心丹",
+    "corrected_header": "93603 镇心丹",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1495,
+    "raw_text": "是率8966",
+    "region": "right",
+    "line_index": 27,
+    "corrected_header": "93968 摩膏",
+    "note": "扫描原页清晰显示93968 摩膏。"
+  },
+  {
+    "pdf_page": 1543,
+    "raw_text": "#9363",
+    "region": "right",
+    "line_index": 18,
+    "corrected_header": "94363 醍醐汤",
+    "note": "扫描原页清晰显示94363 醍醐汤。"
+  },
+  {
+    "pdf_page": 1573,
+    "raw_text": "94502 薏苡瓜瓣汤",
+    "corrected_header": "94602 薏苡瓜瓣汤",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1620,
+    "raw_text": "34993 霞天胶",
+    "corrected_header": "94993 霞天胶",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1628,
+    "raw_text": "15067 嫖蛸散",
+    "corrected_header": "95067 螵蛸散",
+    "note": "扫描原页清晰显示95067 螵蛸散；编号首位及方名首字均有OCR误识。"
+  },
+  {
+    "pdf_page": 1796,
+    "raw_text": "96.385 麝香散",
+    "corrected_header": "96385 麝香散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1820,
+    "raw_text": "5578 蠲痛无忧散",
+    "region": "right",
+    "line_index": 8,
+    "corrected_header": "96578 蠲痛无忧散",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1820,
+    "raw_text": "6579 蠲痛五汁膏",
+    "region": "right",
+    "line_index": 21,
+    "corrected_header": "96579 蠲痛五汁膏",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  },
+  {
+    "pdf_page": 1820,
+    "raw_text": "6580 蠲痛乳香丸",
+    "region": "right",
+    "line_index": 30,
+    "corrected_header": "96580 蠲痛乳香丸",
+    "note": "扫描原页、目录和卷内顺序共同确认。"
+  }
+]

@@ -1,5 +1,6 @@
 # Workspace-provided read-only placeholder; the active local git dir is .git-local.
 .git-local/
+.codex/
 
 # Source archives and scanned books are local inputs, not repository content.
 *.zip
