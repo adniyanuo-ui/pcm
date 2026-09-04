@@ -12,7 +12,8 @@ from tools.token_util import token
 from tools.viewset import ModelViewSet
 from tools.viewset import ModelViewSet
 from django.contrib.auth.models import User
-from rest_framework.exceptions import APIException, ValidationError, NotAuthenticated
+from rest_framework.exceptions import APIException, ValidationError
+from rest_framework import status
 
 from django.contrib.auth import authenticate
 
@@ -20,6 +21,7 @@ from user.cms.serializers import UserSerializer
 from user.models import UserProfile
 from django.db.models import Count
 from django.contrib.auth.hashers import make_password
+from django.conf import settings
 
 
 class RegisterView(ModelViewSet):
@@ -27,6 +29,12 @@ class RegisterView(ModelViewSet):
     authentication_classes = []
 
     def create(self, request, *args, **kwargs):
+        if not getattr(settings, "CMS_REGISTRATION_ENABLED", True):
+            return get_response(
+                code=status.HTTP_403_FORBIDDEN,
+                msg="当前试用环境不开放自主注册",
+                status_code=status.HTTP_403_FORBIDDEN,
+            )
         username = request.data["username"]
         password = request.data["password"]
         if User.objects.filter(username=username).exists():

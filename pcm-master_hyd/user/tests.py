@@ -1,9 +1,10 @@
 from django.contrib.auth.models import User
 from django.test import TestCase
+from django.test import override_settings
 from rest_framework.test import APIRequestFactory
 
 from tools.auth import TokenAuthentication
-from user.cms.views import LoginView
+from user.cms.views import LoginView, RegisterView
 from user.models import UserProfile
 
 
@@ -29,3 +30,16 @@ class LoginProfileTests(TestCase):
         )
         authenticated_user, _ = TokenAuthentication().authenticate(authenticated_request)
         self.assertEqual(authenticated_user.id, user.id)
+
+    @override_settings(CMS_REGISTRATION_ENABLED=False)
+    def test_registration_is_disabled_in_pilot(self):
+        request = APIRequestFactory().post(
+            "/api/cms/user/register/",
+            {"username": "uninvited", "password": "not-used"},
+            format="json",
+        )
+
+        response = RegisterView.as_view({"post": "create"})(request)
+
+        self.assertEqual(response.status_code, 403)
+        self.assertFalse(User.objects.filter(username="uninvited").exists())

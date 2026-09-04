@@ -1,6 +1,9 @@
 {$PCM_DOMAIN} {
     encode zstd gzip
 
+    @registration path /api/cms/user/register /api/cms/user/register/*
+    respond @registration 404
+
     handle /api/* {
         reverse_proxy api:8000
     }

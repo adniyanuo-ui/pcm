@@ -46,6 +46,14 @@ nano .env
 - ALIYUN_ACCESS_KEY_SECRET；
 - ALIYUN_NLS_APPKEY。
 
+首次部署完成后也可以运行以下脚本。它会隐藏键盘输入、保留已配置值，并在写入后
+自动重启和检查后端：
+
+~~~bash
+cd /opt/pcm/app
+./deploy/light-server/configure-secrets.sh
+~~~
+
 生成随机Django密钥：
 
 ~~~bash
