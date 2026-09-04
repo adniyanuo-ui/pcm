@@ -64,12 +64,12 @@
                         <el-form :inline="true" class="demo-form-inline" size="mini" style="margin-bottom: 5px;">
                             <el-form-item label="模型选择">
                                 <el-select v-model="model_name" placeholder="模型选择" clearable>
+                                    <el-option label="DeepSeek V4 Pro（默认）" value="deepseek-v4-pro">DeepSeek V4 Pro（默认）</el-option>
+                                    <el-option label="DeepSeek V4 Flash" value="deepseek-v4-flash">DeepSeek V4 Flash</el-option>
                                     <el-option label="豆包" value="doubao-seed-2-0-pro-260215">豆包</el-option>
-                                    <el-option label="通义千问-max" value="qwen3-max">通义千问-max</el-option>
-                                    <el-option label="通义千问-plus" value="qwen3.5-plus">通义千问-plus</el-option>
-                                    <el-option label="通义千问-turbo" value="qwen-turbo">通义千问-turbo</el-option>
-                                    <el-option label="deepseek V3" value="deepseek-chat">deepseek V3</el-option>
-                                    <el-option label="deepseek R1" value="deepseek-reasoner">deepseek R1</el-option>
+                                    <el-option label="通义千问 Qwen3.7 Plus（备用）" value="qwen3.7-plus">通义千问 Qwen3.7 Plus（备用）</el-option>
+                                    <el-option label="通义千问 Qwen3.8 Max" value="qwen3.8-max">通义千问 Qwen3.8 Max</el-option>
+                                    <el-option label="通义千问 Qwen3.8 Flash" value="qwen3.8-flash">通义千问 Qwen3.8 Flash</el-option>
                                 </el-select>
                             </el-form-item>
 
@@ -86,9 +86,6 @@
                                         }}
                                     </el-option>
                                     <!--							<el-option label="通义千问-push" value="qwen-push">通义千问-push</el-option>-->
-                                    <!--							<el-option label="通义千问-turbo" value="qwen-turbo">通义千问-turbo</el-option>-->
-                                    <!--							<el-option label="deepseek V3" value="deepseek-chat">deepseek V3</el-option>-->
-                                    <!--							<el-option label="deepseek R1" value="deepseek-reasoner">deepseek R1</el-option>-->
                                 </el-select>
                             </el-form-item>
 
@@ -289,7 +286,7 @@ export default {
                 "edit": false
             },
             history_select_id: "",
-            model_name: "qwen3-max",
+            model_name: "deepseek-v4-pro",
             is_loading: false,
             rate: 0,
             record_id: 0,

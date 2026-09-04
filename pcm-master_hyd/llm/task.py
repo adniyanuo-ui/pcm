@@ -18,6 +18,7 @@ if __name__ == '__main__':
 import datetime
 import uuid
 
+from django.conf import settings
 from llm.models import Revise, Record
 from llm_utils.client import model_name2client
 from patient.models import Patient
@@ -29,7 +30,8 @@ from tools.utils import add_unique_lock
 
 @app.task(bind=True)
 @add_unique_lock(args_start_idx=1)
-def gen_prescription(self, patient_id, model_name="qwen3-max"):
+def gen_prescription(self, patient_id, model_name=None):
+    model_name = model_name or settings.DEFAULT_LLM_MODEL
     client = model_name2client[model_name]
     messages, user, question, doctor = Revise.get_revise_output_msg(patient_id, get_user=True)
 

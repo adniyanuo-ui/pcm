@@ -142,7 +142,7 @@ class ChatView(ModelViewSet):
         question = request.data["question"]
         dialogue = request.data["dialogue"]
         doctor = request.data["doctor"]
-        model_name = request.data["model_name"]
+        model_name = request.data.get("model_name") or settings.DEFAULT_LLM_MODEL
 
         return StreamingHttpResponse(self.gen(request.user.id, p_id, user, question, dialogue, doctor, model_name),
                                      content_type="text/plain")
@@ -181,7 +181,7 @@ class GenDialogueView(ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         text = request.data["text"]
-        model_name = request.data.get("model_name", "qwen3-max")
+        model_name = request.data.get("model_name") or settings.DEFAULT_LLM_MODEL
         messages = [
             {'role': 'system', 'content': "帮我把以下文本以医患对话的方式展示出来。"},
             {'role': 'user', 'content': text}
@@ -224,7 +224,7 @@ class GaseView(ModelViewSet):
             return APIException("还未生成AI辅助诊疗方案")
 
         Revise.objects.filter(id=revise_id).update(revise_output=revise_output)
-        model_name = request.data.get("model_name", "qwen3-max")
+        model_name = request.data.get("model_name") or settings.DEFAULT_LLM_MODEL
 
         user_content = f"""
 患者基本信息：

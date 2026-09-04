@@ -41,7 +41,8 @@ nano .env
 
 - PCM_DOMAIN；
 - DJANGO_SECRET_KEY；
-- 一个在线大模型API Key；
+- DeepSeek API Key（默认使用 `deepseek-v4-pro`）；
+- 通义千问 API Key（备用默认使用 `qwen3.7-plus`，可暂时留空）；
 - ALIYUN_ACCESS_KEY_ID；
 - ALIYUN_ACCESS_KEY_SECRET；
 - ALIYUN_NLS_APPKEY。
@@ -53,6 +54,12 @@ nano .env
 cd /opt/pcm/app
 ./deploy/light-server/configure-secrets.sh
 ~~~
+
+脚本默认先配置 DeepSeek，再配置备用的通义千问。重复运行时直接回车会保留对应
+旧值，因此只补充 DeepSeek Key 时，其余四项直接回车即可，不需要重新填写语音
+服务配置。系统不会在诊疗过程中静默切换模型；切换时会明确记录实际模型。
+脚本最后也可选择默认模型：`1` 为 V4 Pro，`2` 为 V4 Flash，`3` 为备用的
+Qwen3.7 Plus；直接回车保持当前选择。
 
 生成随机Django密钥：
 

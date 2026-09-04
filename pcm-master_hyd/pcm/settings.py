@@ -216,6 +216,9 @@ RAG_INDEX_PATH = Path(
     os.getenv("PCM_RAG_INDEX_PATH", BASE_DIR / "var" / "rag" / "fangji.sqlite3")
 )
 
+# ========================== 在线大模型
+DEFAULT_LLM_MODEL = os.getenv("PCM_DEFAULT_LLM_MODEL", "deepseek-v4-pro")
+
 # ========================== redis
 REDIS_HOST = os.getenv("PCM_REDIS_HOST", "127.0.0.1")
 REDIS_PORT = os.getenv("PCM_REDIS_PORT", "6379")

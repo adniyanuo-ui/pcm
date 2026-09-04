@@ -7,7 +7,7 @@ from openai import OpenAI
 
 from llm_utils.client import OPEN_AI_LLM_CONF, model_name2client
 
-model_name = "deepseek-reasoner"
+model_name = "deepseek-v4-pro"
 client = model_name2client[model_name]
 completion = client.chat.completions.create(
     model=model_name,
