@@ -85,6 +85,10 @@ cd deploy/light-server
 docker compose up -d --build
 ~~~
 
+服务器首次部署完成后会安装 `pcm-auto-update.timer`。它每10分钟检查一次GitHub
+main分支；没有新提交时不执行任何构建，有新提交时才进行快进更新、构建、健康
+检查并记录已部署版本。常规更新不需要再登录服务器。
+
 数据保存在Docker命名卷pcm_data中，重新构建镜像不会删除。不要执行带有volumes参数的down命令。
 
 ## 备份

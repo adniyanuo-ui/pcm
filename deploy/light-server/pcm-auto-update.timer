@@ -1,0 +1,12 @@
+[Unit]
+Description=Check PCM GitHub main for updates
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=10min
+RandomizedDelaySec=60
+Persistent=true
+Unit=pcm-auto-update.service
+
+[Install]
+WantedBy=timers.target

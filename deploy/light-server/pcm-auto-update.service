@@ -1,0 +1,19 @@
+[Unit]
+Description=PCM pull, build and deploy tested GitHub main
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=admin
+Group=admin
+SupplementaryGroups=docker
+WorkingDirectory=/opt/pcm/app/deploy/light-server
+EnvironmentFile=/opt/pcm/app/deploy/light-server/.env
+ExecStart=/opt/pcm/app/deploy/light-server/auto-update.sh
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+[Install]
+WantedBy=multi-user.target

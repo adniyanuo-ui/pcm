@@ -15,6 +15,9 @@ dacidian_pdf/
 *.zip
 *.pdf
 dacidian_text/volume_*/
+!dacidian_text/volume_11/
+dacidian_text/volume_11/*
+!dacidian_text/volume_11/volume_11_syndrome_index.jsonl
 dacidian_text/corpus/review_index.jsonl
 dacidian_text/corpus/unresolved_header_audit.jsonl
 dacidian_text/corpus/rag_exclusions.jsonl
