@@ -232,8 +232,9 @@ if currant_env == "local":
     if find_spec("pcm.settings_local"):
         from .settings_local import *
     else:
-        from .settings_dev import *
+        from .settings_sqlite import *
 elif currant_env == "test":
+    from .settings_sqlite import *
     from .settings_test import *
 elif currant_env == "prod":
     from .settings_prod import *

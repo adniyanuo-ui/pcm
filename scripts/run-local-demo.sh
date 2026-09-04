@@ -40,5 +40,5 @@ echo "启动医生工作台：http://localhost:5174"
 echo "按 Ctrl+C 同时停止前后端。"
 (
   cd "${FRONTEND_DIR}"
-  VITE_API_BASE_URL=http://127.0.0.1:8000 npm run dev -- --host 127.0.0.1
+  VITE_API_BASE_URL=http://127.0.0.1:8000 npm run dev -- --host 127.0.0.1 --port 5174
 )
