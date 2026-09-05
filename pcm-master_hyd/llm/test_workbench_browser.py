@@ -2,6 +2,8 @@
 
 PCM_BROWSER_TEST=1 enables the browser. PCM_REAL_MODEL_TEST=1 additionally calls the
 configured model and real RAG index; otherwise only the model output is stubbed.
+PCM_REAL_SPEECH_TEST=1 adds real NLS token/WebSocket/audio capture tests using
+Chrome's synthetic microphone. It does not verify a physical microphone's quality.
 """
 import os
 from pathlib import Path

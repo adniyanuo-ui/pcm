@@ -7,6 +7,7 @@ import assert from 'node:assert/strict'
 
 const profile = await mkdtemp(join(tmpdir(), 'pcm-chrome-'))
 const chrome = spawn('/usr/bin/google-chrome', ['--headless=new', '--no-sandbox', '--disable-dev-shm-usage',
+  ...(process.env.PCM_REAL_SPEECH_TEST === '1' ? ['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'] : []),
   '--remote-debugging-port=9228', '--remote-debugging-address=127.0.0.1', '--user-data-dir=' + profile, 'about:blank'], { stdio: 'ignore' })
 let socket
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -42,7 +43,7 @@ try {
     const start = Date.now()
     while (Date.now() - start < timeout) {
       if (await evaluate(expression)) return
-      const error = await evaluate("document.querySelector('.live-error')?.textContent")
+      const error = await evaluate("document.querySelector('.live-error, .speech-error')?.textContent")
       if (error) throw new Error(error)
       await delay(300)
     }
@@ -71,6 +72,17 @@ try {
   await fill('form.live-fields input[type=number]', '30')
   await click('创建就诊')
   await waitFor("document.body.innerText.includes('医患对话')")
+  if (process.env.PCM_REAL_SPEECH_TEST === '1') {
+    for (let round = 0; round < 2; round++) {
+      await evaluate("document.querySelector('button[aria-label=\"开始语音记录\"]').click()")
+      await waitFor("document.querySelector('.record-state')?.textContent.includes('正在记录')")
+      await delay(2000)
+      await evaluate("document.querySelector('button[aria-label=\"暂停语音记录\"]').click()")
+      await waitFor("document.querySelector('.record-state')?.textContent.includes('已暂停')")
+      assert.equal(await evaluate("document.querySelector('.speech-error')?.textContent || ''"), '')
+    }
+    console.log('PASS: real NLS token, browser audio capture with synthetic microphone, WebSocket start/pause/resume/stop')
+  }
   await click('校对原文')
   await fill('textarea[aria-label="编辑医患对话"]', '患者：我是虚构测试患者，食少便溏两周，乏力，无其他已知资料。医生：舌淡，脉弱。')
   await click('校对完成，整理四诊')

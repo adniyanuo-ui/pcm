@@ -89,14 +89,14 @@ export class AliyunRealtimeTranscriber {
   constructor(private readonly handlers: SpeechSessionHandlers) {}
 
   async start(): Promise<void> {
-    if (!navigator.mediaDevices?.getUserMedia) {
-      throw new Error('当前浏览器不支持麦克风录音，请使用最新版Chrome或Safari')
-    }
     this.stopRequested = false
     this.completed = false
     this.handlers.onState('connecting')
     try {
-      const mediaPromise = navigator.mediaDevices.getUserMedia({
+      if (!navigator.mediaDevices?.getUserMedia) {
+        throw new Error('当前浏览器不支持麦克风录音，请使用最新版Chrome或Safari')
+      }
+      this.mediaStream = await navigator.mediaDevices.getUserMedia({
         audio: {
           channelCount: 1,
           echoCancellation: true,
@@ -104,18 +104,21 @@ export class AliyunRealtimeTranscriber {
           autoGainControl: true,
         },
       })
-      const [credentials, stream] = await Promise.all([getSpeechCredentials(), mediaPromise])
+      if (this.stopRequested) { await this.releaseAudio(); return }
+      const credentials = await getSpeechCredentials()
+      if (this.stopRequested) { await this.releaseAudio(); return }
       this.credentials = credentials
-      this.mediaStream = stream
       this.audioContext = new AudioContext({ latencyHint: 'interactive' })
       await this.audioContext.resume()
-      this.sourceNode = this.audioContext.createMediaStreamSource(stream)
+      this.sourceNode = this.audioContext.createMediaStreamSource(this.mediaStream)
       await this.connectWebSocket(credentials)
+      if (this.stopRequested) { await this.releaseAudio(); return }
       await this.connectAudioCapture()
       this.handlers.onState('recording')
     } catch (reason) {
       await this.releaseAudio()
       this.websocket?.close()
+      if (this.stopRequested) return
       this.handlers.onState('error')
       const message = readableError(reason)
       this.handlers.onError(message)
@@ -141,17 +144,13 @@ export class AliyunRealtimeTranscriber {
           },
         }),
       )
-      await Promise.race([
-        new Promise<void>((resolve) => {
-          const check = window.setInterval(() => {
-            if (this.completed || this.websocket?.readyState === WebSocket.CLOSED) {
-              window.clearInterval(check)
-              resolve()
-            }
-          }, 40)
-        }),
-        new Promise<void>((resolve) => window.setTimeout(resolve, 1200)),
-      ])
+      await new Promise<void>((resolve) => {
+        const finish = () => { window.clearInterval(check); window.clearTimeout(timeout); resolve() }
+        const check = window.setInterval(() => {
+          if (this.completed || this.websocket?.readyState === WebSocket.CLOSED) finish()
+        }, 40)
+        const timeout = window.setTimeout(finish, 1200)
+      })
     }
     this.websocket?.close()
     this.websocket = undefined
@@ -166,9 +165,22 @@ export class AliyunRealtimeTranscriber {
         credentials.gateway + separator + 'token=' + encodeURIComponent(credentials.token),
       )
       this.websocket = socket
-      const timeout = window.setTimeout(() => {
-        reject(new DOMException('NLS connection timeout', 'AbortError'))
+      let started = false
+      let failed = false
+      const fail = (error: Error) => {
+        if (failed) return
+        failed = true
+        window.clearTimeout(timeout)
+        reject(error)
+        if (started && !this.stopRequested) {
+          void this.releaseAudio()
+          this.handlers.onState('error')
+          this.handlers.onError(error.message)
+        }
         socket.close()
+      }
+      const timeout = window.setTimeout(() => {
+        fail(new DOMException('NLS connection timeout', 'AbortError'))
       }, 10_000)
 
       socket.onopen = () => {
@@ -197,11 +209,11 @@ export class AliyunRealtimeTranscriber {
           const message = JSON.parse(String(event.data))
           const header = message.header || {}
           if (header.status && header.status !== SUCCESS_STATUS) {
-            window.clearTimeout(timeout)
-            reject(new Error(header.status_message || '语音识别服务返回错误'))
+            fail(new Error(header.status_message || '语音识别服务返回错误'))
             return
           }
           if (header.name === 'TranscriptionStarted') {
+            started = true
             window.clearTimeout(timeout)
             resolve()
             return
@@ -230,11 +242,12 @@ export class AliyunRealtimeTranscriber {
       }
 
       socket.onerror = () => {
-        window.clearTimeout(timeout)
-        reject(new Error('无法连接实时语音识别服务'))
+        fail(new Error('无法连接实时语音识别服务'))
       }
       socket.onclose = () => {
         window.clearTimeout(timeout)
+        if (!started) reject(new Error('语音连接在建立前已断开，请重试'))
+        if (failed) return
         if (!this.stopRequested && !this.completed) {
           void this.releaseAudio()
           this.handlers.onState('error')

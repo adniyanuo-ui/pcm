@@ -1,10 +1,13 @@
 from unittest.mock import patch
+import json
+from types import SimpleNamespace
 
 from django.contrib.auth.models import User
 from django.test import TestCase
 from rest_framework.test import APIClient
 
 from llm.models import Encounter, EncounterRevision
+from llm.encounters import generate_json
 
 
 EXAMINATIONS = dict(inspection='舌淡', listening='', inquiry='虚构病例：食少便溏两周', palpation='脉弱')
@@ -176,3 +179,15 @@ class EncounterTests(TestCase):
             retriever.return_value.search.return_value = {'candidates': [CANDIDATE]}
             self.transition('retrieve')
         self.assertEqual(''.join(self.visit['state']['query']['symptoms']), inquiry)
+
+    def test_explicit_provider_keeps_actual_model_and_excludes_reasoning(self):
+        with patch('llm.encounters.model_name2client') as clients:
+            completion = SimpleNamespace(model='qwen3.7-plus-test-snapshot', choices=[SimpleNamespace(
+                message=SimpleNamespace(content=json.dumps(EXAMINATIONS), reasoning_content='never expose this'))])
+            client = clients.__getitem__.return_value
+            client.with_options.return_value.chat.completions.create.return_value = completion
+            result, actual = generate_json('examinations', {'transcript': '虚构'}, 'qwen3.7-plus')
+            self.assertEqual(result, EXAMINATIONS)
+            self.assertEqual(actual, 'qwen3.7-plus-test-snapshot')
+            self.assertNotIn('never expose', str(result))
+            self.assertEqual(client.with_options.return_value.chat.completions.create.call_args.kwargs['model'], 'qwen3.7-plus')
