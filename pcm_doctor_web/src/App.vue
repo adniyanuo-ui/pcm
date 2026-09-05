@@ -11,6 +11,7 @@ import PrescriptionEditor from './components/PrescriptionEditor.vue'
 import StageRail from './components/StageRail.vue'
 import VisitHeader from './components/VisitHeader.vue'
 import VoiceIntake from './components/VoiceIntake.vue'
+import LiveWorkbench from './components/LiveWorkbench.vue'
 import {
   analysisItems,
   formulaCandidates as demoFormulaCandidates,
@@ -136,6 +137,7 @@ function completeVisit() {
 
 <template>
   <LoginGate v-if="!authenticated" @authenticated="authenticated = true" />
+  <LiveWorkbench v-else-if="apiConfigured" @logout="authenticated = false" />
   <div v-else class="app-shell">
     <VisitHeader @back="ElMessage.info('演示页面：这里将返回患者列表')" />
 

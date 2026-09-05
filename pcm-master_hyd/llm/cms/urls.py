@@ -4,8 +4,10 @@
 from django.urls import path, include
 from rest_framework.routers import SimpleRouter
 from . import views
+from llm.encounters import EncounterView
 
 router = SimpleRouter()
+router.register(r"encounters", EncounterView, basename="encounters")
 router.register(r"revise", views.ReviseView, basename="revise")
 router.register(r"chat", views.ChatView, basename="chat")
 router.register(r"show/chat", views.ShowChatView, basename="show/chat")

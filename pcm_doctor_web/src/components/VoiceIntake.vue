@@ -11,13 +11,17 @@ import type { TranscriptLine } from '../types/consultation'
 
 const props = withDefaults(defineProps<{
   liveSpeech?: boolean
+  initialText?: string
 }>(), {
   liveSpeech: false,
+  initialText: '',
 })
 
 const emit = defineEmits<{
   confirm: []
   transcriptChange: [text: string]
+  originalChange: [text: string]
+  recordingChange: [active: boolean]
 }>()
 
 const state = ref<SpeechSessionState>('idle')
@@ -82,6 +86,9 @@ const plainTranscript = computed({
   },
 })
 
+// A restored visit starts with the saved transcript instead of an empty microphone session.
+if (props.liveSpeech && props.initialText) plainTranscript.value = props.initialText
+
 function nowLabel(): string {
   return new Intl.DateTimeFormat('zh-CN', {
     hour: '2-digit',
@@ -109,6 +116,7 @@ function updateTranscript(update: TranscriptUpdate) {
     transcript.value.sort((left, right) => left.id - right.id)
   }
   notifyTranscriptChange()
+  emit('originalChange', plainTranscript.value)
 }
 
 function startTimer() {
@@ -126,6 +134,7 @@ function createTranscriber() {
   transcriber = new AliyunRealtimeTranscriber({
     onState: (nextState) => {
       state.value = nextState
+      emit('recordingChange', ['connecting', 'recording', 'stopping'].includes(nextState))
       if (nextState === 'recording') startTimer()
       if (nextState !== 'recording') stopTimer()
     },
@@ -245,7 +254,7 @@ onBeforeUnmount(() => {
       </div>
       <div class="panel-footer">
         <span class="safe-note">不保存原始音频；转写原文由大夫校对后进入四诊整理</span>
-        <button class="primary-button" type="button" :disabled="!hasTranscript" @click="emit('confirm')">整理四诊信息</button>
+        <button class="primary-button" type="button" :disabled="!hasTranscript || recording || busy" @click="emit('confirm')">校对完成，整理四诊</button>
       </div>
     </div>
   </section>

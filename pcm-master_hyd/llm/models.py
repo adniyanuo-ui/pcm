@@ -12,6 +12,33 @@ from patient.models import Patient, Answer
 from tools.base_model import BaseModel
 
 
+class ClinicalPatient(models.Model):
+    """Doctor-owned patient identity, separate from the legacy questionnaire flow."""
+    owner = models.ForeignKey('auth.User', on_delete=models.PROTECT)
+    details = models.JSONField(default=dict)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
+class Encounter(models.Model):
+    patient = models.ForeignKey(ClinicalPatient, on_delete=models.PROTECT)
+    owner = models.ForeignKey('auth.User', on_delete=models.PROTECT)
+    state = models.JSONField(default=dict)
+    version = models.PositiveIntegerField(default=1)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class EncounterRevision(models.Model):
+    encounter = models.ForeignKey(Encounter, on_delete=models.PROTECT, related_name='revisions')
+    version = models.PositiveIntegerField()
+    action = models.CharField(max_length=40)
+    state = models.JSONField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=['encounter', 'version'], name='encounter_revision_unique')]
+
+
 class Record(BaseModel):
     mark = models.CharField(verbose_name="每个请求一个标记", default="", max_length=255, unique=True)
     model_name = models.CharField(verbose_name="模型", default="", max_length=256)
