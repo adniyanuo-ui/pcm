@@ -22,11 +22,18 @@ source "${ENV_FILE}"
 set +a
 
 cleanup() {
+  if [[ -n "${PCM_AUDIO_CLEANUP_PID:-}" ]]; then
+    kill "${PCM_AUDIO_CLEANUP_PID}" 2>/dev/null || true
+  fi
   if [[ -n "${BACKEND_PID:-}" ]]; then
     kill "${BACKEND_PID}" 2>/dev/null || true
   fi
 }
 trap cleanup EXIT INT TERM
+
+"${BACKEND_DIR}/.venv/bin/python" "${BACKEND_DIR}/manage.py" migrate --noinput
+"${BACKEND_DIR}/.venv/bin/python" "${BACKEND_DIR}/manage.py" purge_recordings --watch &
+PCM_AUDIO_CLEANUP_PID=$!
 
 echo "启动 Django：http://127.0.0.1:8000"
 (

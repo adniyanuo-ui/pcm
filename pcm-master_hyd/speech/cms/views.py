@@ -49,6 +49,7 @@ class TokenView(ModelViewSet):
                 "token": token,
                 "appkey": settings.ALIYUN_NLS_APPKEY,
                 "gateway": settings.ALIYUN_NLS_GATEWAY,
+                **({'vocabulary_id': settings.ALIYUN_NLS_VOCABULARY_ID} if settings.ALIYUN_NLS_VOCABULARY_ID else {}),
                 "expires_at": token_record.expire_time.isoformat() if token_record else "",
             }
         )

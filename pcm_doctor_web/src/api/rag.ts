@@ -42,8 +42,12 @@ export function toFormulaCandidate(candidate: RagApiCandidate): FormulaCandidate
     summary,
     supports: supports.length ? supports : candidate.match_reasons.slice(0, 4),
     cautions,
-    composition: candidate.fields['组成'] || '辞典本条未提供组成字段',
+    composition: candidate.dose_reference?.text || candidate.fields['组成'] || '辞典本条未提供组成字段',
     original: indication || '辞典本条未提供主治字段',
+    fields: candidate.fields,
+    truncatedFields: candidate.truncated_fields,
+    fullCitation: candidate.source.citation,
+    doseReference: candidate.dose_reference,
     citation: {
       volume: candidate.source.volume,
       pdfPage: firstPage(candidate.source.pdf_pages),

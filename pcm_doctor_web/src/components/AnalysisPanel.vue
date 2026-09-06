@@ -23,7 +23,7 @@ defineEmits<{
       <div>
         <span class="section-kicker">第 3 步 · 先辨证，再立法</span>
         <h2>辨证分析与病机</h2>
-        <p>这里呈现证据链，不展示模型内部思维。大夫可以直接修改结论并重新检索。</p>
+        <p>依据四诊形成辨证草稿。大夫可以直接修改结论并重新检索。</p>
       </div>
       <button v-if="stale" class="refresh-button" type="button" @click="$emit('refresh')">
         <el-icon><RefreshRight /></el-icon>

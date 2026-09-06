@@ -13,7 +13,7 @@ current_commit="$(git rev-parse HEAD)"
 [[ "$approved_commit" == "$current_commit" ]] || { echo '当前代码与验收提交不一致，请重新验收' >&2; exit 1; }
 [[ -z "$(git status --porcelain)" ]] || { echo '工作区尚有未提交修改，停止发布' >&2; exit 1; }
 
-PCM_ENV=test ./pcm-master_hyd/.venv/bin/python pcm-master_hyd/manage.py test llm user speech pcm
+PCM_ENV=test ./pcm-master_hyd/.venv/bin/python pcm-master_hyd/manage.py test llm user speech pcm llm_utils.rag.tests
 PCM_ENV=test ./pcm-master_hyd/.venv/bin/python pcm-master_hyd/manage.py makemigrations --check --dry-run
 npm --prefix pcm_doctor_web test
 npm --prefix pcm_doctor_web run build

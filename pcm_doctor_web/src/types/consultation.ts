@@ -38,11 +38,46 @@ export interface FormulaCandidate {
   cautions: string[]
   composition: string
   original: string
+  fields?: Record<string, string>
+  truncatedFields?: string[]
+  fullCitation?: string
+  doseReference?: FormulaDoseReference
   citation: {
     volume: number
     pdfPage: number
     bookPage: number
   }
+}
+
+export interface FormulaDoseConversion {
+  basis: string
+  grams_per_unit: Record<string, string>
+  confirmed: true
+}
+
+export interface FormulaDoseReference {
+  id: string
+  name: string
+  original: string
+  text: string
+  items: Array<{
+    herb: string
+    note: string
+    dose: string
+    quantities: Array<{ amount: string; unit: string }>
+    grams: string | null
+    display: string
+  }>
+  convertible_units: string[]
+  conversion: FormulaDoseConversion | null
+  warnings: string[]
+  source: {
+    volume: number
+    pdf_pages: number[]
+    book_pages: number[]
+    citation: string
+  }
+  usage: string
 }
 
 export interface PrescriptionItem {
@@ -84,6 +119,7 @@ export interface RagApiCandidate {
     citation: string
   }
   quality_flags: string[]
+  dose_reference?: FormulaDoseReference
 }
 
 export interface RagSearchResult {

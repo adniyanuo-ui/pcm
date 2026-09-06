@@ -200,7 +200,7 @@ class FormulaRetriever:
             raise RuntimeError("RAG 索引版本与当前程序不一致，请重新构建")
         return metadata
 
-    def search(self, query: RetrievalQuery | dict) -> dict:
+    def search(self, query: RetrievalQuery | dict, full_fields: bool = False) -> dict:
         if isinstance(query, dict):
             query = RetrievalQuery.from_mapping(query)
 
@@ -222,7 +222,7 @@ class FormulaRetriever:
                     reverse=True,
                 )[:MAX_CANDIDATES]
                 ranked = [
-                    self._rank_record(row, states[row["id"]], query)
+                    self._rank_record(row, states[row["id"]], query, full_fields=full_fields)
                     for row in self._fetch_records(connection, candidate_ids)
                 ]
                 ranked.sort(key=lambda item: (-item["_score"], -item["evidence_coverage"], item["id"]))
@@ -414,6 +414,7 @@ class FormulaRetriever:
         row: sqlite3.Row,
         state: _CandidateState,
         query: RetrievalQuery,
+        full_fields: bool = False,
     ) -> dict:
         score = state.retrieval_score
         matched_weight = 0.0
@@ -479,11 +480,11 @@ class FormulaRetriever:
             "正文及其他": 2500,
         }
         truncated_fields = [
-            key for key, value in fields.items() if len(value) > field_limits[key]
+            key for key, value in fields.items() if not full_fields and len(value) > field_limits[key]
         ]
         fields = {
             key: value
-            if len(value) <= field_limits[key]
+            if full_fields or len(value) <= field_limits[key]
             else value[: field_limits[key]].rstrip() + "……"
             for key, value in fields.items()
         }

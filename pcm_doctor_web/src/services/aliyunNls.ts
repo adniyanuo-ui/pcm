@@ -13,12 +13,14 @@ export interface TranscriptUpdate {
   text: string
   isFinal: boolean
   beginTime?: number
+  endTime?: number
 }
 
 export interface SpeechSessionHandlers {
   onState: (state: SpeechSessionState) => void
   onTranscript: (update: TranscriptUpdate) => void
   onError: (message: string) => void
+  onAudio?: (pcm: ArrayBuffer) => void
 }
 
 const TARGET_SAMPLE_RATE = 16_000
@@ -199,6 +201,7 @@ export class AliyunRealtimeTranscriber {
               enable_intermediate_result: true,
               enable_punctuation_prediction: true,
               enable_inverse_text_normalization: true,
+              ...(credentials.vocabulary_id ? { vocabulary_id: credentials.vocabulary_id } : {}),
             },
           }),
         )
@@ -233,6 +236,7 @@ export class AliyunRealtimeTranscriber {
                 text: payload.result,
                 isFinal: header.name === 'SentenceEnd',
                 beginTime: payload.begin_time,
+                endTime: payload.time,
               })
             }
           }
@@ -263,7 +267,9 @@ export class AliyunRealtimeTranscriber {
     const handleAudio = (samples: Float32Array) => {
       if (this.websocket?.readyState !== WebSocket.OPEN || this.stopRequested) return
       const downsampled = downsampleTo16k(samples, context.sampleRate)
-      this.websocket.send(floatTo16BitPcm(downsampled))
+      const pcm = floatTo16BitPcm(downsampled)
+      this.handlers.onAudio?.(pcm)
+      this.websocket.send(pcm)
     }
 
     if (context.audioWorklet && typeof AudioWorkletNode !== 'undefined') {

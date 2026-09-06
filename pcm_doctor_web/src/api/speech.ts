@@ -5,6 +5,7 @@ export interface SpeechCredentials {
   appkey: string
   gateway: string
   expires_at: string
+  vocabulary_id?: string
 }
 
 export function getSpeechCredentials(): Promise<SpeechCredentials> {

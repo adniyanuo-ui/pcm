@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { CircleCheck, EditPen } from '@element-plus/icons-vue'
 import type { ExaminationSection } from '../types/consultation'
 
 const sections = defineModel<ExaminationSection[]>({ required: true })
-const questionAdded = ref(false)
 
 defineEmits<{
   changed: []
@@ -41,16 +39,6 @@ defineEmits<{
       </article>
     </div>
 
-    <div class="missing-callout">
-      <div class="callout-icon">问</div>
-      <div>
-        <strong>建议再确认 2 项</strong>
-        <p>畏寒是否持续？近期体重是否明显变化？补充后可提高虚寒程度判断的可靠性。</p>
-      </div>
-      <button type="button" :disabled="questionAdded" @click="questionAdded = true">
-        {{ questionAdded ? '已加入本次问诊' : '加入追问' }}
-      </button>
-    </div>
 
     <div class="action-row">
       <span><el-icon><CircleCheck /></el-icon> 四诊信息将作为后续检索的唯一患者事实来源</span>

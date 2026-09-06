@@ -218,6 +218,8 @@ RAG_INDEX_PATH = Path(
 
 # ========================== 在线大模型
 DEFAULT_LLM_MODEL = os.getenv("PCM_DEFAULT_LLM_MODEL", "deepseek-v4-pro")
+PCM_AUDIO_ROOT = Path(os.getenv('PCM_AUDIO_ROOT', BASE_DIR / 'var' / 'private_audio'))
+ALIYUN_NLS_VOCABULARY_ID = os.getenv('ALIYUN_NLS_VOCABULARY_ID', '')
 
 # ========================== redis
 REDIS_HOST = os.getenv("PCM_REDIS_HOST", "127.0.0.1")

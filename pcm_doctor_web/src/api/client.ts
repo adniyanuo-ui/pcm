@@ -22,6 +22,23 @@ export function clearCmsToken(): void {
   localStorage.removeItem('account')
 }
 
+export async function apiBlob(path: string): Promise<Blob> {
+  const controller = new AbortController()
+  const timeout = window.setTimeout(() => controller.abort(), 20000)
+  try {
+    const response = await fetch(apiBaseUrl + path, {
+      headers: { Authorization: 'Token ' + (localStorage.getItem('token') || '') },
+      cache: 'no-store', signal: controller.signal,
+    })
+    if (response.status === 401) throw new AuthenticationRequiredError('登录已失效，请重新登录后回放')
+    if (!response.ok) {
+      const body = await response.json().catch(() => ({}))
+      throw new Error(body.msg || '录音暂时无法回放')
+    }
+    return await response.blob()
+  } finally { window.clearTimeout(timeout) }
+}
+
 export async function loginCms(username: string, password: string): Promise<void> {
   if (!apiBaseUrl) throw new Error('尚未配置后端 API 地址')
   const response = await fetch(apiBaseUrl + '/api/cms/user/login/', {
@@ -65,6 +82,9 @@ export async function apiRequest<T>(
       throw new Error(body.detail || body.msg || '请求失败（HTTP ' + response.status + '）')
     }
     return body.data
+  } catch (error) {
+    if (error instanceof DOMException && error.name === 'AbortError') throw new Error('等待处理超时；已保存资料仍保留，请重新打开就诊确认结果后再重试。')
+    throw error
   } finally {
     window.clearTimeout(timeout)
   }

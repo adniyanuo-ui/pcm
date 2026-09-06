@@ -30,6 +30,8 @@ class WorkbenchBrowserTests(LiveServerTestCase):
         User.objects.create_user('browser-test-doctor', password=password)
         env = dict(os.environ, VITE_API_BASE_URL=self.live_server_url,
                    PCM_BROWSER_PASSWORD=password, PCM_BROWSER_USERNAME='browser-test-doctor')
+        fixture_speech = os.getenv('PCM_REAL_SPEECH_TEST') != '1'
+        env['PCM_FIXTURE_SPEECH_TEST'] = '1' if fixture_speech else '0'
         with tempfile.TemporaryDirectory(prefix='pcm-browser-') as folder:
             with open(Path(folder) / 'vite.log', 'w') as log:
                 vite = subprocess.Popen(['npm', 'run', 'dev', '--', '--host', '127.0.0.1', '--port', '5176', '--strictPort'],
@@ -44,10 +46,19 @@ class WorkbenchBrowserTests(LiveServerTestCase):
                     else:
                         self.fail('Vite did not start')
                     def fake_model(kind, payload, model):
+                        if kind.startswith('voice_'):
+                            return dict(summary='虚构患者食少便溏两周，否认发热。' if kind == 'voice_final' else '',
+                                        symptoms=[dict(label='食少便溏两周，否认发热', source_ids=[payload['segments'][0]['id']])], uncertainty=''), 'browser-fixture-model'
                         return (EXAMINATIONS if kind == 'examinations' else ANALYSIS), 'browser-fixture-model'
-                    from contextlib import nullcontext
+                    from contextlib import nullcontext, ExitStack
+                    from tools.resp import get_response
                     model_context = nullcontext() if os.getenv('PCM_REAL_MODEL_TEST') == '1' else patch('llm.encounters.generate_json', side_effect=fake_model)
-                    with model_context:
+                    with ExitStack() as stack:
+                        stack.enter_context(self.settings(PCM_AUDIO_ROOT=Path(folder) / 'private_audio'))
+                        stack.enter_context(model_context)
+                        if fixture_speech:
+                            stack.enter_context(patch('speech.cms.views.TokenView.create', return_value=get_response(dict(
+                                token='fixture', appkey='fixture', gateway='wss://speech-fixture.invalid/ws', expires_at=''))))
                         result = subprocess.run(['node', str(root / 'scripts/test-workbench-browser.mjs')],
                                                 env=env, capture_output=True, text=True, timeout=360)
                     self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

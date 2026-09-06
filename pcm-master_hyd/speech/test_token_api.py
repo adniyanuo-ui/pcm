@@ -45,3 +45,12 @@ class SpeechTokenApiTests(SimpleTestCase):
                 "expires_at": "2026-09-04T12:00:00",
             },
         )
+
+    @override_settings(ALIYUN_NLS_APPKEY='test-appkey', ALIYUN_NLS_VOCABULARY_ID='test-vocabulary')
+    @patch('speech.cms.views.Token.objects.filter')
+    @patch('speech.cms.views.Token.ali_speech', return_value='temporary-token')
+    def test_optional_hotword_id_is_passed_without_long_lived_credentials(self, _, token_filter):
+        token_filter.return_value.first.return_value = None
+        data = self.request().data['data']
+        self.assertEqual(data['vocabulary_id'], 'test-vocabulary')
+        self.assertNotIn('access_key', str(data))

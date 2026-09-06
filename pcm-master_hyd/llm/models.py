@@ -1,5 +1,6 @@
 import json
 import time
+import uuid
 
 from django.db import models
 
@@ -37,6 +38,31 @@ class EncounterRevision(models.Model):
 
     class Meta:
         constraints = [models.UniqueConstraint(fields=['encounter', 'version'], name='encounter_revision_unique')]
+
+
+class EncounterRecording(models.Model):
+    """Private audio session; audio expires independently of the clinical record."""
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    encounter = models.ForeignKey(Encounter, on_delete=models.PROTECT, related_name='recordings')
+    created_at = models.DateTimeField(auto_now_add=True)
+    expires_at = models.DateTimeField(db_index=True)
+    consented = models.BooleanField(default=False)
+    closed = models.BooleanField(default=False)
+    sequence = models.PositiveIntegerField(default=0)
+    segments = models.JSONField(default=list)
+
+
+class RecordingChunk(models.Model):
+    recording = models.ForeignKey(EncounterRecording, on_delete=models.PROTECT, related_name='chunks')
+    index = models.PositiveIntegerField()
+    start_ms = models.PositiveIntegerField()
+    duration_ms = models.PositiveIntegerField()
+    checksum = models.CharField(max_length=64)
+    file_name = models.CharField(max_length=200)
+    deleted_at = models.DateTimeField(null=True)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=['recording', 'index'], name='recording_chunk_unique')]
 
 
 class Record(BaseModel):

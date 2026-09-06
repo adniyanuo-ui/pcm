@@ -8,6 +8,7 @@ from rest_framework.test import APIRequestFactory, force_authenticate
 
 from llm.cms.views import FormulaSearchView
 from llm_utils.rag import FormulaIndexBuilder
+from llm_utils.rag import FormulaRetriever
 
 
 class FormulaSearchApiTests(SimpleTestCase):
@@ -89,6 +90,23 @@ class FormulaSearchApiTests(SimpleTestCase):
         force_authenticate(request, user=self.user)
         response = FormulaSearchView.as_view({"post": "create"})(request)
         self.assertEqual(response.status_code, 400)
+
+    def test_workbench_can_request_untruncated_formula_fields(self):
+        import sqlite3
+        text = '虚构测试原文。' * 800
+        with sqlite3.connect(self.index) as db:
+            original = db.execute('SELECT indications FROM formulas WHERE id=?', ('10001',)).fetchone()[0]
+            db.execute('UPDATE formulas SET indications=? WHERE id=?', (text, '10001'))
+        try:
+            retriever = FormulaRetriever(self.index)
+            brief = retriever.search({'formula_names': ['四君子汤']})['candidates'][0]
+            full = retriever.search({'formula_names': ['四君子汤']}, full_fields=True)['candidates'][0]
+            self.assertIn('主治', brief['truncated_fields'])
+            self.assertEqual(full['fields']['主治'], text)
+            self.assertEqual(full['truncated_fields'], [])
+        finally:
+            with sqlite3.connect(self.index) as db:
+                db.execute('UPDATE formulas SET indications=? WHERE id=?', (original, '10001'))
 
     def test_missing_index_returns_service_unavailable(self):
         with self.settings(RAG_INDEX_PATH=self.index.parent / "missing.sqlite3"):

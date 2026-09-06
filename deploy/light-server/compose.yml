@@ -28,6 +28,25 @@ services:
       retries: 5
       start_period: 40s
 
+  audio-cleanup:
+    build:
+      context: ../..
+      dockerfile: deploy/light-server/Dockerfile.api
+    entrypoint: ["python", "manage.py", "purge_recordings", "--watch"]
+    env_file:
+      - ${PCM_ENV_FILE:-.env}
+    volumes:
+      - pcm_data:/app/var
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m
+    security_opt:
+      - no-new-privileges:true
+
   web:
     build:
       context: ../..
