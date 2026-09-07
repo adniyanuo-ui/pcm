@@ -1,6 +1,9 @@
 #!/bin/sh
 set -eu
 
+echo "创建SQLite迁移前备份"
+python manage.py backup_sqlite_database --keep 7
+
 echo "应用数据库迁移"
 python manage.py migrate --noinput
 
