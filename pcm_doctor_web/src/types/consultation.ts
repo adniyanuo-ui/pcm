@@ -42,6 +42,23 @@ export interface FormulaCandidate {
   truncatedFields?: string[]
   fullCitation?: string
   doseReference?: FormulaDoseReference
+  selectionLayer?: 'core' | 'archive'
+  treatmentFamily?: {
+    id: string
+    name: string
+    parentFormulas: string[]
+  }
+  reverseValidation?: {
+    consistency: string
+    compositionSource: string
+    formulaMeaning: string
+    actualTreatment: string
+    actualIndications: string
+    matchedTreatment: string[]
+    matchedPathogenesis: string[]
+    matchedClinicalEvidence: string[]
+    cautions: string[]
+  }
   citation: {
     volume: number
     pdfPage: number
@@ -120,14 +137,53 @@ export interface RagApiCandidate {
   }
   quality_flags: string[]
   dose_reference?: FormulaDoseReference
+  selection_layer?: 'core' | 'archive'
+  treatment_family?: {
+    id: string
+    name: string
+    parent_formulas: string[]
+    review_status: string
+  } | null
+  reverse_validation?: {
+    consistency: string
+    composition_source: string
+    formula_meaning: string
+    actual_treatment: string
+    actual_indications: string
+    matched_treatment: string[]
+    matched_pathogenesis: string[]
+    matched_clinical_evidence: string[]
+    treatment_ontology_supported: boolean
+    unmatched_treatment_structures: string[]
+    cautions: string[]
+    facts_inferred_by_model: false
+  }
+}
+
+export interface RagRetrieval {
+  candidate_pool: number
+  returned: number
+  treatment_prototypes?: Array<{
+    id: string
+    name: string
+    parent_formulas: string[]
+    matched_treatments: string[]
+    matched_pathogenesis: string[]
+  }>
+  gold_size?: number
+  gold_ready?: boolean
+  search_path?: string[]
+  stopped_at?: 'clinical_profile' | 'core' | 'archive'
+  fallback_used?: boolean
+  fallback_reason?: string
+  reverse_validation_rejected?: number
+  validation_status?: 'clinical_profile_conflict' | 'consistent_candidates_found' | 'no_consistent_candidate'
+  profile_conflicts?: string[]
+  score_note: string
 }
 
 export interface RagSearchResult {
   query: RagSearchPayload
   candidates: RagApiCandidate[]
-  retrieval: {
-    candidate_pool: number
-    returned: number
-    score_note: string
-  }
+  retrieval: RagRetrieval
 }

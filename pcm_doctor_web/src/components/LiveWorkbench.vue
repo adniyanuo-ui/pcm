@@ -239,7 +239,7 @@ onBeforeUnmount(() => window.removeEventListener('beforeunload', guardLeave))
           <section v-else-if="step === 2">
             <FormulaPanel v-model="selected" v-model:selected-ids="selectedIds" multiple
               :adopted-ids="adoptedIds" :encounter-id="visit.id" :candidates="candidates" :stale="false"
-              :loading="busy" :candidate-pool="candidates.length" data-mode="live"
+              :loading="busy" :candidate-pool="visit.state.retrieval?.candidate_pool || candidates.length" data-mode="live"
               @conversion="(id, conversion) => formulaConversions[id] = conversion" @confirm="adoptFormula" />
             <section v-if="adoptedIds.length" class="panel live-panel prescription-editor">
               <div class="section-title"><h2>大夫编辑处方</h2><span>已带入：{{ adoptedNames }}</span></div>

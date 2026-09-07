@@ -54,7 +54,7 @@ function choose(id: string) {
       <div>
         <h2>候选基础方</h2>
         <p>
-          <template v-if="dataMode === 'live'">根据已确认的问诊与辨证检索 · {{ candidates.length }} 个候选</template>
+          <template v-if="dataMode === 'live'">按病机与治法定位方族，核验辞典原文 · {{ candidates.length }} 个候选</template>
           <template v-else>当前展示内置演示结果，配置 API 后切换为真实辞典检索。</template>
         </p>
       </div>
@@ -88,6 +88,9 @@ function choose(id: string) {
             <div>
               <h3>{{ candidate.name }}</h3>
               <span>方号 {{ candidate.id }} · {{ candidate.source }}</span>
+              <em v-if="candidate.reverseValidation" class="validation-badge" :class="candidate.reverseValidation.consistency === '不足' ? 'insufficient' : ''">
+                反向核验{{ candidate.reverseValidation.consistency }}
+              </em>
               <em v-if="adopted(candidate.id)" class="adopted-label">已带入编辑框</em>
             </div>
             <div class="match-score"><strong>{{ candidate.match }}</strong><small>% 证据覆盖</small></div>
@@ -100,6 +103,21 @@ function choose(id: string) {
             :encounter-id="encounterId" :reference="candidate.doseReference" :disabled="adopted(candidate.id)"
             @converted="emit('conversion', candidate.id, $event)" />
           <details class="evidence-lines" @click.stop><summary>支持证据与不确定性</summary>
+            <div v-if="candidate.treatmentFamily" class="validation-line">
+              <span>治疗原型</span>
+              <p>{{ candidate.treatmentFamily.name }}；代表方：{{ candidate.treatmentFamily.parentFormulas.join('、') }}</p>
+            </div>
+            <div v-if="candidate.reverseValidation" class="validation-line">
+              <span>反向核验</span>
+              <p>
+                一致性：{{ candidate.reverseValidation.consistency }}；
+                实际治法：{{ candidate.reverseValidation.actualTreatment || '辞典本条未提供' }}
+              </p>
+            </div>
+            <div v-if="candidate.reverseValidation" class="validation-line">
+              <span>方义依据</span>
+              <p>{{ candidate.reverseValidation.formulaMeaning || '辞典本条未独立提供方论，不作推断；以组成、功用与主治原文核验。' }}</p>
+            </div>
             <div class="support-line">
               <span><el-icon><CircleCheck /></el-icon> 支持</span>
               <p><i v-for="item in candidate.supports" :key="item">{{ item }}</i></p>
@@ -157,5 +175,9 @@ function choose(id: string) {
 .citation-row > span { font-size: 12px; }.citation-row button { font-size: 12px; }
 .action-row > span { font-size: 14px; }
 .adopted-label { display: inline-block; margin: 6px 0 0 8px; padding: 2px 7px; border-radius: 5px; color: #276044; background: #e7f3ec; font-size: 12px; font-style: normal; }
+.validation-badge { display: inline-block; margin: 6px 0 0 8px; padding: 2px 7px; border-radius: 5px; color: #276044; background: #e7f3ec; font-size: 12px; font-style: normal; }
+.validation-badge.insufficient { color: #8f3e22; background: #fff0e8; }
+.validation-line { display: grid; grid-template-columns: 86px 1fr; gap: 10px; margin: 8px 0; }
+.validation-line > span { color: #52685c; font-weight: 700; }.validation-line p { margin: 0; line-height: 1.7; }
 .formula-card[role=checkbox] .select-dot { border-radius: 4px; }
 </style>

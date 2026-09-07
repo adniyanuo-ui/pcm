@@ -3,8 +3,25 @@ import json
 from pathlib import Path
 
 from .index import FormulaIndexBuilder
-from .paths import corpus_path, search_index_path, syndrome_index_path
-from .retriever import FormulaRetriever, RetrievalQuery
+from .layered import LayeredFormulaRetriever
+from .paths import (
+    corpus_path,
+    gold_formula_metadata_path,
+    gold_formula_set_path,
+    search_index_path,
+    syndrome_index_path,
+    treatment_prototypes_path,
+)
+from .retriever import RetrievalQuery
+
+
+def _retriever(index: Path) -> LayeredFormulaRetriever:
+    return LayeredFormulaRetriever(
+        index,
+        treatment_prototypes_path(),
+        gold_formula_set_path(),
+        gold_formula_metadata_path(),
+    )
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -41,7 +58,7 @@ def main() -> None:
             raise SystemExit(f"索引已存在：{args.output}；如需重建请增加 --force")
         result = FormulaIndexBuilder(args.corpus, args.syndrome_index, args.output).build()
     elif args.command == "status":
-        result = FormulaRetriever(args.index).metadata()
+        result = _retriever(args.index).metadata()
     else:
         query = RetrievalQuery.from_mapping(
             {
@@ -56,7 +73,7 @@ def main() -> None:
                 "top_k": args.top_k,
             }
         )
-        result = FormulaRetriever(args.index).search(query)
+        result = _retriever(args.index).search(query)
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 

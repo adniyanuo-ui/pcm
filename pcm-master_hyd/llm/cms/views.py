@@ -18,8 +18,9 @@ from django.http import StreamingHttpResponse
 from django.conf import settings
 from rest_framework.exceptions import APIException
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
 
-from llm_utils.rag import FormulaRetriever, RetrievalQuery
+from llm_utils.rag import LayeredFormulaRetriever, RetrievalQuery
 
 
 class ReviseView(ModelViewSet):
@@ -57,10 +58,16 @@ class FormulaSearchView(ModelViewSet):
     """返回有辞典原文和页码依据的候选基础方，不生成最终诊断或处方。"""
 
     http_method_names = ["get", "post"]
+    permission_classes = [IsAuthenticated]
 
     @staticmethod
     def _retriever():
-        return FormulaRetriever(settings.RAG_INDEX_PATH)
+        return LayeredFormulaRetriever(
+            settings.RAG_INDEX_PATH,
+            settings.RAG_TREATMENT_PROTOTYPES_PATH,
+            settings.RAG_GOLD_FORMULA_SET_PATH,
+            settings.RAG_GOLD_FORMULA_METADATA_PATH,
+        )
 
     def list(self, request, *args, **kwargs):
         try:
@@ -75,6 +82,10 @@ class FormulaSearchView(ModelViewSet):
                     "syndrome_terms",
                     "syndrome_links",
                     "corpus_sha256",
+                    "layered_ready",
+                    "treatment_prototypes",
+                    "gold_formulas",
+                    "level2_status",
                 )
             }
             return get_response({"ready": True, "index": safe_metadata})

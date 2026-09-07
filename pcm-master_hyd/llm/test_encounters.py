@@ -50,8 +50,11 @@ class EncounterTests(TestCase):
 
     def complete(self):
         self.to_analysis()
-        with patch('llm.encounters.FormulaRetriever') as retriever:
-            retriever.return_value.search.return_value = {'candidates': [CANDIDATE]}
+        with patch('llm.encounters.LayeredFormulaRetriever') as retriever:
+            retriever.return_value.search.return_value = {
+                'candidates': [CANDIDATE],
+                'retrieval': {'stopped_at': 'core', 'fallback_used': False},
+            }
             self.transition('retrieve')
         self.transition('select_formula', {'id': '10001'})
         self.transition('save_prescription', PRESCRIPTION)
@@ -114,6 +117,7 @@ class EncounterTests(TestCase):
         self.assertEqual(s['confirmed'], [True, False, False, False, False])
         self.assertIsNone(s['analysis'])
         self.assertEqual(s['candidates'], [])
+        self.assertIsNone(s['retrieval'])
         self.assertIsNone(s['prescription'])
         self.assertEqual(s['record'], '')
         self.assertTrue(EncounterRevision.objects.filter(state__confirmed__4=True).exists())
@@ -145,11 +149,16 @@ class EncounterTests(TestCase):
 
     def test_retrieval_uses_confirmed_values_and_rejects_invented_formula(self):
         self.to_analysis()
-        with patch('llm.encounters.FormulaRetriever') as retriever:
+        with patch('llm.encounters.LayeredFormulaRetriever') as retriever:
             retriever.return_value.search.return_value = {'candidates': [CANDIDATE]}
             self.transition('retrieve')
         self.assertEqual(self.visit['state']['query']['syndromes'], [ANALYSIS['syndrome']])
         self.assertEqual(self.visit['state']['query']['treatments'], [ANALYSIS['principle'] + '\n' + ANALYSIS['treatment']])
+        self.assertEqual(self.visit['state']['clinical_profile']['etiology'], [ANALYSIS['cause']])
+        self.assertEqual(self.visit['state']['clinical_profile']['nature'], [ANALYSIS['nature']])
+        self.assertEqual(self.visit['state']['clinical_profile']['primary_pathogenesis'], [ANALYSIS['mechanism']])
+        self.assertEqual(self.visit['state']['clinical_profile']['primary_treatment'], [ANALYSIS['treatment']])
+        self.assertIn(ANALYSIS['location'], self.visit['state']['query']['doctor_notes'][0])
         self.transition('select_formula', {'id': 'invented'}, status=400)
 
     def test_confirmation_requires_explicit_review(self):
@@ -191,7 +200,7 @@ class EncounterTests(TestCase):
         with patch('llm.encounters.generate_json', return_value=(ANALYSIS, 'test-model')):
             self.transition('analyze')
         self.transition('confirm_analysis')
-        with patch('llm.encounters.FormulaRetriever') as retriever:
+        with patch('llm.encounters.LayeredFormulaRetriever') as retriever:
             retriever.return_value.search.return_value = {'candidates': [CANDIDATE]}
             self.transition('retrieve')
         self.assertEqual(''.join(self.visit['state']['query']['symptoms']), inquiry)
@@ -252,7 +261,7 @@ class EncounterTests(TestCase):
 
     def test_free_text_prescription_prefills_only_rag_facts_and_requires_review(self):
         self.to_analysis()
-        with patch('llm.encounters.FormulaRetriever') as retriever:
+        with patch('llm.encounters.LayeredFormulaRetriever') as retriever:
             retriever.return_value.search.return_value = {'candidates': [CANDIDATE]}
             self.transition('retrieve')
         self.transition('select_formula', {'id': CANDIDATE['id']})
@@ -283,7 +292,7 @@ class EncounterTests(TestCase):
                  source={'volume': 3, 'pdf_pages': [30], 'book_pages': [22]}),
         ]
         self.to_analysis()
-        with patch('llm.encounters.FormulaRetriever') as retriever:
+        with patch('llm.encounters.LayeredFormulaRetriever') as retriever:
             retriever.return_value.search.return_value = {'candidates': candidates}
             self.transition('retrieve')
         self.transition('select_formulas', {'ids': ['10001', '10002'], 'conversions': {}})
@@ -309,7 +318,7 @@ class EncounterTests(TestCase):
     def test_multiple_formula_selection_validates_scope_limit_and_pending_doses(self):
         candidates = [dict(CANDIDATE, id=str(i), name=f'测试方{i}', fields={'组成': '生地'}) for i in range(1, 7)]
         self.to_analysis()
-        with patch('llm.encounters.FormulaRetriever') as retriever:
+        with patch('llm.encounters.LayeredFormulaRetriever') as retriever:
             retriever.return_value.search.return_value = {'candidates': candidates}
             self.transition('retrieve')
         self.transition('select_formulas', {'ids': ['1', '1']}, status=400)
@@ -322,7 +331,7 @@ class EncounterTests(TestCase):
     def test_formula_reference_conversion_is_read_only_and_audited_in_record(self):
         historical = dict(CANDIDATE, fields={'组成': '人参一两甘草二钱', '用法': '测试原方用法'})
         self.to_analysis()
-        with patch('llm.encounters.FormulaRetriever') as retriever:
+        with patch('llm.encounters.LayeredFormulaRetriever') as retriever:
             retriever.return_value.search.return_value = {'candidates': [historical]}
             self.transition('retrieve')
         version = self.visit['version']

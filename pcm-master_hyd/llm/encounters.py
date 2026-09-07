@@ -15,7 +15,7 @@ from rest_framework.viewsets import ViewSet
 
 from llm.models import ClinicalPatient, Encounter, EncounterRevision
 from llm_utils.client import model_name2client
-from llm_utils.rag import FormulaRetriever, RetrievalQuery
+from llm_utils.rag import ClinicalFormulaProfile, LayeredFormulaRetriever, RetrievalQuery
 from tools.resp import get_response
 from llm.voice import VoiceMixin, VoiceSummaryInput, source_segments, validate_sources
 from llm.formula_references import build_reference, reference_draft
@@ -96,7 +96,7 @@ def validated(schema, data):
 def initial_state(patient):
     return dict(patient=patient, transcript='', original_transcript='', examinations=None, analysis=None,
                 candidates=[], query=None, selected_id='', selected_ids=[], formula_references=[], prescription=None,
-                record='', confirmed=[False] * 5, models=[], voice_summary=None)
+                retrieval=None, clinical_profile=None, record='', confirmed=[False] * 5, models=[], voice_summary=None)
 
 
 def invalidate(state, stage):
@@ -104,7 +104,8 @@ def invalidate(state, stage):
     if stage <= 1:
         state['analysis'] = None
     if stage <= 2:
-        state.update(candidates=[], query=None, selected_id='', selected_ids=[], formula_references=[], prescription=None)
+        state.update(candidates=[], query=None, retrieval=None, clinical_profile=None,
+                     selected_id='', selected_ids=[], formula_references=[], prescription=None)
     if stage <= 3:
         state['record'] = ''
 
@@ -165,6 +166,12 @@ def render_record(state):
         source = candidate['source']
         lines += ['参考基础方：' + candidate['name'],
                   f"辞典依据：第{source['volume']}册，PDF页{source['pdf_pages']}，书内页{source['book_pages']}"]
+        family = candidate.get('treatment_family') or {}
+        reverse = candidate.get('reverse_validation') or {}
+        if family.get('name'):
+            lines.append('治疗原型：' + family['name'])
+        if reverse.get('consistency'):
+            lines.append('方证反向核验：' + reverse['consistency'])
     for reference in state.get('formula_references', []):
         if reference.get('conversion'):
             basis = reference['conversion']
@@ -366,15 +373,34 @@ class EncounterView(VoiceMixin, ViewSet):
             e, a = s['examinations'], s['analysis']
             def chunks(text):
                 return [text[i:i + 240] for i in range(0, len(text), 240)]
-            query = dict(symptoms=chunks(e['inquiry']), tongue=chunks(e['inspection']), pulse=chunks(e['palpation']),
-                         voice=chunks(e['listening']), mechanisms=chunks(a['mechanism']), syndromes=chunks(a['syndrome']),
-                         treatments=chunks('\n'.join(filter(None, [a.get('principle', ''), a['treatment']]))), top_k=5)
-            result = FormulaRetriever(settings.RAG_INDEX_PATH).search(RetrievalQuery.from_mapping(query), full_fields=True)
+            query = dict(
+                symptoms=chunks(e['inquiry']),
+                tongue=chunks(e['inspection']),
+                pulse=chunks(e['palpation']),
+                voice=chunks(e['listening']),
+                mechanisms=chunks(a['mechanism']),
+                syndromes=chunks(a['syndrome']),
+                treatments=chunks('\n'.join(filter(None, [a.get('principle', ''), a['treatment']]))),
+                doctor_notes=chunks('\n'.join(filter(None, [a['cause'], a['location'], a['nature'], a['trend']]))),
+                top_k=5,
+            )
+            profile = ClinicalFormulaProfile.from_mapping(dict(
+                etiology=chunks(a['cause']), location=chunks(a['location']), nature=chunks(a['nature']),
+                trend=chunks(a['trend']), primary_pathogenesis=chunks(a['mechanism']),
+                primary_treatment=chunks(a['treatment'])))
+            result = LayeredFormulaRetriever(
+                settings.RAG_INDEX_PATH,
+                settings.RAG_TREATMENT_PROTOTYPES_PATH,
+                settings.RAG_GOLD_FORMULA_SET_PATH,
+                settings.RAG_GOLD_FORMULA_METADATA_PATH,
+            ).search(RetrievalQuery.from_mapping(query), clinical_profile=profile, full_fields=True)
             require(bool(result['candidates']), '未找到基础方，请返回补充四诊或修订治法')
             for candidate in result['candidates']:
                 candidate['dose_reference'] = build_reference(candidate)
             invalidate(s, 3)
-            s.update(query=query, candidates=result['candidates'], selected_id='', selected_ids=[], formula_references=[], prescription=None)
+            s.update(query=query, clinical_profile=result.get('clinical_profile', profile.as_dict()),
+                     retrieval=result.get('retrieval'),
+                     candidates=result['candidates'], selected_id='', selected_ids=[], formula_references=[], prescription=None)
         elif op == 'select_formulas':
             require(s['confirmed'][2], '请先确认辨证论治')
             ids, conversions = data.get('ids'), data.get('conversions', {})

@@ -249,6 +249,59 @@ class FormulaRetriever:
             },
         }
 
+    def search_subset(
+        self,
+        query: RetrievalQuery | dict,
+        formula_ids: list[str] | tuple[str, ...] | set[str],
+        *,
+        boosts: dict[str, float] | None = None,
+        routes: dict[str, list[str]] | None = None,
+        full_fields: bool = False,
+        top_k: int | None = None,
+    ) -> dict:
+        """在一组已审计条目中重排，不先从全库召回。
+
+        该入口供核心方层使用。formula_ids 只负责限制候选空间，所有返回事实仍从
+        只读 RAG 索引读取，避免核心方清单复制或改写辞典原文。
+        """
+        if isinstance(query, dict):
+            query = RetrievalQuery.from_mapping(query)
+        unique_ids = list(dict.fromkeys(str(value) for value in formula_ids if value))
+        boosts = boosts or {}
+        routes = routes or {}
+        limit = top_k if top_k is not None else query.top_k
+        if not 1 <= limit <= 100:
+            raise ValueError("top_k 必须在 1—100 之间")
+
+        with self._connect() as connection:
+            self._verify_schema(connection)
+            rows = self._fetch_records(connection, unique_ids)
+            ranked = []
+            for row in rows:
+                state = _CandidateState(
+                    retrieval_score=float(boosts.get(row["id"], 0.0)),
+                    routes=set(routes.get(row["id"], [])),
+                )
+                ranked.append(
+                    self._rank_record(row, state, query, full_fields=full_fields)
+                )
+            ranked.sort(
+                key=lambda item: (-item["_score"], -item["evidence_coverage"], item["id"])
+            )
+            candidates = self._diversify(ranked, limit)
+            for candidate in candidates:
+                candidate.pop("_score", None)
+
+        return {
+            "query": query.as_dict(),
+            "candidates": candidates,
+            "retrieval": {
+                "candidate_pool": len(rows),
+                "returned": len(candidates),
+                "score_note": "核心方层只在预先选定的可追溯辞典记录内重排。",
+            },
+        }
+
     @staticmethod
     def _verify_schema(connection: sqlite3.Connection) -> None:
         row = connection.execute(

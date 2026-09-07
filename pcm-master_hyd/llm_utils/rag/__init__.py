@@ -4,6 +4,13 @@
 """
 
 from .index import FormulaIndexBuilder
+from .layered import ClinicalFormulaProfile, LayeredFormulaRetriever
 from .retriever import FormulaRetriever, RetrievalQuery
 
-__all__ = ["FormulaIndexBuilder", "FormulaRetriever", "RetrievalQuery"]
+__all__ = [
+    "ClinicalFormulaProfile",
+    "FormulaIndexBuilder",
+    "FormulaRetriever",
+    "LayeredFormulaRetriever",
+    "RetrievalQuery",
+]

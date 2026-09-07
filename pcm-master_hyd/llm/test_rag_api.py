@@ -91,6 +91,12 @@ class FormulaSearchApiTests(SimpleTestCase):
         response = FormulaSearchView.as_view({"post": "create"})(request)
         self.assertEqual(response.status_code, 400)
 
+    def test_authentication_is_required(self):
+        request = self.factory.get("/api/cms/llm/rag/search/")
+        response = FormulaSearchView.as_view({"get": "list"})(request)
+        # Legacy CMS envelope keeps HTTP 200 while returning an explicit auth error code.
+        self.assertEqual(response.data["code"], 401)
+
     def test_workbench_can_request_untruncated_formula_fields(self):
         import sqlite3
         text = '虚构测试原文。' * 800

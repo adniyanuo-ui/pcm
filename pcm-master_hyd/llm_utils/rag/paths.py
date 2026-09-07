@@ -33,3 +33,30 @@ def search_index_path() -> Path:
             REPOSITORY_ROOT / "pcm-master_hyd" / "var" / "rag" / "fangji.sqlite3",
         )
     ).expanduser()
+
+
+def treatment_prototypes_path() -> Path:
+    return Path(
+        os.getenv(
+            "PCM_TREATMENT_PROTOTYPES_PATH",
+            Path(__file__).resolve().with_name("treatment_prototypes.json"),
+        )
+    ).expanduser()
+
+
+def gold_formula_set_path() -> Path:
+    return Path(
+        os.getenv(
+            "PCM_GOLD_FORMULA_SET_PATH",
+            Path(__file__).resolve().with_name("gold_formulas.jsonl"),
+        )
+    ).expanduser()
+
+
+def gold_formula_metadata_path() -> Path:
+    return Path(
+        os.getenv(
+            "PCM_GOLD_FORMULA_METADATA_PATH",
+            Path(__file__).resolve().with_name("gold_formulas.meta.json"),
+        )
+    ).expanduser()

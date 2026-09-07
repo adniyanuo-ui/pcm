@@ -1,5 +1,5 @@
 import { apiRequest } from './client'
-import type { FormulaDoseConversion, FormulaDoseReference, RagApiCandidate } from '../types/consultation'
+import type { FormulaDoseConversion, FormulaDoseReference, RagApiCandidate, RagRetrieval } from '../types/consultation'
 import type { VoiceSummary } from './voice'
 
 export interface Patient { name: string; sex: string; age: number | null; allergy: string }
@@ -9,6 +9,7 @@ export interface Encounter {
   state: {
     patient: Patient; transcript: string; original_transcript: string; examinations: Record<string, string> | null
     analysis: Record<string, string> | null; candidates: RagApiCandidate[]; selected_id: string
+    retrieval?: RagRetrieval | null; clinical_profile?: Record<string, string[]> | null
     selected_ids?: string[]; formula_references?: FormulaDoseReference[]
     prescription: Prescription | null; record: string; confirmed: boolean[]
     voice_summary?: VoiceSummary | null

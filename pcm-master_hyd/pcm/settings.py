@@ -215,6 +215,24 @@ RAG_SYNDROME_INDEX_PATH = Path(
 RAG_INDEX_PATH = Path(
     os.getenv("PCM_RAG_INDEX_PATH", BASE_DIR / "var" / "rag" / "fangji.sqlite3")
 )
+RAG_TREATMENT_PROTOTYPES_PATH = Path(
+    os.getenv(
+        "PCM_TREATMENT_PROTOTYPES_PATH",
+        BASE_DIR / "llm_utils" / "rag" / "treatment_prototypes.json",
+    )
+)
+RAG_GOLD_FORMULA_SET_PATH = Path(
+    os.getenv(
+        "PCM_GOLD_FORMULA_SET_PATH",
+        BASE_DIR / "llm_utils" / "rag" / "gold_formulas.jsonl",
+    )
+)
+RAG_GOLD_FORMULA_METADATA_PATH = Path(
+    os.getenv(
+        "PCM_GOLD_FORMULA_METADATA_PATH",
+        BASE_DIR / "llm_utils" / "rag" / "gold_formulas.meta.json",
+    )
+)
 
 # ========================== 在线大模型
 DEFAULT_LLM_MODEL = os.getenv("PCM_DEFAULT_LLM_MODEL", "deepseek-v4-pro")
